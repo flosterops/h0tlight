@@ -1,0 +1,172 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* -- Footer Promo -- */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.kickstarter-promo {
+	position: relative;
+	z-index: 2;
+	
+	&:before { content: ""; height: 1px; background: rgba(white, .1); position: absolute; right: 0; bottom: 0; left: 0; }
+	&:after {
+		content: ""; height: 20px; position: absolute; right: 0; bottom: -20px; left: 0;
+		background-image: linear-gradient(to bottom, black, rgba(black, 0));
+	}
+	
+	h2 {
+		color: $color-primary; font: bold italic 4rem $font-factoria; text-transform: uppercase; text-shadow: 0 0 50px $color-shadow, 0 0 50px $color-shadow; margin: 0 0 60px; padding: 0px 0 0;
+		
+		span {
+			line-height: 1em; display: block;
+			&:nth-child(2) { font-size: 6rem; }
+			&:nth-child(3) { font-size: 7rem; }
+		}
+		
+		@media ($breakpoint-tablet-portrait) {
+			font-size: 3rem; margin-bottom: 35px; padding-top: 35px;
+			span {
+				&:nth-child(n+2) { font-size: 4rem; }
+			}
+		}
+		
+		@media ($breakpoint-mobile-landscape) {
+			font-size: 2rem; margin-bottom: 70px; padding-top: 45px;
+			span {
+				&:nth-child(n+2) { font-size: 2.8rem; }
+			}
+		}
+	}
+	
+	.app-icon {
+		width: 200px; max-width: 100%; margin: 0 auto; position: relative; z-index: 1;
+		
+		&:after {
+			content: ""; width: 505px; height: 505px; margin: (-505px/2) 0 0 (-505px/2); background: url(#{$gamigo-cdn}/img/footer-promo/app-icon-glow.png) 50% 50% / contain no-repeat; position: absolute; top: 50%; left: 50%; z-index: 1; pointer-events: none;
+			animation: FooterPromoAppGlowPulse 3s linear infinite alternate;
+		}
+		
+		img { display: block; width: 100%; height: auto; position: relative; z-index: 2; }
+		
+		
+		@media ($breakpoint-tablet-portrait) {
+			width: 132px;
+			
+			&:after { width: 300px; height: 300px; margin: (-300px/2) 0 0 (-300px/2); }
+		}
+	}
+	
+	.app-info {
+		margin: -35px (-$page-width-padding) 0; padding: 0 $page-width-padding; background: url(#{$gamigo-cdn}/img/footer-promo/stores-background.png) 50% 0 no-repeat;
+		
+		@media ($breakpoint-tablet-portrait) {
+			margin-top: -25px; padding: 0 $page-width-padding-mobile;
+		}
+		
+		@media ($breakpoint-mobile-landscape) {
+			margin: -25px (-$page-width-padding-mobile) 0; padding: 0 $page-width-padding-mobile;
+		}
+	}
+	
+	.stores {
+		padding: 46px 0;
+		
+		a {
+			width: 200px; height: 59px; max-width: 100%; margin: 0 20px; box-shadow: 0 0 20px rgba(white, .5); border-radius: 8px; display: inline-block; position: relative; z-index: 2;
+			transition: box-shadow $transition-duration $transition-timing-function;
+			
+			@include hover() {
+				box-shadow: 0 0 10px rgba(white, .5);
+			}
+			
+			img,
+			svg {
+				width: 100%; height: auto; margin: 0 auto; display: block;
+			}
+		}
+		
+		
+		@media ($breakpoint-mobile-landscape) {
+			padding: 30px 0;
+			a { width: 166px; height: 49px; margin: 15px auto 0; display: block; }
+		}
+	}
+	
+	.credits {
+		font-size: 3rem; max-width: 500px; margin: 0 auto; padding-bottom: 75px;
+		
+		p {
+			margin-bottom: .5em;
+			&:last-child { font-weight: bold; font-size: 3rem; margin-bottom: 0 !important; }
+		}
+		
+		a {
+			text-decoration: none;
+			transition: color $transition-duration $transition-timing-function;
+			
+			@include hover() {
+				color: $color-primary;
+			}
+		}
+		
+		@media ($breakpoint-mobile-landscape) {
+			font-size: 1.6rem; padding-bottom: 50px;
+			
+			p {
+				&:last-child { font-size: 2rem; }
+			}
+		}
+		
+		
+		@media ($breakpoint-mobile-landscape) {
+			font-size: 1.4rem; padding-bottom: 40px;
+		}
+	}
+	
+	.background-container {
+		background: 50% 100% / auto auto no-repeat; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; pointer-events: none;
+		&:before {
+			content: ""; height: 50px; position: absolute; top: 0; right: 0; left: 0; z-index: 1;
+			background-image: linear-gradient(to bottom, $color-page-background, rgba($color-page-background, 0));
+		}
+		
+		.background {
+			&:before,
+			&:after {
+				content: ""; width: 400px; position: absolute; top: 0; bottom: 0;
+			}
+			&:before { left: -1px; background-image: linear-gradient(to right, $color-page-background, rgba($color-page-background, 0)); }
+			&:after { right: -1px; background-image: linear-gradient(to left, $color-page-background, rgba($color-page-background, 0)); }
+			
+			position: absolute; top: 0; bottom: 0; left: 50%;
+			transform: translate3d(-50%,0,0);
+			
+			img,
+			video {
+				width: auto; height: 100%; display: block;
+			}
+		}
+		
+		@media ($breakpoint-tablet-portrait) {
+			background-image: url(#{$gamigo-cdn}/videos/footer-promo/poster-tablet.jpg);
+			
+			.background { display: none; }
+		}
+		
+		@media ($breakpoint-mobile-landscape) {
+			background-image: url(#{$gamigo-cdn}/videos/footer-promo/poster-mobile.jpg);
+		}
+	}
+
+	&__support {
+		padding: 60px 0;
+
+		@media ($breakpoint-tablet-portrait) {
+			padding: 25px 0;
+		}
+	}
+}
+
+
+
+keyframes FooterPromoAppGlowPulse {
+	to { transform: scale3d(.95,.95,0); opacity: .7; }
+}

@@ -1,0 +1,447 @@
+{% import "./macros.njk" as macros %}
+
+{# body class broke the index page ... Adding page-template-page_heroes page-template-page_heroes-php page-id-9 heroes page-heroes #}
+{% set bodyClass = "home page-template page-template-page_home page-template-page_home-php page page-id-5 page-home page-template-page_heroes page-template-page_heroes-php page-id-9 heroes page-heroes" %}
+{% set pageTitle = "Heroes Of Twilight" %}
+
+{% block master__content %}
+    {% set gamigo_cdn = "https://webcdn.triongames.com/landingpages/heroesoftwilight" %}
+	<header>
+		<div class="images">
+			<img class="logo" src="{{ gamigo_cdn }}/assets/img/homepage/heroes-of-twilight-logo.png" alt="Heroes Of Twilight" />
+			
+			<div class="cool-text-header">
+				<h4>Pre-register now</h4>
+				<div class="on">
+					<div class="appstore"></div>
+					<div class="divider"></div>
+					<div class="playstore"></div>
+				</div>
+			</div>
+			<div class="herk-flail"></div>
+		</div>
+		
+		<div class="video">
+			<div class="background wide">
+				<video preload="auto" loop webkit-playsinline autoplay muted>
+					<source type="video/mp4" src="https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/videos/homepage/heroes-of-twilight.mp4" media="screen and (min-width:1200px)">
+				</video>
+			</div>
+		</div>
+		<script>
+			$('.appstore').click(function() {
+				Adjust.trackEvent({
+					eventToken: 'c8lnwy'
+				});			
+			})
+			$('.playstore').click(function() {
+				Adjust.trackEvent({
+					eventToken: 'svg8o8'
+				});			
+			})		
+		</script>
+	</header>
+
+{# 
+	<div class="scroll-gears">
+		<div class="dn-bar">
+			<a href="#veroline" class="next"></a>
+		</div>
+	</div> #}
+	<button id="pre-register-btn"><a href="#pre-register">{{ langContent.prereg.preRegister }}</a></button>
+	<div id="content">
+		<script>
+			$('#pre-register-btn').click(function() {
+					Adjust.trackEvent({
+						eventToken: '27pyo4'
+					});			
+			})
+		</script>
+		{# Start section trailer #}
+		<section id="trailer">
+			<div class="text">
+				<a href="#" data-prevent-smooth-scroll="" data-videoid="PFzfikkGExU" onclick="ark.track('homepage','play','video-cinematographic-');" class="play play-btn fancybox fancybox.iframe"></a>
+				<h3>{{ langContent.watchTrailer }}</h3>
+			</div>
+			<div class="video-section">
+				<div class="background"
+					data-image-source="{{ gamigo_cdn }}/assets/img/homepage/trailer-video-image.jpg"
+					data-image-source-tablet="{{ gamigo_cdn }}/assets/img/homepage/trailer-video-image-tablet.jpg"
+					data-image-source-mobile="{{ gamigo_cdn }}/assets/img/homepage/trailer-video-image-mobile.jpg"
+					data-video-source="{{ gamigo_cdn }}/assets/videos/homepage/heroes-of-twilight-preview.mp4"
+				></div>
+			</div>
+		</section>
+		<script>
+			$('.play.play-btn.fancybox').click(function() {
+					Adjust.trackEvent({
+						eventToken: '2j153p'
+					});			
+			})
+		</script>
+		{# End section trailer #}
+
+		{# Start section pre-register #}
+        <section id="pre-register">
+            <div class="register-container">
+                <div class="register">
+                    <h3>{{langContent.prereg.titleReg}}</h3>
+                    <div class="text">
+						<p>{{langContent.prereg.textLine1}}</p>
+                    	<p>{{langContent.prereg.textLine2}}</p>
+                    	<p>{{langContent.prereg.textLine3}}</p>
+					</div>
+					<img class="character-img" src="{{ gamigo_cdn }}/assets/img/homepage/preregister_desktop_char.png" alt="character">
+					<img class="character-img-mobile" src="{{ gamigo_cdn }}/assets/img/homepage/prereg-mobile-gnome.png" alt="character">
+                    <form id="pre-register-form" class="registration-form">
+						<div>
+						<input id="email-pre-register" class="email-input" type="email" placeholder="{{ langContent.prereg.enterEmail }}" required>
+                        <input id="confirmation" class="confirmation-box" type="checkbox" required>
+                        <label for="confirmation"><span>{{langContent.prereg.agreeLine1}}</span><span> {{langContent.prereg.agreeLine2}}</span></label>
+						</div>
+                        <div class="submit-container">
+                            <button id="pre-register-btn-form" type="submit"></button>
+                        </div>
+                    </form>
+                </div>
+				<div class="app-section">
+					<div class="title-container"><h3>{{langContent.prereg.regDirect}}</h3></div>
+					<div class="app-btn-container">
+						<div id="app-store-btn" data-value="0"></div>
+						<div id="google-btn"></div>
+					</div>
+					<p class="ios-message">{{ langContent.prereg.iosMessage1 }}</p>
+					<p class="ios-message">{{ langContent.prereg.iosMessage2 }}</p>
+				</div>
+				<div class="divider">
+					<img src="{{ gamigo_cdn }}/assets/img/homepage/divider.png" alt="divider">
+				</div>
+				<div class="reward-container">
+					<div class="title-container"><h3>{{langContent.prereg.rewardTitle}}</h3></div>
+					<div class="text">
+						<p>{{langContent.prereg.rewardDesc1}}</p>
+                    	<p>{{langContent.prereg.rewardDesc2}}</p>
+					</div>
+					<div class="reward-status"><img class="reward-status-img" src="{{ gamigo_cdn }}/assets_v2/img/homepage/preregister_desktop_tier_state2.png" alt="reward status"></img></div>
+				</div>
+            </div>
+            <div class="mobile-line"></div>
+        </section>
+		<script>
+			$('#email-pre-register').click(function() {
+				Adjust.trackEvent({
+					eventToken: 'lkv3yp'
+				});
+			})
+			$('#google-btn').click(function() {
+				Adjust.trackEvent({
+					eventToken: '47zacb'
+				});
+				window.open('https://play.google.com/store/apps/details?id=com.gamigo.hot');
+			})
+			$('#pre-register-btn-form').click(function() {
+				Adjust.trackEvent({
+					eventToken: 'x1p6aj'
+				});
+			})
+			$('#app-store-btn').click(function() {
+				Adjust.trackEvent({
+					eventToken: '43f39r'
+				});
+			})
+			$('#confirmation').click(function() {
+				Adjust.trackEvent({
+					eventToken: 'iapxag'
+				});			
+			})
+		</script>
+		{# End section pre-register #}
+
+		{# Start section veroline #}
+		<section id="veroline" >                                
+			<div id="day-night" class="day-active">
+				<div id="days-nights-section" class="day-bg dn-bg">
+                    <div class="headline">
+                        <div class="headline-discover">
+                        </div>
+                        <div class="separator-line separator-title"></div>
+                    </div>
+                    <div class="veroline-description">
+                        <h3>{{langContent.veroline.dayTitle}}</h3>
+                        <p>{{langContent.veroline.dayText}}</p>
+                    </div>
+                </div>
+				<div class="night-bg dn-bg">
+                    <div class="headline">
+                        <div class="headline-discover"></div>
+                        <div class="separator-line separator-title"></div>
+                    </div>
+                    <div class="veroline-description">
+                        <h3>{{langContent.veroline.nightTitle}}</h3>
+                        <p>{{langContent.veroline.nightText}}</p>
+                    </div>
+                </div>
+				<div class="front-layer">
+					<div class="character-day">
+						<img alt="character day">
+					</div>
+					<div class="character-night">
+						<img alt="character night">
+					</div>
+				</div>
+                
+				<div class="dn-indicator-wrapper">
+					<div class="indicator">
+						<div id="day-night-rim" class="rim">
+							<span class="cursor"></span>
+							<span class="icons day-icon"></span>
+							<span class="icons night-icon"></span>
+						</div>
+						<img src="{{ gamigo_cdn }}/assets/img/homepage/day-night-indicator.png" alt="" class="day-icon">
+					</div>
+				</div>
+				<div id="mousetrack"></div>
+			</div>
+		    <div class="separator-line"></div>
+        </section>
+		<script>
+			$('#day-night-rim').click(function() {
+				Adjust.trackEvent({
+					eventToken: '84dkvy'
+				});			
+			})
+		</script>
+		{# End section Veroline #}
+
+		{# Start section features #}
+		<section id="features">
+			<div class="container">
+				<div class="headline">
+					<div class="headline-discover"></div>
+					<div class="separator-line separator-title"></div>
+            	</div>
+				
+				<div class="phone">
+				  <div class="key-features">
+					<div>
+					  <svg width="768" height="446" baseProfile="full" version="1.2">
+						<defs>
+						  <mask id="svgmask1" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" transform="scale(1)">
+							<image width="100%" height="446" xlink:href="{{ gamigo_cdn }}/assets/img/features/phone-mask-white.png"></image>
+						  </mask>
+						</defs>
+						<image mask="url(#svgmask1)" width="768" height="446" y="0" x="0" xlink:href="{{ gamigo_cdn }}/assets/img/features/screen-hot-genre-mix.jpg"></image>
+					  </svg>     
+					</div>
+					<div>
+					  <svg width="768" height="446" baseProfile="full" version="1.2">
+						<defs>
+						  <mask id="svgmask2" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" transform="scale(1)">
+							<image width="100%" height="446" xlink:href="{{ gamigo_cdn }}/assets/img/features/phone-mask-white.png"></image>
+						  </mask>
+						</defs>
+						<image mask="url(#svgmask2)" width="768" height="446" y="0" x="0" xlink:href="{{ gamigo_cdn }}/assets/img/features/screen-hot-pvp.jpg"></image>
+					  </svg>     
+					</div>
+					<div>
+					  <svg width="768" height="446" baseProfile="full" version="1.2">
+						<defs>
+						  <mask id="svgmask3" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" transform="scale(1)">
+							<image width="100%" height="446" xlink:href="{{ gamigo_cdn }}/assets/img/features/phone-mask-white.png"></image>
+						  </mask>
+						</defs>
+						<image mask="url(#svgmask2)" width="768" height="446" y="0" x="0" xlink:href="{{ gamigo_cdn }}/assets/img/features/screen-hot-outsmart.jpg"></image>
+					  </svg>     
+					</div>
+					<div>
+					  <svg width="768" height="446" baseProfile="full" version="1.2">
+						<defs>
+						  <mask id="svgmask4" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" transform="scale(1)">
+							<image width="100%" height="446" xlink:href="{{ gamigo_cdn }}/assets/img/features/phone-mask-white.png"></image>
+						  </mask>
+						</defs>
+						<image mask="url(#svgmask2)" width="768" height="446" y="0" x="0" xlink:href="{{ gamigo_cdn }}/assets/img/features/screen-hot-cards.jpg"></image>
+					  </svg>     
+					</div>
+					<div>
+					  <svg width="768" height="446" baseProfile="full" version="1.2">
+						<defs>
+						  <mask id="svgmask5" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" transform="scale(1)">
+							<image width="100%" height="446" xlink:href="{{ gamigo_cdn }}/assets/img/features/phone-mask-white.png"></image>
+						  </mask>
+						</defs>
+						<image mask="url(#svgmask2)" width="768" height="446" y="0" x="0" xlink:href="{{ gamigo_cdn }}/assets/img/features/screen-hot-leaderboard.jpg"></image>
+					  </svg>     
+					</div>
+					<div>
+					  <svg width="768" height="446" baseProfile="full" version="1.2">
+						<defs>
+						  <mask id="svgmask6" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" transform="scale(1)">
+							<image width="100%" height="446" xlink:href="{{ gamigo_cdn }}/assets/img/features/phone-mask-white.png"></image>
+						  </mask>
+						</defs>
+						<image mask="url(#svgmask2)" width="768" height="446" y="0" x="0" xlink:href="{{ gamigo_cdn }}/assets/img/features/screen-hot-become-the-greatest.jpg"></image>
+					  </svg>     
+					</div>
+				  </div>
+				</div>
+				<div id="pestipew"></div>
+				{# I don't know what is this #}
+				<div class="feature-text" style="display: block;">
+				  <h3>{{ langContent.carousel.line12 }}</h3>
+				  <p>{{ langContent.carousel.line13 }}</p>
+				</div>
+			</div>
+		</section>
+		<script>
+			$('.key-features').click(function() {
+				Adjust.trackEvent({
+					eventToken: 'n4dcj9'
+				});			
+			})
+		</script>
+		<script>
+		 var features = [
+							[ "{{langContent.carousel.line1}}","{{langContent.carousel.line2}}" ],
+							[ "{{langContent.carousel.line14}}","{{langContent.carousel.line3}}" ],
+							["{{langContent.carousel.line4}}","{{langContent.carousel.line5}}"],
+							["{{langContent.carousel.line6}}","{{langContent.carousel.line7}}"],
+							["{{langContent.carousel.line8}}","{{langContent.carousel.line9}}"],
+							["{{langContent.carousel.line10}}","{{langContent.carousel.line16}}"]
+				];
+
+		$('.key-features').slick({dots: false,infinite: true,speed: 500,autoplay: true,autoplaySpeed: 7500,fade: true,arrows: true,cssEase: 'linear'});
+
+		$('#prev-slide').click(function(){
+		  $(".key-features").slick('slickPrev');
+		});
+
+		$('#next-slide').click(function(){
+		  $(".key-features").slick('slickNext');
+		});
+
+		  $('.key-features').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+				fadeOut(nextSlide, features);
+			});
+
+			function fadeOut(index,features){
+				$('.feature-text').fadeOut();
+				$('.feature-text h3').html(features[index][0]);
+				$('.feature-text p').html(features[index][1]);
+				$('.feature-text').fadeIn();
+			}
+		</script>
+		{# End section features #}
+
+		{# Start section heroes #}
+        <section id="heroes-section">
+            <div class="page-width">
+                <div class="headline">
+                    <div class="headline-heroes"></div>
+                    <div class="separator-line separator-title"></div>
+                </div>
+                <div class="heroes-text">{{ heroes__text }}</div>
+            </div>
+            <div id="heroes">
+                <nav id="heroes-selector">
+                    <ul>
+                        <li><a href="#" id="heroes-veroline" class="character veroline active"></a></li>
+                        <li><a href="#" id="heroes-makino" class="character makino inactive"></a></li>
+                        <li><a href="#" id="heroes-pestipew" class="character pestipew inactive"></a></li>
+                    </ul>
+                </nav>
+                <div class="character">
+                    <div class="character-container">
+                    <div class="character-img char-veroline">
+                    </div>
+                    </div>
+                    <div class="description">
+                        <div class="name veroline active"></div>
+                        <div class="name makino inactive"></div>
+                        <div class="name pestipew inactive"></div>
+                        <h3 class="day">[{{ langContent.charDesc.day }}]</h3>
+                        <h3 class="night">[{{ langContent.charDesc.night }}]</h3>
+                        <div class="text-container desc-veroline active">
+                            <p class="text day active">{{ langContent.charDesc.verolineDay }}</p>
+                            <p class="text night inactive">{{ langContent.charDesc.verolineNight }}</p>
+                        </div>
+                        <div class="text-container desc-makino inactive">
+                            <p class="text day active">{{ langContent.charDesc.makinoDay }}</p>
+                            <p class="text night inactive">{{ langContent.charDesc.makinoNight }}</p>
+                        </div>
+                        <div class="text-container desc-pestipew inactive">
+                            <p class="text day active">{{ langContent.charDesc.pestipewDay }}</p>
+                            <p class="text night inactive">{{ langContent.charDesc.pestipewNight }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="day-night-trigger" class="day">
+                    <div class="gears">
+                        <div class="holders"></div>
+                        <img src="{{ gamigo_cdn }}/assets/img/heroes/top-left-gear.png" alt="" class="gear top-left spinnable-gear" data-rotation-orientation="counterclockwise">
+                        <img src="{{ gamigo_cdn }}/assets/img/heroes/bottom-left-gear.png" alt="" class="gear bottom-left spinnable-gear">
+                        <img src="{{ gamigo_cdn }}/assets/img/heroes/bottom-right-gear.png" alt="" class="gear bottom-right spinnable-gear" data-rotation-orientation="counterclockwise">
+                        <img src="{{ gamigo_cdn }}/assets/img/heroes/top-right-gear.png" alt="" class="gear top-right spinnable-gear">
+                    </div>
+                    <div class="wrap-trigger">
+                        <div id="dn-buttons" data-character="veroline" class="buttons">
+                            <a href="#" data-prevent-smooth-scroll="" class="day"></a>
+                            <a href="#" data-prevent-smooth-scroll="" class="night"></a>
+                        </div>
+                        <div class="indicator-rim">
+                            <img src="{{ gamigo_cdn }}/assets/img/homepage/dn-rim-cursor.png" alt="dn-rim-arrow" width="114" height="114">
+                        </div>
+                        <img src="{{ gamigo_cdn }}/assets/img/heroes/day-indicator-icon.png" class="icon day" alt="" />
+                        <img src="{{ gamigo_cdn }}/assets/img/heroes/night-indicator-icon.png" class="icon night" alt="" />
+                    </div>
+                </div>
+                 <div class="separator-line"></div>
+            </div>
+        </section>
+		<script>
+			$('#dn-buttons').click(function() {
+				Adjust.trackEvent({
+					eventToken: 't5uqhe'
+				});			
+			})
+			$('#heroes-veroline').click(function() {
+				Adjust.trackEvent({
+					eventToken: '73bs3v'
+				});			
+			})
+			$('#heroes-makino').click(function() {
+				Adjust.trackEvent({
+					eventToken: '3j0exz'
+				});			
+			})
+			$('#heroes-pestipew').click(function() {
+				Adjust.trackEvent({
+					eventToken: '1gyyri'
+				});			
+			})
+		</script>
+		{# End section Heroes #}
+	</div>
+    <div class="modal" id="modal-confirm">
+        <h2>{{ langContent.prereg.popupTitle1 }}<br />{{ langContent.prereg.popupTitle2 }}</h2>
+        <div id="modal-text">
+			<p>{{ langContent.prereg.popupText }}</p>
+		</div>
+		<div id="close-button" class="close-button close" class="close"></div>
+    </div>
+	<div class="legal-modal" id="legal-modal">
+		<div id="legal-close-button" class="close"></div>
+        <p id="modal-text">{{ langContent.prereg.legalText.firstLine }}<br /> {{ langContent.prereg.legalText.secondLine }} <a href="{{ gamigo_cdn }}/assets/legal/gamigo-group-list.pdf" target="_blank">{{ langContent.prereg.legalText.thirdLine }}</a>{{ langContent.prereg.legalText.forthLine }}</p><p>{{ langContent.prereg.legalText.gamigoGroup }}</p>
+    	<div id="legal-consent-btn" class="agree-btn">{{ langContent.prereg.legalText.agree }}</div>
+		<script>
+			$('#legal-consent-btn').click(function() {
+				Adjust.trackEvent({
+					eventToken: 'nfli6j'
+				});			
+			})
+		</script>
+    </div>
+    <div class="modal-overlay" id="modal-overlay"></div>
+{% endblock %}
+
+{% extends "./master.njk" %}

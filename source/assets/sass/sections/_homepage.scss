@@ -1,0 +1,2990 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Homepage */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+body.home {
+	header {
+		height: 1040px;
+		text-align: center;
+		padding-bottom: 72px;
+		padding-top: 0;
+		align-items: flex-start;
+		background: url(#{$gamigo_cdn}/img/headers/background-main.jpg)
+			no-repeat center top;
+		@media screen and ($breakpoint-desktop) {
+			background: url(#{$gamigo_cdn}/img/headers/background-main-1200.jpg)
+				no-repeat center 50px;
+			height: 800px;
+		}
+		@media ($breakpoint-tablet-portrait) {
+			background: url(#{$gamigo_cdn}/img/headers/background-main-1024.jpg)
+				no-repeat center 50px;
+			height: 750px;
+		}
+		@media ($breakpoint-mobile-landscape) {
+			background: url(#{$gamigo_cdn}/img/headers/background-main-768.jpg)
+				no-repeat center 50px;
+			height: 710px;
+		}
+		/*.banner {
+			float: right;
+			top: 74px;
+			right: 25px;
+			position: fixed;
+			width: 175px;
+			z-index: 30;
+			@media (max-width: 1200px) {
+				width: 140px;
+				right: 25px;
+			}
+			@media ($breakpoint-tablet-portrait) {
+				top: 50px;
+			}
+			@media ($breakpoint-mobile-landscape) {
+				content: url(#{$gamigo_cdn}/img/homepage/smaller-banner.png);
+				right: 0;
+				top: 51px;
+				width: auto;
+			}
+			@media ($breakpoint-mobile-portrait) {
+				width: auto;
+				top: 51px;
+			}
+		}*/
+
+		.images {
+			margin: 402px auto 0 auto;
+			position: relative;
+			pointer-events: none;
+			z-index: 25;
+			@media screen and ($breakpoint-desktop) {
+				margin: 272px auto 0;
+			}
+			@media ($breakpoint-tablet-portrait) {
+				background-position: center 11px;
+			}
+			@media screen and (min-width: 1200px) {
+				.herk-flail {
+					position: absolute;
+					top: 534px;
+					left: -657px;
+					background: url(#{$gamigo_cdn}/img/homepage/herk-flail.png)
+						no-repeat center top;
+					width: 340px;
+					height: 190px;
+					z-index: 25;
+				}
+			}
+
+			.cool-text-header {
+				position: absolute;
+				top: 443px;
+				z-index: 15;
+				left: 50%;
+				margin-left: -285px;
+				@media ($breakpoint-desktop) {
+					top: 397px;
+				}
+				@media ($breakpoint-tablet-portrait) {
+					top: 355px;
+				}
+				@media ($breakpoint-mobile-landscape) {
+					transform: scale(0.75);
+					top: 340px;
+				}
+				@media ($breakpoint-mobile-portrait) {
+					margin-left: -220px;
+					top: 390px;
+				}
+				h4 {
+					text-indent: -9999px;
+					background: transparent
+						url(#{$gamigo_cdn}/img/homepage/hot-spritesheet.png)
+						no-repeat;
+					width: 260px;
+					height: 45px;
+					background-position: 0 -310px;
+					margin: 0px auto;
+				}
+				.on {
+					display: flex;
+					align-items: center;
+					justify-content: space-around;
+					width: 570px;
+					@media ($breakpoint-mobile-portrait) {
+						flex-wrap: wrap;
+						width: 420px;
+					}
+					.divider {
+						background: transparent
+							url(#{$gamigo_cdn}/img/homepage/hot-spritesheet.png)
+							no-repeat;
+						width: 125px;
+						height: 122px;
+						background-position: -260px -248px;
+						@media ($breakpoint-mobile-portrait) {
+							display: none;
+						}
+					}
+					.playstore {
+						background-image: url(#{$gamigo_cdn}/img/homepage/appstore_btn_en.png);
+						width: 190px;
+						height: 62px;
+						background-size: 190px 62px;
+					}
+				}
+			}
+
+			img {
+				display: block;
+				margin: 0 auto;
+
+				&.logo {
+					width: 390px;
+					margin-top: -40px;
+					margin-left: 19px;
+					transform: scale(1.35);
+				}
+
+				@media screen and ($breakpoint-desktop) {
+					&.logo {
+						transform: scale(1);
+						margin-top: 10px;
+					}
+				}
+
+				@media ($breakpoint-tablet-portrait) {
+					&.logo {
+						width: 360px;
+						margin-top: 10px;
+						transform: scale(0.9);
+						margin-left: 0;
+					}
+				}
+				@media ($breakpoint-mobile-landscape) {
+					&.logo {
+						width: 210px;
+						margin-top: 10px;
+						transform: scale(1);
+						margin-left: 0;
+					}
+				}
+			}
+		}
+
+		.watch-trailer {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 664px;
+			z-index: 5;
+
+			@media ($breakpoint-tablet-portrait) {
+				top: 612px;
+			}
+			@media ($breakpoint-mobile-landscape) {
+				top: 545px;
+			}
+
+			a.play {
+				display: block;
+				position: relative;
+				margin: 0 auto;
+				width: 112px;
+				height: 112px;
+				top: auto;
+				left: auto;
+				background: url(#{$gamigo-cdn}/img/homepage/btn_play.png)
+					no-repeat center center;
+				&:after {
+					content: "";
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					margin: -30px 0 0 -30px;
+					width: 60px;
+					height: 60px;
+					border-radius: 50%;
+					box-shadow: 0 0 30px 0 #00c0ff;
+					transition: box-shadow 0.25s ease;
+				}
+				&:hover:after {
+					box-shadow: 0 0 30px 0 #27b6b7;
+				}
+			}
+
+			p {
+				color: $color-text;
+				font: bold italic 2rem $font-factoria;
+				line-height: 1em;
+				text-transform: uppercase;
+				margin-top: 32px;
+				text-shadow: 0 0 30px $color-shadow;
+			}
+		}
+	}
+
+	.modal {
+		display: none;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 900px;
+		min-height: 275px;
+		max-height: 100%;
+		background: white;
+		z-index: 1010;
+		padding: 100px 145px 68px;
+		border: 2px solid white;
+		text-align: left;
+		color: #fff;
+		background: #0e1721
+			url(#{$gamigo-cdn}/img/homepage/bg-newsletter-reg-modal.png) 50% 0
+			no-repeat !important;
+		box-shadow: 0 0 15px #000;
+		@media (max-width: 760px) {
+			padding: 66px 60px 32px;
+			width: 80%;
+		}
+		h2 {
+			font-size: 4rem;
+			margin-bottom: 41px;
+			font-weight: 700;
+			text-transform: uppercase;
+			font-family: $font-factoria;
+			@media (max-width: 650px) {
+				font-size: 3rem;
+			}
+		}
+
+		p {
+			font-size: 2.6rem;
+			line-height: 2.6rem;
+			padding: 10px;
+			margin-bottom: 0;
+			&:not(:last-child) {
+				margin-bottom: 46px;
+				@media (max-width: 650px) {
+					margin-bottom: 28px;
+				}
+			}
+			@media (max-width: 650px) {
+				font-size: 2.1rem;
+			}
+		}
+
+		.close {
+			position: absolute;
+			right: 32px;
+			top: 32px;
+			width: 32px;
+			height: 32px;
+			cursor: pointer;
+		}
+
+		.close:before,
+		.close:after {
+			position: absolute;
+			left: 15px;
+			content: " ";
+			height: 33px;
+			width: 2px;
+			background-color: white;
+		}
+		.close:before {
+			transform: rotate(45deg);
+		}
+		.close:after {
+			transform: rotate(-45deg);
+		}
+		.app-btn-container-popup {
+			width: 100%;
+			display: flex;
+			justify-content: space-evenly;
+			.disabled {
+				pointer-events: none;
+				cursor: not-allowed;
+			}
+			@media (max-width: 760px) {
+				flex-direction: column;
+				align-items: center;
+			}
+			@media ($breakpoint-mobile-portrait) {
+				padding-bottom: 30px;
+			}
+			a:not(.disabled):hover {
+				transform: scale(1.1);
+				cursor: pointer;
+			}
+			.app-store-btn {
+				background-image: url(#{$gamigo-cdn}/img/homepage/appstore_btn_en.png);
+				background-size: 220px 66px;
+				width: 220px;
+				height: 66px;
+				@media (max-width: 1650px) {
+					transform: scale(0.8);
+				}
+			}
+			#google-btn {
+				background-image: url(#{$gamigo-cdn}/img/homepage/pre-order-google_en.png);
+				background-size: 220px 66px;
+				width: 220px;
+				height: 66px;
+				@media (max-width: 1650px) {
+					transform: scale(0.8);
+				}
+			}
+		}
+	}
+
+	.legal-modal {
+		display: none;
+		position: fixed;
+		top: 50%;
+		right: 136px;
+		transform: translate(0%, -50%);
+		width: 450px;
+		max-width: 100%;
+		min-height: 275px;
+		max-height: 100%;
+		background: #0e1621;
+		z-index: 1010;
+		padding: 100px 20px 42px 20px;
+		color: #fff;
+		border: 2px solid white;
+		box-shadow: 0 0 15px #000;
+		font-family: $font-century-gothic;
+		font-size: 1.5rem;
+		line-height: 2rem;
+		overflow-y: scroll;
+		text-align: initial;
+		text-transform: uppercase;
+		@media ($breakpoint-mobile-landscape) {
+			right: 0;
+		}
+		&.open {
+			display: flex;
+			flex-direction: column;
+		}
+		p {
+			padding: 10px;
+		}
+
+		.agree-btn {
+			background-color: #b6babd;
+			padding: 26px 8px;
+			margin: 0 4rem;
+			font-family: $font-century-gothic;
+			text-transform: uppercase;
+			font-size: 2.5rem;
+			font-style: italic;
+			border-radius: 5px;
+			cursor: pointer;
+			text-align: center;
+		}
+		.close {
+			position: absolute;
+			right: 32px;
+			top: 32px;
+			width: 32px;
+			height: 32px;
+			cursor: pointer;
+		}
+
+		.close:before,
+		.close:after {
+			position: absolute;
+			left: 15px;
+			content: " ";
+			height: 33px;
+			width: 2px;
+			background-color: white;
+		}
+		.close:before {
+			transform: rotate(45deg);
+		}
+		.close:after {
+			transform: rotate(-45deg);
+		}
+	}
+	.modal-overlay {
+		display: none;
+		z-index: 1000;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.6);
+	}
+	.modal.open,
+	.overlay.open {
+		display: block;
+	}
+	/* Gears & Bar */
+	.scroll-gears {
+		text-align: center;
+		position: relative;
+		margin-top: -200px;
+		height: 302px;
+
+		@media ($breakpoint-mobile-landscape) {
+			display: none;
+		}
+
+		&:after {
+			background: url(#{$gamigo-cdn}/img/interface/bg_texture_bottom.png)
+				no-repeat center bottom;
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 30px;
+			height: 214px;
+			z-index: 2;
+		}
+
+		.dn-bar {
+			height: 145px;
+			margin-top: 15px;
+			position: relative;
+			z-index: 3;
+			a.next {
+				width: 122px;
+				height: 122px;
+				margin: 0 auto;
+				display: block;
+				background: url(#{$gamigo-cdn}/img/homepage/bt-next-section.png)
+					50% 50% no-repeat;
+				cursor: pointer;
+				position: relative;
+				z-index: 100000;
+
+				div {
+					width: 145px;
+					height: 145px;
+					position: absolute;
+					left: 0;
+					top: 0;
+				}
+			}
+			.newsletter-link {
+				padding-top: 62px;
+				img {
+					padding-top: 62px;
+				}
+			}
+		}
+	}
+	#pre-register-btn {
+		padding-bottom: 17px;
+		padding-left: 46px;
+		cursor: pointer;
+		background-position: 0px 119px;
+		margin-top: 25px;
+		margin-left: -85px;
+		background-image: url(#{$gamigo-cdn}/img/homepage/newsletter-button.png);
+		width: 398px;
+		height: 116px;
+		background-color: transparent;
+		border: none;
+		font-family: $font-factoria;
+		font-weight: bold;
+		font-size: 3.3rem;
+		color: white;
+		text-shadow: 3px 3px 0 #8d3713, -2px -2px 0 #8d3713,
+		2px -2px 0 #8d3713, -2px 2px 0 #8d3713, 2px 2px 0 #8d3713;
+		float: right;
+		top: 74px;
+		right: 25px;
+		position: fixed;
+		z-index: 30;
+		@media (max-width: 1200px) {
+			right: 25px;
+		}
+		@media ($breakpoint-tablet-portrait) {
+			top: 50px;
+		}
+		@media ($breakpoint-mobile-landscape) {
+			right: 0;
+			top: 51px;
+		}
+		@media ($breakpoint-mobile-portrait) {
+			top: 51px;
+			transform: scale(0.45);
+		}
+		&:hover {
+			background-position: 0px 2px;
+		}
+		@media ($breakpoint-mobile-landscape) {
+			transform: scale(0.65);
+			font-size: 4rem;
+			margin-top: 0;
+			margin-left: -179px;
+		}
+		@media ($breakpoint-mobile-landscape) {
+			margin-left: -90px;
+		}
+		@media ($breakpoint-mobile-portrait) {
+			transform: scale(0.55);
+			margin-top: -15px;
+		}
+		a {
+			text-decoration: none;
+		}
+	}
+	#content {
+		margin-top: -30px;
+		@media ($breakpoint-desktop) {
+			margin-top: 0px;
+		}
+		.stores {
+			z-index: 5;
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+
+			@media ($breakpoint-tablet-portrait) {
+				bottom: 115px;
+			}
+			@media ($breakpoint-mobile-landscape) {
+				bottom: 0;
+				height: 168px;
+			}
+			@media ($breakpoint-mobile-portrait) {
+				flex-direction: column;
+				flex-wrap: nowrap;
+				bottom: -10px;
+				height: 205px;
+				margin-bottom: 0;
+			}
+
+			a {
+				width: 200px;
+				height: 59px;
+				margin: 0 40px 25px 0;
+				display: inline-block;
+				text-align: center;
+				box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+				border-radius: 8px;
+
+				&:last-child {
+					margin-right: 0;
+				}
+
+				@include hover() {
+					box-shadow: 0 0 10px rgba(white, 0.5);
+				}
+
+				@media ($breakpoint-mobile-landscape) {
+					margin: 0 10px 20px;
+				}
+				@media ($breakpoint-mobile-portrait) {
+					width: 166px;
+					height: 49px;
+					margin-right: 0;
+					margin-bottom: 20px;
+					align-self: center;
+				}
+				svg {
+					padding: 0;
+					margin: 0;
+					display: block;
+					width: auto;
+					height: 100%;
+				}
+			}
+		}
+	}
+
+	#testimonials {
+		.slider-testimonials {
+			position: relative;
+			padding: 50px 0 85px;
+			margin: 0 65px;
+
+			@media ($breakpoint-tablet-portrait) {
+				margin: 0;
+			}
+			@media ($breakpoint-mobile-landscape) {
+				margin: 0 -15px;
+				padding: 40px 0 85px;
+			}
+
+			&:before,
+			&:after {
+				content: "";
+				height: 19px;
+				position: absolute;
+				left: 0;
+				right: 0;
+				background: url(#{$gamigo-cdn}/img/homepage/separator.png) 50%
+					50% no-repeat;
+			}
+			&:before {
+				top: 0;
+				transform: rotate(180deg);
+			}
+			&:after {
+				bottom: 0;
+			}
+
+			.slick-list {
+				@extend .gradient-texture;
+				&:before,
+				&:after {
+					width: 50px;
+				}
+			}
+
+			.slick-slide {
+				outline: none;
+				padding: 10px 40px;
+				@media ($breakpoint-mobile-landscape) {
+					padding: 10px 20px;
+				}
+			}
+
+			.slick-arrow {
+				width: 120px;
+				height: 120px;
+				z-index: 1;
+				opacity: 1;
+				transition: opacity $transition-duration
+					$transition-timing-function;
+
+				@media ($breakpoint-tablet-portrait) {
+					display: none !important;
+				}
+
+				&.slick-disabled {
+					opacity: 0.5;
+					cursor: default;
+				}
+
+				&.slick-prev {
+					left: -90px;
+					&:before {
+						content: "";
+						background: url(#{$gamigo-cdn}/img/homepage/btn_prev.png)
+							50% 50% no-repeat;
+						opacity: 1;
+						display: block;
+						height: 120px;
+						width: 120px;
+					}
+				}
+				&.slick-next {
+					right: -90px;
+					&:before {
+						content: "";
+						background: url(#{$gamigo-cdn}/img/homepage/btn_next.png)
+							50% 50% no-repeat;
+						opacity: 1;
+						display: block;
+						height: 120px;
+						width: 120px;
+					}
+				}
+			}
+
+			.slick-dots {
+				bottom: 45px;
+				left: 0;
+				right: 0;
+				li {
+					width: 37px;
+					height: 43px;
+					margin: 0;
+					background: url(#{$gamigo-cdn}/img/homepage/dots.png) 50% 0%
+						no-repeat;
+					button {
+						background: url(#{$gamigo-cdn}/img/homepage/dot-inactive.png)
+							50% 0% no-repeat;
+						width: 37px;
+						height: 43px;
+						padding: 0;
+					}
+					&.slick-active {
+						button {
+							background: url(#{$gamigo-cdn}/img/homepage/dot-active.png)
+								50% 0% no-repeat;
+						}
+					}
+				}
+			}
+
+			.text-quote {
+				font-style: italic;
+				text-shadow: 0 0 20px $color-shadow-light,
+					0 0 20px $color-shadow-light;
+
+				@media ($breakpoint-mobile-landscape) {
+					font-size: 1.6rem;
+					line-height: 1.2em;
+				}
+			}
+
+			.author {
+				font-size: 2.4rem;
+				font-style: italic;
+				font-weight: 700;
+				color: $color-primary;
+				text-shadow: 0 0 30px $color-shadow-light,
+					0 0 30px $color-shadow-light;
+				margin: 25px 0 10px 0;
+			}
+
+			.from {
+				font-size: 1.6rem;
+				font-style: italic;
+				color: #c2c2c2;
+			}
+		}
+	}
+
+	#pre-register {
+		min-height: 1802px;
+		background-image: url(#{$gamigo-cdn}/img/homepage/preregister_desktop_bg_clear.jpg);
+		background-size: cover;
+		position: relative;
+		@media (max-width: 1440px) {
+			background-image: url(#{$gamigo-cdn}/img/homepage/prereg_tablet_bg_clear.jpg);
+			background-size: cover;
+			min-height: 1635px;
+		}
+		@media ($breakpoint-mobile-landscape) {
+			display: flex;
+			flex-direction: column;
+			margin-top: -19px;
+			z-index: 15;
+		}
+		@media ($breakpoint-mobile-portrait) {
+			background-image: url(#{$gamigo-cdn}/img/homepage/prereg_mobile_bg_short.png);
+			background-size: cover;
+			z-index: 20;
+			height: auto;
+			min-height: 1200px;
+		}
+		/* Container starts */
+		.register-container {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			/* Container Breakpoints */
+			@media (max-width: 1440px) {
+				position: relative;
+				margin-top: -72px;
+			}
+			@media (max-width: 1290px) {
+				margin-top: -67px;
+			}
+			@media (max-width: 1024px) {
+				margin-top: 60px;
+			}
+			@media ($breakpoint-mobile-landscape) {
+				bottom: 0;
+				height: 900px;
+			}
+			@media ($breakpoint-mobile-portrait) {
+				bottom: 0;
+				height: 900px;
+			}
+
+			.registration-form {
+				display: flex;
+				div {
+					@media (max-width: 1440px) {
+						padding-top: 7px;
+					}
+				}
+				@media ($breakpoint-tablet-portrait) {
+					flex-direction: column;
+				}
+			}
+			#pre-register-btn-form {
+				padding-bottom: 17px;
+				padding-left: 46px;
+				margin-top: 0px;
+				cursor: pointer;
+				background-position: center;
+				margin-top: -10px;
+				background-image: url(#{$gamigo-cdn}/img/homepage/prereg_btn.png);
+				width: 400px;
+				height: 114px;
+				background-size: 400px 114px;
+				background-color: transparent;
+				border: none;
+				font-family: $font-factoria;
+				font-weight: bold;
+				font-size: 3.3rem;
+				color: white;
+				text-shadow: 3px 3px 0 #8d3713, -2px -2px 0 #8d3713,
+					2px -2px 0 #8d3713, -2px 2px 0 #8d3713, 2px 2px 0 #8d3713;
+				float: right;
+				top: 74px;
+				right: 25px;
+				z-index: 30;
+				@media (max-width: 1440px) {
+					width: 252px;
+					height: 73px;
+					background-size: 252px 73px;
+					margin-top: 0;
+				}
+
+				@media (max-width: 1024px) {
+					margin-top: 15px;
+				}
+				@media ($breakpoint-mobile-landscape) {
+					transform: scale(0.65);
+					font-size: 4rem;
+					margin-top: 0;
+					margin-left: -179px;
+				}
+				@media ($breakpoint-mobile-landscape) {
+					margin-left: 0;
+					transform: scale(0.9);
+					margin-top: 20px;
+				}
+				@media ($breakpoint-mobile-portrait) {
+					transform: scale(1);
+				}
+				&:hover {
+					background-position: 0px 2px;
+				}
+
+				a {
+					text-decoration: none;
+				}
+			}
+			.character-img {
+				right: 0;
+				top: 0;
+    			position: absolute;
+				@media (max-width: 1649px)  {
+					right: -119px;
+					transform: scale(0.75);
+				}
+				@media (max-width: 1440px) {
+					transform: scale(0.7);
+					top: 135px;
+					right: -58px;
+				}
+				@media (max-width: 1237px) {
+					right: -179px;
+					transform: scale(0.6);
+				}
+
+				@media (max-width: 764px) {
+					transform: scale(0.4);
+				}
+				@media (max-width: 676px) {
+					display: none;
+				}
+			}
+			.character-img-mobile {
+				display: none;
+				@media($breakpoint-mobile-portrait) {
+					display: block;
+					right: 0;
+					top: -60px;
+					position: absolute;
+				}
+			}
+		}
+		.register {
+			margin-left: 130px;
+			width: 80%;
+			margin-top: 233px;
+			@media (max-width: 1440px) {
+				margin-left: 143px;
+				margin-top: 0;
+				padding-top: 303px;
+			}
+			@media (max-width: 1024px) {
+				margin-top: 68px;
+				padding-top: 178px;
+				margin: 0 auto;
+				max-width: 595px;
+				margin-bottom: 110px;
+			}
+			@media ($breakpoint-mobile-landscape) {
+				margin-left: 106px;
+				max-width: 320px;
+				padding-top: 231px;
+			}
+			@media (max-width: 550px) {
+				margin-left: 80px;
+			}
+			@media ($breakpoint-mobile-portrait) {
+				margin: 0 auto;
+				padding-top: 208px;
+			}
+			.title-container {
+				height: 104px;
+				margin-top: 81px;
+				position: relative;
+				@media (max-width: 1024px) {
+					margin-top: 33px;
+				}
+				@media ($breakpoint-mobile-landscape) {
+					height: 77px;
+					margin-bottom: 28px;
+				
+				}
+			}
+			h3 {
+				text-align: initial;
+    			font-size: 4.8rem;
+				font-weight: 900;
+				text-transform: uppercase;
+				font-family: $font-factoria;
+				margin-bottom: 3.3rem;
+				@media ($breakpoint-mobile-portrait) {
+					font-size: 2.2rem;
+					margin-bottom: 2rem;
+				}
+			}
+			.text {
+				font-family: $font-century-gothic;
+				text-transform: uppercase;
+				margin-bottom: 47px;
+				text-align: left;
+				font-weight: bold;
+				font-size: 2.7rem;
+				@media (max-width: 1440px) {
+					font-size: 2rem;
+					line-height: 2.2rem;
+					margin-bottom: 30px;
+				}
+				@media ($breakpoint-mobile-landscape) {
+					font-size: 1.4rem;
+					font-weight: bold;
+					margin-bottom: 24px;
+				}
+				p {
+					line-height: 3.1rem;
+					margin-top: 0;
+					margin-bottom: 9px;
+					@media (max-width: 1440px) {
+						line-height: 2.2rem;
+						margin-bottom: 13px;
+					}
+					@media ($breakpoint-mobile-landscape) {
+						line-height: 1.8rem;
+						font-size: 1.4rem;
+						margin-bottom: .5rem;
+					}
+				}
+			}
+			.email-input {
+				padding-top: 21px; /*46*/
+				padding-bottom: 20px;
+				padding-left: 14px;
+				display: block;
+				margin-left: 0;
+				width: 500px;
+				border: 2px solid $color-dark-blue;
+				border-radius: 4px;
+				background-color: #d6bac6;
+				font-size: 1.8rem;
+				color: $color-dark-grey;
+				@media (max-width: 1440px) {
+					width: 314px;
+					padding-top: 22px;
+					padding-bottom: 9px;
+					padding-left: 9px;
+					font-size: 1.3rem;
+				}
+				@media ($breakpoint-mobile-landscape) {
+					width: 300px;
+					padding-top: 12px;
+					padding-bottom: 10px;
+					font-size: 1.2rem;
+				}
+				&::placeholder {
+					font-style: italic;
+					font-weight: 800;
+					text-transform: uppercase;
+				}
+				@media ($breakpoint-mobile-portrait) {
+					width: 100%;
+					padding-top: 19px;
+					padding-bottom: 11px;
+				}
+			}
+			.confirmation-box {
+				width: 33px;
+				border-radius: 3px;
+				height: 33px;
+				margin-top: 33px;
+				outline: 2px solid $color-dark-blue;
+				border-radius: 4px;
+				float: left;
+				@media ($breakpoint-mobile-landscape) {
+					margin-top: 15px;
+					width: 13px;
+					height: 13px;
+				}
+			}
+			label {
+				font-family: $font-century-gothic;
+				float: left;
+				color: white;
+				font-style: normal;
+				text-transform: uppercase;
+				text-align: left;
+				margin-top: 33px;
+				margin-left: 11px;
+				font-weight: 900;
+				line-height: 1.5rem;
+				font-size: 1.25rem;
+				max-width: 450px;
+				@media (max-width: 1440px) {
+					max-width: 280px;
+				}
+				@media ($breakpoint-tablet-portrait) {
+					max-width: 350px;
+				}
+				@media ($breakpoint-mobile-landscape) {
+					font-size: 1rem;
+					line-height: 1.3rem;
+					margin-top: 15px;
+					color: #fff;
+					text-transform: none;
+					font-weight: 400;
+					max-width: 270px;
+				}
+				@media ($breakpoint-mobile-portrait) {
+					max-width: 225px;
+					font-size: 1.3rem;
+					line-height: 1.7rem;
+					margin-top: 11px;
+				}
+			}
+			.submit-container {
+				display: block;
+				width: 401px;
+				height: 116px;
+				margin-left: 26px;
+				@media (max-width: 1440px) {
+					margin-left: 10px;
+					width: 252px;
+					height: 73px;
+				}
+				@media ($breakpoint-mobile-landscape) {
+					width: auto;
+					align-self: baseline;
+				}
+			}
+		}
+		.divider {
+			display: flex;
+			justify-content: center;
+			transform: scaleX(-1);
+			margin: 0 0 21px;
+			@media (max-width: 1440px) {
+				margin-left: 0;
+			}
+			img {
+				@media (max-width: 1024px) {
+					left: 0;
+					margin-top: -20px;
+				}
+				@media ($breakpoint-mobile-landscape) {
+					left: -108px;
+					margin-top: -35px;
+				}
+				@media ($breakpoint-mobile-portrait) {
+					width: 100%;
+					margin: 0 0 0;
+				}
+			}
+		}
+		.app-section {
+			margin-top: 118px;
+			display: flex;
+			flex-direction: column;
+			@media(max-width: 1440px) {
+				margin-top: 80px;
+			}
+			@media (max-width: 1024px) {
+				margin: 0 auto;
+				max-width: 595px;
+			}
+			@media (max-width: 579px) {
+				margin-top: 0;
+			}
+			@media ($breakpoint-mobile-portrait) {
+				max-width: 320px;
+			}
+			.title-container {
+				margin-bottom: 39px;
+				position: relative;
+				@media (max-width: 1440px) {
+					margin-bottom: 0;
+				}
+				@media ($breakpoint-mobile-landscape) {
+					height: 77px;
+					margin-bottom: 28px;
+					margin-left: -88px;
+				}
+				@media ($breakpoint-mobile-portrait) {
+					margin-top: 53px;
+				}
+				@media ($breakpoint-mobile-portrait) {
+					margin-left: 0;
+					height: auto;
+					margin-bottom: 0;
+				}
+			}
+			h3 {
+    			font-size: 4.8rem;
+				font-weight: 900;
+				text-transform: uppercase;
+				font-family: $font-factoria;
+				margin-bottom: 3.3rem;
+				@media($breakpoint-mobile-portrait) {
+					font-size: 2rem;
+					line-height: 2.2rem;
+					text-align: center;
+				}
+ 			}
+			.ios-message {
+				font-size: 2rem;
+				line-height: 2.4rem;
+				display: none;
+				@media ($breakpoint-mobile-portrait) {
+					font-size: 1.3rem;
+					line-height: 1.7rem;
+
+				}
+			}
+			.app-btn-container {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				margin-bottom: 20px;
+				.disabled {
+					pointer-events: none;
+					cursor: not-allowed;
+				}
+				@media ($breakpoint-mobile-landscape) {
+					transform: scale(0.8);
+				}
+				@media (max-width: 1024px) {
+					transform: scale(0.8);
+					width: auto;
+				}
+				@media ($breakpoint-mobile-portrait) {
+					transform: scale(1);
+					width: 100%;
+					justify-content: space-between;
+					padding-bottom: 25px;
+				}
+				#app-store-btn:not(.disabled):hover, #google-btn:not(.disabled):hover {
+					transform: scale(1.1);
+					cursor: pointer;
+				}
+				#app-store-btn {
+					background-image: url(#{$gamigo-cdn}/img/homepage/pre-order-app-en.png);
+					background-size: 220px 66px;
+					width: 220px;
+					height: 66px;
+					@media ($breakpoint-mobile-portrait) {
+						width: 150px;
+						height: 45px;
+						background-size: 150px 45px;
+					}
+				}
+				#google-btn {
+					background-image: url(#{$gamigo-cdn}/img/homepage/pre-order-google_EN.png);
+					background-size: 220px 66px;
+					width: 220px;
+					height: 66px;
+					margin-left: 113px;
+					@media(max-width:1440px) {
+						margin-left: 70px;
+					}
+					@media ($breakpoint-mobile-landscape) {
+						margin-left: 40px;
+					}
+					@media ($breakpoint-mobile-portrait) {
+						width: 150px;
+						height: 45px;
+						background-size: 150px 45px;
+						margin-left: 0;
+					}
+				}
+			}
+		}
+		.reward-container {
+			@media ($breakpoint-mobile-portrait) {
+				width: 100%;
+ 
+			}
+			.title-container {
+				@media($breakpoint-mobile-portrait) {
+					margin: 0 auto;
+					width: 80%;
+				}
+				h3 {
+					font-size: 4rem;
+					font-weight: 900;
+					text-transform: uppercase;
+					font-family: $font-factoria;
+					@media($breakpoint-mobile-portrait) {
+						font-size: 2.5rem;
+						margin-bottom: 0;
+					}
+				}
+			}
+			.text {
+				font-family: $font-century-gothic;
+				text-transform: uppercase;
+				margin-bottom: 47px;
+				font-weight: bold;
+				font-size: 2.7rem;
+				margin-top: 48px;
+				@media (max-width: 1440px) {
+					font-size: 2.4rem;
+					line-height: 5rem;
+					margin-bottom: 30px;
+				}
+				@media ($breakpoint-mobile-landscape) {
+					font-size: 1.4rem;
+					font-weight: bold;
+					margin-bottom: 24px;
+				}
+				@media ($breakpoint-mobile-portrait) {
+					margin: 0 auto;
+					width: 80%;
+					margin-top: 14px;
+				}
+				p {
+					line-height: 3.1rem;
+					margin-top: 0;
+					margin-bottom: 9px;
+					@media ($breakpoint-mobile-landscape) {
+						line-height: 1.6rem;
+					}
+					@media ($breakpoint-mobile-portrait) {
+						font-size: 1.5rem;
+
+					}
+				}
+			}
+			.reward-status-img {
+				margin-bottom: 2.5rem;
+				@media (max-width: 1440px) {
+					width: 90%;
+				}
+				@media (max-width: 860px) {
+					max-width: 100%;
+				}
+				@media ($breakpoint-mobile-portrait) {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	#veroline {
+		@extend .gradient-texture;
+		padding-top: 100px;
+		@media ($breakpoint-tablet-portrait) {
+			padding-top: 15px;
+			height: 1000px;
+		}
+		@media ($breakpoint-mobile-portrait) {
+			padding-top: 30px;
+			height: 740px;
+			margin-bottom: 100px;
+		}
+		#veroline:after {
+			right: -1px;
+			top: -150px;
+		}
+
+		#veroline:before {
+			left: -1px;
+			top: -150px;
+		}
+		//Day & Night Indicator
+		.dn-indicator-wrapper {
+			width: 855px;
+			height: 426px;
+			margin-left: -427px;
+			left: 50%;
+			top: 682px;
+			position: absolute;
+			z-index: 5;
+
+			@media ($breakpoint-mobile-landscape) {
+				top: 603px;
+			}
+			@media ($breakpoint-mobile-portrait) {
+				top: 225px;
+				transform: scale(0.75);
+			}
+			/* Spinning Gears */
+			.gears {
+				@media ($breakpoint-mobile-landscape) {
+					display: none;
+				}
+				width: 260px;
+				height: 117px;
+				margin-left: -110px;
+				position: absolute;
+				left: 50%;
+				top: 216px;
+				z-index: -3;
+				overflow: hidden;
+				transform: rotate(180deg);
+
+				.holders {
+					width: 221px;
+					height: 117px;
+					position: absolute;
+					top: -40px;
+					left: 5px;
+					background: url(#{$gamigo-cdn}/img/heroes/gears-holder.png)
+						0 0 no-repeat;
+					z-index: 2;
+				}
+				.gear {
+					position: absolute;
+					z-index: 2;
+					&.top-right {
+						right: 2px;
+						top: -37px;
+					}
+					&.top-left {
+						left: 8px;
+						top: -26px;
+						z-index: 2;
+					}
+					&.bottom-left {
+						left: 28px;
+						top: 16px;
+						z-index: -3;
+					}
+					&.bottom-right {
+						right: 44px;
+						top: 32px;
+					}
+				}
+			}
+
+			.indicator {
+				width: 210px;
+				height: 210px;
+				margin: 75px auto 0;
+				position: relative;
+				transform: scale(0.8);
+				top: -97px;
+
+				.cursor {
+					width: 210px;
+					height: 210px;
+					margin: 0 auto;
+					display: block;
+					position: relative;
+					background: url(#{$gamigo-cdn}/img/homepage/dn-rim-cursor.png)
+						50% 0% no-repeat;
+					z-index: 3;
+					transition: transform 1s $transition-timing-function 0.2s;
+				}
+				.icons {
+					width: 210px;
+					height: 210px;
+					display: block;
+					top: 0;
+					left: 0;
+					position: absolute;
+					z-index: 5;
+					transition: opacity 1s $transition-timing-function 0.2s;
+					&.day-icon {
+						background: url(#{$gamigo-cdn}/img/homepage/icon-day-on.png)
+							50% 0% no-repeat;
+						opacity: 1;
+					}
+					&.night-icon {
+						background: url(#{$gamigo-cdn}/img/homepage/icon-night-on.png)
+							50% 0% no-repeat;
+						opacity: 0;
+					}
+				}
+				.rim {
+					width: 210px;
+					height: 210px;
+					margin: 0 auto;
+					position: relative;
+					background: url(#{$gamigo-cdn}/img/homepage/dn-rim-indicator.png)
+						50% 0% no-repeat;
+					z-index: 3;
+					transition: transform 1s $transition-timing-function 0.2s;
+				}
+
+				img {
+					position: absolute;
+					left: 0;
+					top: 0;
+					opacity: 1;
+					transition: opacity 1s $transition-timing-function;
+				}
+			}
+		}
+
+		/* Day & Night Backgrounds */
+
+		#day-night {
+			min-height: 794px;
+			margin: 0 auto;
+			position: relative;
+			z-index: 10;
+
+			#mousetrack {
+				height: 794px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				border: 1px solid transparent;
+				z-index: 999;
+
+				@media ($breakpoint-mobile-landscape) {
+					height: 710px;
+				}
+			}
+			.gears-right {
+				position: absolute;
+				top: 18px;
+				left: 1234px;
+				z-index: 4;
+			}
+			.gears-left {
+				position: absolute;
+				top: 18px;
+				z-index: 4;
+				left: 598px;
+			}
+			.dn-bg {
+				min-height: 794px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				z-index: 1;
+				opacity: 0;
+				background-repeat: no-repeat;
+				background-position: center top;
+				transition: opacity 1s $transition-timing-function;
+				@media ($breakpoint-tablet-portrait) {
+					background: none;
+				}
+
+				.headline {
+					.headline-discover {
+						background: url(#{$gamigo-cdn}/img/homepage/headline-discover.png);
+						width: 510px;
+						height: 49px;
+						text-align: center;
+						margin: 0 auto;
+						position: relative;
+						z-index: 5;
+						@media ($breakpoint-tablet-portrait) {
+							transform: scale(0.75);
+						}
+						@media ($breakpoint-mobile-landscape) {
+							transform: scale(0.5);
+							left: 50%;
+							margin-left: -255px;
+						}
+						&::before {
+							content: "";
+							background: transparent
+								url(#{$gamigo-cdn}/img/homepage/gears-left.png)
+								no-repeat center top/cover;
+							width: 91px;
+							height: 60px;
+							position: absolute;
+							left: -105px;
+							bottom: -28px;
+						}
+						&::after {
+							content: "";
+							background: transparent
+								url(#{$gamigo-cdn}/img/homepage/gears-right.png)
+								no-repeat center top/cover;
+							width: 91px;
+							height: 60px;
+							position: absolute;
+							right: -110px;
+							bottom: -28px;
+						}
+					}
+
+					.separator-line.separator-title {
+						height: 1px;
+						@media ($breakpoint-tablet-portrait) {
+						}
+					}
+
+					.separator-line:before {
+						content: "";
+						width: 950px;
+						height: 1px;
+						margin-left: -475px;
+						border-radius: 200px;
+						position: absolute;
+						top: 55px;
+						left: 50%;
+						box-shadow: 0 0 50px 30px rgba(0, 0, 0, 0.5);
+						z-index: 1;
+						background: #000;
+						overflow: hidden;
+					}
+					.separator-line:after {
+						content: "";
+						height: 2px;
+						display: block;
+						position: absolute;
+						top: 55px;
+						left: 10%;
+						right: 10%;
+						background-image: linear-gradient(
+							to right,
+							rgba(183, 183, 183, 0) 0%,
+							#b7b7b7 50%,
+							rgba(183, 183, 183, 0) 100%
+						);
+						opacity: 1;
+						z-index: 2;
+						@media ($breakpoint-tablet-portrait) {
+							left: -12%;
+							right: -12%;
+							height: 1px;
+							top: 48px;
+						}
+						@media ($breakpoint-mobile-landscape) {
+							left: -12%;
+							right: -12%;
+							height: 1px;
+							top: 40px;
+						}
+						@media ($breakpoint-mobile-portrait) {
+							bottom: 434px;
+							left: -12%;
+							right: -12%;
+							height: 1px;
+						}
+					}
+				}
+				.veroline-description {
+					position: absolute;
+					margin: 0 auto;
+					width: 40%;
+					max-width: 400px;
+					transform: translate(-50%, -50%);
+					h3 {
+						font-family: $font-century-gothic;
+						font-weight: bold;
+						font-size: 4.25rem;
+						text-align: left;
+					}
+					p {
+						font-family: $font-century-gothic;
+						font-weight: 400;
+						font-size: 1.8rem;
+						line-height: 2.25rem;
+						text-align: left;
+					}
+					@media (max-width: 768px) and (min-width: 1024px) {
+						margin: 0 15%;
+						max-width: none;
+						width: auto;
+						left: unset;
+						top: unset;
+						transform: none;
+					}
+				}
+				@media ($breakpoint-mobile-landscape) {
+					min-height: 550px;
+					background-position-y: 50px;
+				}
+			}
+
+			.day-bg {
+				background-image: url(#{$gamigo-cdn}/img/homepage/bg_veroline_day.jpg);
+				background-size: cover;
+				@media (max-width: 1440px) {
+					background-image: url(#{$gamigo-cdn}/img/homepage/bg-story-day-med.jpg);
+				}
+				.veroline-description {
+					top: 50%;
+					left: 75%;
+
+					@media ($breakpoint-tablet-portrait) {
+						top: 950px;
+						left: 50%;
+						width: 80%;
+						max-width: 100%;
+						h3 {
+							font-size: 3.1rem;
+							line-height: 3.3rem;
+							text-transform: uppercase;
+						}
+						p {
+							font-size: 1.8rem;
+							line-height: 2.25rem;
+						}
+					}
+					@media ($breakpoint-mobile-landscape) {
+						top: 880px;
+						left: 50%;
+						width: 80%;
+						max-width: 100%;
+						h3 {
+							font-size: 2.5rem;
+							line-height: 2.75rem;
+							text-transform: uppercase;
+						}
+						p {
+							font-size: 1.5rem;
+							line-height: 2rem;
+						}
+					}
+					@media ($breakpoint-mobile-portrait) {
+						top: 575px;
+					}
+				}
+				@media ($breakpoint-mobile-landscape) {
+					height: 710px;
+					min-height: auto;
+					background-image: url(#{$gamigo-cdn}/img/homepage/background-story-day-768.jpg);
+					background-position: center;
+				}
+				@media ($breakpoint-mobile-portrait) {
+					height: 342px;
+					min-height: 342px;
+					background: url(#{$gamigo-cdn}/img/homepage/bg-story-day-300.jpg)
+						no-repeat center bottom/auto;
+				}
+			}
+			.night-bg {
+				.veroline-description {
+					top: 50%;
+					left: 25%;
+					@media ($breakpoint-tablet-portrait) {
+						top: 950px;
+						left: 50%;
+						width: 80%;
+						max-width: 100%;
+						h3 {
+							font-size: 3.1rem;
+							line-height: 3.3rem;
+							text-transform: uppercase;
+						}
+						p {
+							font-size: 1.8rem;
+							line-height: 2.25rem;
+						}
+					}
+					@media ($breakpoint-mobile-landscape) {
+						top: 880px;
+						left: 50%;
+						width: 80%;
+						max-width: 100%;
+						h3 {
+							font-size: 2.5rem;
+							line-height: 2.75rem;
+							text-transform: uppercase;
+						}
+						p {
+							font-size: 1.5rem;
+							line-height: 2rem;
+						}
+					}
+					@media ($breakpoint-mobile-portrait) {
+						top: 575px;
+					}
+				}
+				background-image: url(#{$gamigo-cdn}/img/homepage/bg_veroline_night.jpg);
+				background-size: cover;
+				@media (max-width: 1440px) {
+					background-image: url(#{$gamigo-cdn}/img/homepage/bg-story-night-med.jpg);
+				}
+				@media ($breakpoint-mobile-landscape) {
+					height: 710px;
+					min-height: auto;
+					background-image: url(#{$gamigo-cdn}/img/homepage/background-story-night-768.jpg);
+					background-position: center;
+				}
+				@media ($breakpoint-mobile-portrait) {
+					height: 342px;
+					min-height: 342px;
+					background: url(#{$gamigo-cdn}/img/homepage/bg-story-night-300.jpg)
+						no-repeat center bottom/auto;
+				}
+			}
+
+			/* Day & Night assets Layers */
+			.front-layer {
+				/* Common */
+				@media ($breakpoint-mobile-landscape) {
+					display: none;
+				}
+				.character-day,
+				.character-night {
+					z-index: 4;
+					left: 50%;
+					position: absolute;
+					pointer-events: none;
+					transition: opacity 1s $transition-timing-function,
+						transform 1s $transition-timing-function;
+				}
+
+				/* Day */
+				.character-day {
+					max-width: 1250px;
+					max-height: 850px;
+					margin-left: -953px;
+					top: -57px;
+					transform-origin: 0% 100%;
+					@media (max-width: 1440px) {
+						margin-left: -640px;
+						top: 54px;
+					}
+					@media ($breakpoint-tablet-portrait) {
+						margin-left: -360px;
+						top: 54px;
+					}
+					img {
+						content: url(#{$gamigo-cdn}/img/homepage/story-day-characters.png);
+						@media (max-width: 1440px) {
+							content: url(#{$gamigo-cdn}/img/homepage/story-day-characters-m.png);
+						}
+					}
+				}
+
+				/* Night */
+				.character-night {
+					max-width: 1250px;
+					max-height: 850px;
+					margin-left: -92px;
+					top: -56px;
+					transform-origin: 100% 100%;
+					@media (max-width: 1440px) {
+						margin-left: -60px;
+						top: 54px;
+					}
+					@media ($breakpoint-tablet-portrait) {
+						margin-left: -360px;
+						top: 54px;
+					}
+					img {
+						content: url(#{$gamigo-cdn}/img/homepage/story-night-characters.png);
+						@media (max-width: 1440px) {
+							content: url(#{$gamigo-cdn}/img/homepage/story-night-characters-m.png);
+						}
+					}
+				}
+
+				@media ($breakpoint-mobile-landscape) {
+					max-height: 540px;
+					.character-day {
+						margin-left: -205px;
+						top: -260px;
+						transform: scale(0.5, 0.5);
+					}
+
+					.character-night {
+						margin-left: -615px;
+						top: -120px;
+						transform: scale(0.52);
+					}
+				}
+			}
+
+			/* Idle state */
+			&.idle {
+				.character-night {
+					transform: scale(0.5, 0.5);
+					opacity: 0;
+				}
+				.character-day {
+					transform: scale(0.5, 0.5);
+					opacity: 0;
+				}
+
+				@media ($breakpoint-mobile-landscape) {
+					.character-night {
+						transform: scale(0, 0);
+						opacity: 0;
+					}
+					.character-day {
+						transform: scale(0, 0);
+						opacity: 0;
+					}
+				}
+			}
+
+			/* When Day is active */
+			&.day-active {
+				//Day & Night Indicator
+				.cursor {
+					transform: rotate(-50deg);
+				}
+				.icons.day-icon {
+					opacity: 1;
+				}
+				.icons.night-icon {
+					opacity: 0;
+				}
+				.day-bg {
+					opacity: 1;
+				}
+
+				//Character & Moon
+				.character-night {
+					transform: scale(0.5, 0.5);
+					opacity: 0;
+					z-index: 1;
+				}
+
+				@media ($breakpoint-mobile-landscape) {
+					.character-night {
+						transform: scale(0, 0);
+						opacity: 0.3;
+					}
+				}
+			}
+
+			/* When Night is active */
+			&.night-active {
+				//Day & Night Indicator
+				.cursor {
+					transform: rotate(50deg);
+				}
+				.icons.day-icon {
+					opacity: 0;
+				}
+				.icons.night-icon {
+					opacity: 1;
+				}
+				.night-bg {
+					opacity: 1;
+				}
+
+				//Character & Sun
+				.character-day {
+					transform: scale(0.5, 0.5);
+					opacity: 0;
+					z-index: 1;
+				}
+
+				@media ($breakpoint-mobile-landscape) {
+					.character-day {
+						transform: scale(0, 0);
+						opacity: 0.3;
+					}
+				}
+			}
+		}
+
+		.synopsis-wrap {
+			background-color: $color-page-background;
+			position: relative;
+			z-index: 10;
+			box-shadow: 0 0 1px 0px rgba(white, 0.5);
+
+			.synopsis {
+				max-width: 790px;
+				padding: 30px 0 40px;
+				margin: 0 auto;
+
+				@media ($breakpoint-tablet-portrait) {
+					padding: 30px 20px 40px;
+				}
+				@media ($breakpoint-mobile-landscape) {
+					padding-bottom: 1px;
+				}
+
+				h2 {
+					text-transform: none;
+					padding: 0;
+					line-height: 1em;
+					&:before,
+					&:after {
+						display: none;
+					}
+				}
+
+				p {
+					line-height: 1.2em;
+				}
+			}
+		}
+	}
+
+	#features {
+		min-height: 700px;
+		margin: 150px auto 150px;
+		position: relative;
+		z-index: 10;
+
+		@media ($breakpoint-mobile-landscape) {
+			margin: 50px auto 50px;
+		}
+		@media ($breakpoint-mobile-portrait) {
+			min-height: 430px;
+			margin: 50px auto 100px;
+		}
+		.container {
+			max-width: 1200px;
+			margin: 0px auto;
+		}
+
+		.phone {
+			background: transparent url(#{$gamigo-cdn}/img/features/phone.png)
+				no-repeat center top/cover;
+			width: 825px;
+			height: 500px;
+			padding: 26px 0px 0px 16px;
+			z-index: 60;
+
+			position: relative;
+			margin: 100px 0 50px 0;
+
+			@media screen and (max-width: 1200px) {
+				margin: 100px auto 50px;
+			}
+
+			@media ($breakpoint-tablet-portrait) {
+			}
+			@media ($breakpoint-mobile-landscape) {
+				margin: -50px auto -50px;
+				transform: scale(0.6);
+				left: 50%;
+				margin-left: -412px;
+				padding-left: 37px;
+			}
+			@media ($breakpoint-mobile-portrait) {
+				margin: -100px -412px -100px;
+				transform: scale(0.45);
+			}
+		}
+
+		/*.phone::after{
+			  content: '';
+			  background: transparent url(#{$gamigo-cdn}/img/features/phone-shadow.png) no-repeat center top/cover;
+			  width: 1200px;
+			  height: 250px;
+			  position: absolute;
+			  bottom: 0px;
+			  left: 0px;
+		}*/
+
+		.slick-next {
+			@media ($breakpoint-mobile-portrait) {
+				right: 100px;
+				z-index: 10;
+				top: 580px;
+			}
+		}
+
+		.slick-next::before {
+			content: "";
+			position: absolute;
+			width: 50px;
+			height: 62px;
+			background: transparent
+				url(#{$gamigo-cdn}/img/homepage/hot-spritesheet.png) -260px -62px;
+		}
+
+		.slick-prev {
+			left: -100px;
+			@media ($breakpoint-mobile-portrait) {
+				left: 10px;
+				z-index: 10;
+				top: 580px;
+			}
+		}
+
+		.slick-prev::before {
+			content: "";
+			position: absolute;
+			width: 50px;
+			height: 62px;
+			background: transparent
+				url(#{$gamigo-cdn}/img/homepage/hot-spritesheet.png) -310px -62px;
+		}
+
+		@media screen and (min-width: 1199px) {
+			#pestipew {
+				background: transparent
+					url(#{$gamigo-cdn}/img/features/features-pestipew.png)
+					no-repeat center top/cover;
+				width: 750px;
+				height: 625px;
+
+				position: absolute;
+				top: 25px;
+				right: -50px;
+				z-index: 50;
+			}
+		}
+		.headline {
+			.headline-discover {
+				background: url(#{$gamigo-cdn}/img/homepage/headline-feature.png);
+				width: 258px;
+				height: 49px;
+				text-align: center;
+				margin: 0 auto;
+				position: relative;
+				z-index: 5;
+				@media ($breakpoint-tablet-portrait) {
+					transform: scale(0.75);
+				}
+				@media ($breakpoint-mobile-landscape) {
+					transform: scale(0.5);
+				}
+				&::before {
+					content: "";
+					background: transparent
+						url(#{$gamigo-cdn}/img/homepage/gears-left.png)
+						no-repeat center top/cover;
+					width: 91px;
+					height: 60px;
+					position: absolute;
+					left: -105px;
+					bottom: -28px;
+				}
+				&::after {
+					content: "";
+					background: transparent
+						url(#{$gamigo-cdn}/img/homepage/gears-right.png)
+						no-repeat center top/cover;
+					width: 91px;
+					height: 60px;
+					position: absolute;
+					right: -110px;
+					bottom: -28px;
+				}
+			}
+
+			.separator-line.separator-title {
+				height: 1px;
+				@media ($breakpoint-tablet-portrait) {
+				}
+			}
+
+			.separator-line:before {
+				content: "";
+				width: 950px;
+				height: 1px;
+				margin-left: -475px;
+				border-radius: 200px;
+				position: absolute;
+				top: 55px;
+				left: 50%;
+				box-shadow: 0 0 50px 30px rgba(0, 0, 0, 0.5);
+				z-index: 1;
+				background: #000;
+				overflow: hidden;
+			}
+			.separator-line:after {
+				content: "";
+				height: 2px;
+				display: block;
+				position: absolute;
+				top: 55px;
+				left: 10%;
+				right: 10%;
+				background-image: linear-gradient(
+					to right,
+					rgba(183, 183, 183, 0) 0%,
+					#b7b7b7 50%,
+					rgba(183, 183, 183, 0) 100%
+				);
+				opacity: 1;
+				z-index: 2;
+				@media ($breakpoint-mobile-landscape) {
+					top: 39px;
+				}
+			}
+		}
+
+		.feature-text {
+			max-width: 992px;
+			margin: 0px auto;
+
+			@media ($breakpoint-tablet-portrait) {
+				max-width: 80%;
+			}
+			@media ($breakpoint-mobile-portrait) {
+				max-width: 270px;
+			}
+
+			h3 {
+				font: 900 4rem/4.5rem $font-century-gothic;
+				text-transform: uppercase;
+				@media ($breakpoint-mobile-landscape) {
+					font: 900 2.5rem/2.75rem $font-century-gothic;
+				}
+				@media ($breakpoint-mobile-portrait) {
+					font: 900 2.1rem/2.5rem "century gothic", serif;
+					text-transform: none;
+				}
+			}
+			p {
+				font-family: $font-century-gothic;
+				font-weight: 400;
+				font-size: 1.8rem;
+				line-height: 2.25rem;
+				@media ($breakpoint-mobile-portrait) {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.separator-line {
+		height: 1px;
+	}
+
+	.separator-line:before {
+		content: "";
+		width: 950px;
+		height: 1px;
+		margin-left: -475px;
+		border-radius: 200px;
+		position: absolute;
+		bottom: 2px;
+		left: 50%;
+		box-shadow: 0 0 50px 30px rgba(0, 0, 0, 0.5);
+		z-index: 1;
+		background: #000;
+		overflow: hidden;
+		@media ($breakpoint-tablet-portrait) {
+			bottom: 393px;
+			display: none;
+		}
+	}
+	.separator-line:after {
+		content: "";
+		height: 2px;
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 10%;
+		right: 10%;
+		background-image: linear-gradient(
+			to right,
+			rgba(183, 183, 183, 0) 0%,
+			#b7b7b7 50%,
+			rgba(183, 183, 183, 0) 100%
+		);
+		opacity: 1;
+		z-index: 2;
+		@media ($breakpoint-tablet-portrait) {
+			bottom: 190px;
+			left: -12%;
+			right: -12%;
+			height: 1px;
+		}
+		@media ($breakpoint-mobile-landscape) {
+			bottom: 274px;
+			left: -12%;
+			right: -12%;
+			height: 1px;
+		}
+		@media ($breakpoint-mobile-portrait) {
+			bottom: 367px;
+			left: -12%;
+			right: -12%;
+			height: 1px;
+		}
+	}
+	#trailer {
+		position: relative;
+		height: 800px;
+		background-color: #a7446b;
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		margin-top: 0;
+		z-index: 10;
+		display: flex;
+		align-items: center;
+
+		@media ($breakpoint-mobile-landscape) {
+			height: 430px;
+		}
+
+		&:before {
+			background: url(#{$gamigo-cdn}/img/interface/bg_texture_top.png)
+				no-repeat center bottom;
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: -1px;
+			height: 114px;
+			z-index: 2;
+		}
+
+		&:after {
+			background: url(#{$gamigo-cdn}/img/interface/bg_texture_bottom.png)
+				no-repeat center bottom;
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 187px;
+			z-index: 2;
+		}
+
+		.text {
+			z-index: 5;
+			width: 100%;
+			height: 100%;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			@extend .gradient-texture;
+		}
+
+		h3 {
+			color: $color-text;
+			font: bold italic 3rem $font-factoria;
+			text-transform: uppercase;
+			text-shadow: 0 0 50px $color-shadow, 0 0 50px $color-shadow;
+			margin: 20px 0 0 0;
+
+			@media ($breakpoint-mobile-landscape) {
+				font-size: 2.4rem;
+				margin-top: 10px;
+			}
+		}
+
+		.play-btn {
+			display: block;
+			position: relative;
+			text-decoration: none;
+			width: 110px;
+			height: 110px;
+			top: auto;
+			left: auto;
+			margin: 0 auto;
+
+			@media ($breakpoint-mobile-landscape) {
+				width: 60px;
+				height: 60px;
+			}
+
+			&:after {
+				content: "";
+				@include icomoon($icomoon-play, 110px);
+				width: 110px;
+				height: 110px;
+				color: white;
+				text-shadow: 0 0 50px $color-shadow, 0 0 50px $color-shadow;
+
+				@media ($breakpoint-mobile-landscape) {
+					width: 60px;
+					height: 60px;
+					font-size: 60px;
+				}
+			}
+		}
+
+		.video-section {
+			.background:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background: url(#{$gamigo-cdn}/img/homepage/texture-video.png)
+					repeat left top;
+			}
+		}
+	}
+
+	#community {
+		background: url(#{$gamigo-cdn}/img/homepage/bg_community.png) no-repeat
+			center center;
+		padding: 80px 0 30px 0;
+
+		@media ($breakpoint-mobile-landscape) {
+			background-size: auto 100%;
+			background-position: center center;
+			padding-top: 40px;
+		}
+
+		.wrapper-community {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			margin: 0 -15px;
+
+			@media ($breakpoint-tablet-portrait) {
+				margin: 0 -25px;
+			}
+
+			@media ($breakpoint-mobile-landscape) {
+				margin: 0;
+			}
+
+			article {
+				height: 200px;
+				margin: 30px 15px;
+				position: relative;
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				box-shadow: 0 0 22px black;
+				width: calc(33% - 30px);
+				transition: transform 0.25s ease-in-out;
+
+				@media ($breakpoint-tablet-portrait) {
+					width: calc(50% - 30px);
+					display: none;
+					&:nth-child(1),
+					&:nth-child(2) {
+						display: block;
+					}
+				}
+
+				@media ($breakpoint-mobile-landscape) {
+					width: 100%;
+					margin: 10px 0;
+				}
+
+				&:before {
+					content: "";
+					display: block;
+					position: absolute;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					top: 50%;
+					z-index: 1;
+					background-image: linear-gradient(
+						to bottom,
+						rgba(0, 0, 0, 0) 0%,
+						rgba(0, 0, 0, 0.08) 12%,
+						rgba(0, 0, 0, 0.2) 24%,
+						rgba(0, 0, 0, 0.61) 57%,
+						rgba(0, 0, 0, 0.83) 78%,
+						rgba(0, 0, 0, 0.98) 94%,
+						rgba(0, 0, 0, 1) 100%
+					);
+				}
+
+				&:after {
+					content: "";
+					border: 1px solid rgba(white, 0.1);
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					z-index: 2;
+				}
+
+				&.youtube {
+					&:before {
+						background-image: linear-gradient(
+							to bottom,
+							rgba($color-youtube, 0) 0%,
+							rgba($color-youtube, 0.5) 50%,
+							rgba($color-youtube, 1) 100%
+						);
+					}
+
+					.channel {
+						background: url(#{$gamigo-cdn}/img/socials/corner_youtube.png)
+							no-repeat top right;
+					}
+				}
+
+				&.twitch {
+					&:before {
+						background-image: linear-gradient(
+							to bottom,
+							rgba($color-twitch, 0) 0%,
+							rgba($color-twitch, 0.5) 50%,
+							rgba($color-twitch, 1) 100%
+						);
+					}
+					.channel {
+						background: url(#{$gamigo-cdn}/img/socials/corner_twitch.png)
+							no-repeat top right;
+					}
+				}
+
+				/* Hover on article bloc */
+				@include hover() {
+					transform: translateY(-10px);
+				}
+
+				a {
+					position: absolute;
+					left: 0;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					cursor: pointer !important;
+					z-index: 99;
+				}
+
+				h3 {
+					color: #fff;
+					font-size: 1.4rem;
+					text-transform: uppercase;
+					margin-bottom: 0;
+					position: absolute;
+					bottom: 20px;
+					left: 20px;
+					right: 20px;
+					text-align: left;
+					z-index: 2;
+					@media ($breakpoint-mobile-portrait) {
+						bottom: 15px;
+						left: 15px;
+						right: 15px;
+					}
+					span {
+						margin-top: 5px;
+						display: block;
+						color: $color-primary;
+					}
+				}
+
+				.channel {
+					display: block;
+					position: absolute;
+					width: 70px;
+					height: 70px;
+					top: 0;
+					right: 0;
+				}
+			}
+		}
+	}
+
+	#latest-news {
+		background: url(#{$gamigo-cdn}/img/homepage/bg_latest-news.png)
+			no-repeat center top;
+		padding: 80px 0;
+
+		@media ($breakpoint-mobile-landscape) {
+			background-size: auto 100%;
+			background-position: center center;
+			padding-top: 40px;
+		}
+
+		.wrapper-news {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			margin: 0 -15px;
+
+			@media ($breakpoint-tablet-portrait) {
+				margin: 0 -25px;
+			}
+
+			@media ($breakpoint-mobile-landscape) {
+				margin: 0;
+			}
+
+			article {
+				height: 410px;
+				margin: 30px 15px;
+				position: relative;
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				box-shadow: 0 0 22px black;
+				width: calc(33% - 30px);
+				transition: transform 0.25s ease-in-out;
+
+				@media ($breakpoint-tablet-portrait) {
+					width: calc(50% - 30px);
+					&:last-child {
+						display: none;
+					}
+				}
+
+				@media ($breakpoint-mobile-landscape) {
+					width: 100%;
+					margin: 10px 0;
+				}
+
+				&:before {
+					content: "";
+					height: 250px;
+					display: block;
+					position: absolute;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					z-index: 1;
+					background-image: linear-gradient(
+						to bottom,
+						rgba(0, 0, 0, 0) 0%,
+						rgba(0, 0, 0, 0.08) 12%,
+						rgba(0, 0, 0, 0.2) 24%,
+						rgba(0, 0, 0, 0.61) 57%,
+						rgba(0, 0, 0, 0.83) 78%,
+						rgba(0, 0, 0, 0.98) 94%,
+						rgba(0, 0, 0, 1) 100%
+					);
+					transition: opacity 0.5s ease;
+				}
+				&:after {
+					content: "";
+					border: 1px solid rgba(white, 0.1);
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					z-index: 2;
+				}
+
+				/* Hover on article bloc */
+				@include hover() {
+					transform: translateY(-10px);
+					&:before {
+						opacity: 0;
+					}
+					a:before {
+						opacity: 1;
+					}
+				}
+
+				a {
+					position: absolute;
+					left: 0;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					cursor: pointer !important;
+					z-index: 99;
+					&:before {
+						content: "";
+						height: 250px;
+						display: block;
+						position: absolute;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						z-index: 1;
+						opacity: 0;
+						background-image: linear-gradient(
+							to bottom,
+							rgba(6, 57, 96, 0) 0%,
+							rgba(6, 57, 96, 1) 100%
+						);
+						transition: opacity 0.5s ease;
+					}
+				}
+
+				h3 {
+					color: #fff;
+					font-size: 1.4rem;
+					text-transform: uppercase;
+					position: absolute;
+					margin-bottom: 0;
+					bottom: 20px;
+					left: 20px;
+					right: 20px;
+					text-align: left;
+					z-index: 2;
+					span {
+						margin-top: 5px;
+						display: block;
+						color: $color-primary;
+					}
+				}
+
+				.date {
+					width: 73px;
+					height: 145px;
+					padding: 40px 0 0;
+					position: absolute;
+					left: 0;
+					top: 0;
+					margin: 0;
+					padding: 0;
+					font-size: 1.6rem;
+					font-family: $font-factoria;
+					text-transform: uppercase;
+					font-weight: bold;
+					font-style: italic;
+					display: flex;
+					align-items: center;
+					flex-direction: column;
+					justify-content: center;
+
+					&:before {
+						content: "";
+						border-style: solid;
+						border-width: 72px 0 72px 73px;
+						border-color: transparent transparent transparent
+							#063a63;
+						position: absolute;
+						left: 0;
+						top: 0;
+						z-index: 1;
+					}
+
+					span {
+						position: relative;
+						z-index: 2;
+						left: -12px;
+						&.month {
+							font-size: 1.6rem;
+						}
+						&.day {
+							font-size: 2.7rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+section#confirmation {
+	background: url(https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/confirmation/background-email.jpg)
+		no-repeat center top/cover;
+
+	.container {
+		max-width: 1024px;
+		position: relative;
+		margin: 0px auto;
+		height: 866px;
+		@media ($breakpoint-mobile-portrait) {
+			height: 750px;
+		}
+
+		.message {
+			width: 540px;
+			position: absolute;
+			top: 250px;
+			right: -30px;
+			@media ($breakpoint-desktop) {
+				top: 190px;
+				right: 50%;
+				margin-right: -270px;
+			}
+			@media ($breakpoint-mobile-landscape) {
+				width: 480px;
+				top: 150px;
+				right: 50%;
+				margin-right: -240px;
+			}
+			@media ($breakpoint-mobile-portrait) {
+				width: 100%;
+				top: 110px;
+				right: auto;
+				margin: 0px auto;
+			}
+			h2 {
+				font: 900 92px/100px $font-century-gothic;
+				text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+				margin-bottom: 0.45em;
+				text-transform: uppercase;
+				@media ($breakpoint-mobile-landscape) {
+					font: 900 50px/100px $font-century-gothic;
+				}
+			}
+			p {
+				font: 700 25px/30px $font-century-gothic;
+				text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+				@media ($breakpoint-mobile-landscape) {
+					font: 700 20px/24px $font-century-gothic;
+				}
+			}
+		}
+
+		.robot {
+			background: url(https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/confirmation/heroes-of-twilight-robot.png)
+				no-repeat center top/cover;
+			width: 700px;
+			height: 620px;
+			bottom: 10px;
+			left: -170px;
+			position: absolute;
+
+			@media ($breakpoint-desktop) {
+				transform: scale(0.75);
+				bottom: -70px;
+			}
+			@media ($breakpoint-mobile-landscape) {
+				transform: scale(0.6);
+				bottom: -120px;
+				left: 50%;
+				margin-left: -350px;
+			}
+		}
+	}
+}
+
+.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted #252835;
+	margin-left: 5px;
+	.tooltiptext {
+		visibility: hidden;
+		width: 320px;
+		background-color: rgba(21, 39, 53, 0.9);
+		border: 1px solid rgba(255, 255, 255, 0.8);
+		color: #fff;
+		font-size: 11px;
+		text-align: center;
+		padding: 12px;
+		border-radius: 5px;
+		position: absolute;
+		z-index: 1;
+	}
+}
+
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+}
+
+body.home #pre-register .reward-container .reward-status {
+	display: flex;
+	justify-content: center;
+}
+
+html[lang="fr-FR"] {
+
+	body.home header .images .cool-text-header h4 {
+		background: url(#{$gamigo-cdn}/img/homepage/comingsoon_fr.png);
+		width: 245px;
+	}
+	body.home header .images .cool-text-header .on .appstore {
+		background: url(#{$gamigo-cdn}/img/homepage/pre-order-google_fr.png);
+		background-size: 208px 62px;
+		width: 208px;
+		height: 62px;
+		a {
+			display: block;
+			height:100%;
+			z-index: 30;		
+		}
+	}
+	body.home header .images .cool-text-header .on .playstore {
+		background: url(#{$gamigo-cdn}/img/homepage/appstore_download_fr.png);
+		background-size: 197px 62px;
+		width: 197px;
+	}
+	body.home #pre-register .register-container #pre-register-btn-form {
+		background-image: url(#{$gamigo-cdn}/img/homepage/prereg_button_fr.png);
+	}
+	body.home #pre-register .app-section .app-btn-container #google-btn {
+		background-image: url(#{$gamigo-cdn}/img/homepage/pre-order-google_fr.png);
+	}
+	body.home #pre-register .app-section .app-btn-container #app-store-btn {
+		background-image: url(#{$gamigo-cdn}/img/homepage/appstore_btn_fr.png);
+	}
+	body.home #pre-register .reward-container .reward-status-img {
+		content: url(#{$gamigo-cdn}/img/homepage/tier2fr.png);
+		@media (max-width: 1440px) {
+			content: url(#{$gamigo-cdn}/img/homepage/tier2fr.png);
+			width: 860px;
+		}
+		@media ($breakpoint-mobile-portrait) {
+			content: url(#{$gamigo-cdn}/img/homepage/tier2fr.png);
+			width: 360px;
+		}
+	}
+	body.home #veroline #day-night .dn-bg .headline .headline-discover {
+		background: url(#{$gamigo-cdn}/img/homepage/prereg_discover_fr.png);
+		width: 658px;
+		@media($breakpoint-mobile-portrait) {
+			margin-left: -330px;
+			transform: scale(0.4);
+		}
+	}
+	body.home #features .headline .headline-discover {
+		background: url(#{$gamigo-cdn}/img/homepage/prereg_features_fr.png);
+		width: 484px;
+		@media($breakpoint-mobile-portrait) {
+			left: 50%;
+			margin-left: -244px;
+		}
+	}
+	body.page-template-page_heroes #heroes-section .headline-heroes {
+		background: url(#{$gamigo-cdn}/img/homepage/prereg_heroes_title_fr.png);
+		width: 360px;
+
+	}
+}
+
+
+html[lang="es-ES"] {
+	body.home header .images .cool-text-header h4 {
+		background: url(#{$gamigo-cdn}/img/homepage/comingsoon_es.png);
+		width: 253px;
+	}
+	body.home header .images .cool-text-header .on .appstore {
+		background: url(#{$gamigo-cdn}/img/homepage/pre-order-google_es.png);
+		background-size: 208px 62px;
+		width: 208px;
+		height: 62px;
+		a {
+			display: block;
+			height:100%;
+			z-index: 30;	
+		}
+	}
+	body.home header .images .cool-text-header .on .playstore {
+		background: url(#{$gamigo-cdn}/img/homepage/appstore_download_es.png);
+		background-size: 197px 62px;
+		width: 197px;
+	}
+	body.home #pre-register .register-container #pre-register-btn-form {
+		background-image: url(#{$gamigo-cdn}/img/homepage/prereg_button_es.png);
+	}
+	body.home #pre-register .register .email-input {
+		font-size: 1.55rem;
+	}
+	body.home #pre-register .app-section .app-btn-container #google-btn {
+		background-image: url(#{$gamigo-cdn}/img/homepage/pre-order-google_es.png);
+	}
+	body.home #pre-register .app-section .app-btn-container #app-store-btn {
+		background-image: url(#{$gamigo-cdn}/img/homepage/appstore_btn_es.png);
+	}
+	body.home #pre-register .reward-container .reward-status-img {
+		content: url(#{$gamigo-cdn}/img/homepage/tier2es.png);
+		@media (max-width: 1440px) {
+			content: url(#{$gamigo-cdn}/img/homepage/tier2es.png);
+			width: 860px;
+		}
+		@media ($breakpoint-mobile-portrait) {
+			content: url(#{$gamigo-cdn}/img/homepage/tier2es.png);
+			width: 360px;
+		}
+	}
+	body.home #veroline #day-night .dn-bg .headline .headline-discover {
+		background: url(#{$gamigo-cdn}/img/homepage/prereg_discover_es.png);
+		width: 625px;
+		@media($breakpoint-mobile-portrait) {
+			margin-left: -312px;
+			transform: scale(0.4);
+		}
+	}
+	body.home #features .headline .headline-discover {
+		background: url(#{$gamigo-cdn}/img/homepage/prereg_features_es.png);
+		width: 312px;
+	}
+	body.page-template-page_heroes #heroes-section .headline-heroes {
+		background: url(#{$gamigo-cdn}/img/homepage/prereg_heroes_title_es.png);
+		width: 360px;
+	}
+
+}
+
+html[lang="de-DE"] {
+	body.home header .images .cool-text-header h4 {
+		background: url(#{$gamigo-cdn}/img/homepage/comingsoon_de.png);
+		width: 363px;
+	}
+	body.home header .images .cool-text-header .on .appstore {
+		background: url(#{$gamigo-cdn}/img/homepage/pre-order-google_de.png);
+		background-size: 208px 62px;
+		width: 208px;
+		height: 62px;
+		a {
+			display: block;
+			height:100%;
+			z-index: 30;	
+		}
+	}
+	body.home header .images .cool-text-header .on .playstore {
+		background: url(#{$gamigo-cdn}/img/homepage/appstore_download_de.png);
+		background-size: 197px 62px;
+		width: 197px;
+		height: 62px;
+	}
+	body.home #pre-register .register-container #pre-register-btn-form {
+		background-image: url(#{$gamigo-cdn}/img/homepage/prereg_button_de.png);
+	}
+	body.home #pre-register .app-section .app-btn-container #google-btn {
+		background-image: url(#{$gamigo-cdn}/img/homepage/pre-order-google_de.png);
+	}
+	body.home #pre-register .app-section .app-btn-container #app-store-btn {
+		background-image: url(#{$gamigo-cdn}/img/homepage/appstore_btn_de.png);
+	}
+	body.home #pre-register .reward-container .reward-status-img {
+		content: url(#{$gamigo-cdn}/img/homepage/tier2de.png);
+		@media (max-width: 1440px) {
+			content: url(#{$gamigo-cdn}/img/homepage/tier2de.png);
+			width: 860px;
+		}
+		@media ($breakpoint-mobile-portrait) {
+			content: url(#{$gamigo-cdn}/img/homepage/tier2de.png);
+			width: 360px;
+		}
+	}
+	body.home #veroline #day-night .dn-bg .headline .headline-discover {
+		background: url(#{$gamigo-cdn}/img/homepage/prereg_discover_de.png);
+		width: 527px;
+	}
+	body.home #features .headline .headline-discover {
+		background: url(#{$gamigo-cdn}/img/homepage/prereg_features_de.png);
+		width: 258px;
+	}
+	body.page-template-page_heroes #heroes-section .headline-heroes {
+		background: url(#{$gamigo-cdn}/img/homepage/prereg_heroes_title_de.png);
+		width: 360px;
+	}
+}
+
+html[lang="en-US"] {
+	body.home header .images .cool-text-header h4 {
+		background: url(#{$gamigo-cdn}/img/homepage/comingsoon_en.png) no-repeat;
+		width: 343px;
+	}
+	body.home #pre-register .app-section .app-btn-container #google-btn {
+		background-image: url(#{$gamigo-cdn}/img/homepage/pre-order-google_en.png);
+	}
+	body.home #pre-register .app-section .app-btn-container #app-store-btn {
+		background-image: url(#{$gamigo-cdn}/img/homepage/appstore_btn_en.png);
+	}
+	body.home header .images .cool-text-header .on .appstore {
+		background: url(#{$gamigo-cdn}/img/homepage/pre-order-google_EN.png);
+		background-size: 208px 62px;
+		width: 208px;
+		height: 62px;
+		a {
+			display: block;
+			height:100%;
+			z-index: 30;
+		}
+	}
+	body.home #pre-register .reward-container .reward-status-img {
+		content: url(#{$gamigo-cdn}/img/homepage/preregister_desktop_tier_state2.png);
+		@media (max-width: 1440px) {
+			content: url(#{$gamigo-cdn}/img/homepage/prereg_tablet_tier_state2.png);
+		}
+		@media ($breakpoint-mobile-portrait) {
+			content: url(#{$gamigo-cdn}/img/homepage/prereg_mobile_tier_state2.png);
+		}
+	}
+	body.home #veroline #day-night .dn-bg .headline .headline-discover {
+		background: url(#{$gamigo-cdn}/img/homepage/headline-discover.png);
+	}
+}

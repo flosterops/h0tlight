@@ -1,0 +1,180 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Base */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* !-- Variables -- */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* -- Built-In Fonts -- */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+$font-arial: Arial, Helvetica, sans-serif;
+$font-courier: Courier, "Courier New", Monaco, monospace;
+$font-georgia: Georgia, Times, "Times New Roman", serif;
+$font-helvetica: Helvetica, Arial, sans-serif;
+$font-menlo: "Menlo Regular", Monaco, Courier, "Courier New", monospace;
+$font-times: Times, "Times New Roman", Georgia, serif;
+$font-trebuchet: "Trebuchet MS", Verdana, "Lucida Grande", Lucida,
+	"Lucida Sans Unicode", sans-serif;
+$font-verdana: Verdana, "Lucida Grande", Lucida, "Lucida Sans Unicode",
+	sans-serif;
+$font-century-gothic: "century-gothic", sans-serif;
+
+/* -- Imported Fonts -- */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+$font-icomoon: icomoon, sans-serif;
+/*
+		Proxima Nova
+			Thin       100
+			Light      300
+			Regular    400
+			Medium     500
+			Semibold   600
+			Bold       700
+			Extrabold  800
+			Black      900
+	*/
+$font-proxima: "proxima-nova", sans-serif;
+
+/*
+		Factoria
+			Thin    200
+			Light   300
+			Book    400
+			Medium  500
+			Demi    600
+			Bold    700
+			Black   800
+			Ultra   900
+	*/
+$font-factoria: "factoria", sans-serif;
+
+/* -- Transitions -- */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+$transition-duration: 0.25s;
+$transition-timing-function: ease-in-out;
+
+/* -- Media queries breakpoints -- */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+$breakpoint-desktop: "max-width: 1200px";
+$breakpoint-tablet-portrait: "max-width: 1023px";
+$breakpoint-tablet-portrait-min: "min-width: 768px";
+$breakpoint-mobile-landscape: "max-width: 767px";
+$breakpoint-mobile-portrait: "max-width: 479px";
+
+/* -- Page  -- */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+$page-width: 1170px;
+$page-width-padding: 30px;
+$page-width-padding-mobile: 15px;
+$page-width-min: 994px;
+
+/* -- Colors -- */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+$color-page-background: #0e1721;
+$color-primary: #fbd443;
+$color-text: white;
+$color-secondary-text: #959595;
+$color-title: white;
+$color-shadow: #0a4886;
+$color-shadow-light: #0c59a7;
+$color-secondary-nav: #5a6067;
+$color-border: #4f6b85;
+$color-bkom: #94d60a;
+$color-dark-blue: #152735;
+$color-light-blue: #becbd1;
+$color-dark-grey: #596269;
+$color-dark-red: #8d3713;
+
+$color-facebook: #3b5998;
+$color-google: #dd4b39;
+$color-twitch: #632e9f;
+$color-twitter: #45b0e3;
+$color-youtube: #d32323;
+$color-instagram: #e1306c;
+
+/* -- Sizes -- */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+$size-text: 1.8rem;
+$size-h1: 2rem;
+$size-h2: 1.9rem;
+$size-h3: 1.8rem;
+$size-h4: 1.7rem;
+$size-h5: 1.6rem;
+$size-h6: 1.5rem;
+
+/* -- Icomoon Font Icons -- */
+$icomoon-close: "\e909";
+$icomoon-arrow: "\e900";
+$icomoon-play: "\e901";
+$icomoon-instagram: "\e90b";
+$icomoon-pinterest: "\e90a";
+$icomoon-facebook: "\e902";
+$icomoon-google: "\e903";
+$icomoon-twitch: "\e904";
+$icomoon-twitter: "\e905";
+$icomoon-youtube: "\e906";
+$icomoon-share: "\e907";
+
+/* -- Icomoon Font Icons -- */
+$gamigo-cdn: "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets";
+
+/* !-- Mixins -- */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* -- Adds a clearfix for the current selector -- */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@mixin clearfix() {
+	&:after {
+		content: "";
+		height: 0;
+		display: block;
+		clear: both;
+		overflow: hidden;
+		visibility: hidden;
+	}
+}
+
+/* -- Adds an hover/focus state for the current selector -- */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@mixin hover() {
+	html:not(.mobile) &:hover,
+	html.mobile &.touched {
+		@content;
+	}
+}
+
+/* -- Outputs a basic Icomoon rule -- */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@mixin icomoon($_content, $_font-size) {
+	content: $_content;
+	font-style: normal;
+	font-weight: normal;
+	font-size: $_font-size;
+	line-height: 1em;
+	font-family: $font-icomoon;
+}
+
+/* -- Vertical align center -- */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@mixin v-align($position) {
+	position: $position;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/* -- Horizontal align center -- */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@mixin h-align($position) {
+	position: $position;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+/* -- Vertical and Horizontal align center -- */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@mixin vh-align($position) {
+	position: $position;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}

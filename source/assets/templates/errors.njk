@@ -1,0 +1,20 @@
+{% import "./macros.njk" as macros %}
+
+
+{% set bodyClass = "error404" %}
+
+
+{% block master__content %}
+	{% set errors__pageHeader_characters = [
+		"https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/headers/charac_404.png"
+	] %}
+	{% set errors__pageHeader_html %}
+		<p>{{ errors__pageHeader_html }}</p>
+		<p class="actions">
+			<a class="button alt" href="{{ langContent.header.nav.homepage.url }}">{{ langContent.goHome }}</a>
+		</p>
+	{% endset %}
+	{{ macros.outputPageHeader(errors__pageHeader_title, errors__pageHeader_html, errors__pageHeader_characters, langContent) }}
+{% endblock %}
+
+{% extends "./master.njk" %}

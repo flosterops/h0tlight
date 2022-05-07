@@ -1,0 +1,45 @@
+version: "3.1"
+services:
+
+    proxy:
+        image: nginx:alpine
+        ports:
+            - 80:80
+            - 443:443
+        restart: unless-stopped
+        volumes:
+            - /var/www/certbot/certs:/etc/ssl
+            - /var/www/nginx/nginx.conf:/etc/nginx/nginx.conf
+            - /var/www/nginx/.htpasswd:/etc/nginx/.htpasswd
+
+    certbot:
+        depends_on:
+            - proxy
+        image: certbot/certbot
+        command: renew
+        volumes:
+            - /var/www/certbot/certs:/etc/letsencrypt
+            - /var/www/certbot/libs:/var/lib/letsencrypt
+            - /var/www/html:/etc/webroots
+
+    php-default:
+        depends_on:
+            - proxy
+        image: ulsmith/alpine-apache-php7
+        cap_add:
+            - SYS_TIME
+            - SYS_NICE
+        volumes:
+            - /var/www/html/llot-prod:/app/public:rw
+        restart: unless-stopped
+            
+    php-qa:
+        depends_on:
+            - proxy
+        image: ulsmith/alpine-apache-php7
+        cap_add:
+            - SYS_TIME
+            - SYS_NICE
+        volumes:
+            - /var/www/html/llot-qa:/app/public:rw
+        restart: unless-stopped

@@ -1,0 +1,64 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Content */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+keyframes rotating-cw {
+	from 	{ transform: rotate(0deg); }
+	to 		{ transform: rotate(360deg); }
+}
+
+keyframes rotating-acw {
+	from 	{ transform: rotate(360deg); }
+	to 		{ transform: rotate(0deg); }
+}
+
+keyframes rotating-cw {
+	from 	{ transform: rotate(0deg); }
+	to 		{ transform: rotate(360deg); }
+}
+
+keyframes bounce {
+	0% 		{ transform: translateY(-100%); opacity: 0; }
+	50% 	{ transform: translateY(20%); opacity: .5; }
+	100% 	{ transform: translateY(0%); opacity: 1; }
+}
+
+keyframes bounce-talisman {
+	0% 		{ transform: translateY(-100%); opacity: 0; }
+	50% 	{ transform: translateY(10%); opacity: .5; }
+	100% 	{ transform: translateY(0%); opacity: 1; }
+}
+
+keyframes fade-in {
+	0% 		{ opacity: 0; }
+	100% 	{ opacity: 1; }
+}
+
+keyframes glow-fx {
+	0% 		{ opacity: 1; }
+	50% 	{ opacity: .5; }
+	100% 	{ opacity: 1; }
+}
+
+keyframes TalismanLights1 {
+	  0% { transform: scale(1.00) rotate( 0deg) translate( 0px,  0px); }
+	100% { transform: scale(1.05) rotate(-5deg) translate(-5px, -3px); }
+}
+
+keyframesTalismanLights2 {
+	  0% { transform: scale(1.00) rotate(0deg) translate( 0px,  0px); }
+	100% { transform: scale(0.90) rotate(9deg) translate( 3px,  6px); }
+}
+
+keyframes dn-anim {
+	  0% { transform: scale(1); }
+	 50% { transform: scale(1.02); }
+	100% { transform: scale(1); }
+}
+
+keyframes dn-anim-mobile {
+	  0% { transform: scale(.5); }
+	 50% { transform: scale(.51); }
+	100% { transform: scale(.5); }
+}

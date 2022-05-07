@@ -1,0 +1,50 @@
+
+# Error Documents
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	ErrorDocument 401 /errors/401.html
+	ErrorDocument 403 /errors/403.html
+	ErrorDocument 404 /errors/404.html
+	ErrorDocument 500 /errors/500.html
+	ErrorDocument 503 /errors/503.html
+
+
+# Options
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Options +Multiviews -Indexes
+
+
+# Mime Types
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	# Audio
+		AddType audio/aac .aac
+		AddType audio/mp4 .mp4 .m4a
+		AddType audio/mpeg .mp1 .mp2 .mp3 .mpg .mpeg
+		AddType audio/webm .webm
+
+	# Fonts
+		AddType application/x-font-woff .woff
+		AddType font/otf .otf
+		AddType font/ttf .ttf
+
+	# Video
+		AddType video/mp4 .mp4 .m4v
+		AddType video/webm .webm
+
+
+# Forces IE to use the latest rendering engine
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	<FilesMatch "\.(htm|html|php)$">
+		<IfModule mod_headers.c>
+			BrowserMatch MSIE ie
+			Header set X-UA-Compatible "IE=Edge,chrome=1" env=ie
+		</IfModule>
+	</FilesMatch>
+
+
+
+# Tailing slash management
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R]

@@ -1,0 +1,125 @@
+{% import "./macros.njk" as macros %}
+
+
+{% set pageTitle = app.languages[lang].news[newsArticle__id].title %}
+
+
+{% set bodyClass = "post-template-default single single-post postid-1942 single-format-standard" %}
+{% set activeMenu = "menu-item-news" %}
+
+
+{% block master__content %}
+	<header class="ark-parallax-item">
+		<div class="header-image">
+			<img
+				src="{{ newsArticle__headerImage }}"
+				alt=""
+			/>
+		</div>
+	</header>
+
+	<div id="content">
+		<div class="page-width">
+			<div class="wrapper-content">
+				<div class="main-content">
+					<a href="{{ langContent.header.nav.news.url }}" class="back">
+						{{ langContent.seeAllNews }}
+					</a>
+					
+					<h1>
+						{{ langContent.news[newsArticle__id].title }}
+					</h1>
+
+					<p class="date">
+						{% if langContent.language === "fr"  %}
+							{{ langContent.news[newsArticle__id].date.day }}
+							{{ langContent.news[newsArticle__id].date.month.full }}
+						{% else %}
+							{{ langContent.news[newsArticle__id].date.month.full }}
+							{{ langContent.news[newsArticle__id].date.day }},
+						{% endif %}
+						{{ langContent.news[newsArticle__id].date.year }}
+					</p>
+					<article>
+						{{ newsArticle__text }}
+					</article>
+
+					<span class="final"></span>
+
+					<div class="share">
+						<button class="share-toggle-button share">
+							<span class="share-icon"></span>
+						</button>
+						<ul class="share-items">
+							<li class="share-item facebook">
+								<span
+									class="share-button"
+									onclick="ark.track('news','share','{{ langContent.news[newsArticle__id].title }}-');"
+									data-share-url="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flittlelordsoftwilight.com{{ langContent.news[newsArticle__id].url | urlencode }}"
+								>
+									<span class="share-icon"></span>
+								</span>
+							</li>
+							<li class="share-item twitter">
+								<span
+									class="share-button"
+									onclick="ark.track('news','share','{{ langContent.news[newsArticle__id].title }}-');"
+									data-share-url="https://twitter.com/home?status=https%3A%2F%2Flittlelordsoftwilight.com{{ langContent.news[newsArticle__id].url | urlencode }}"
+								>
+									<span class="share-icon"></span>
+								</span>
+							</li>
+							<li class="share-item google-plus">
+								<span
+									class="share-button"
+									onclick="ark.track('news','share','{{ langContent.news[newsArticle__id].title }}-');"
+									data-share-url="https://plus.google.com/share?url=https%3A%2F%2Flittlelordsoftwilight.com{{ langContent.news[newsArticle__id].url | urlencode }}"
+								>
+									<span class="share-icon"></span>
+								</span>
+							</li>
+							<li class="share-item pinterest">
+								<span
+									class="share-button"
+									onclick="ark.track('news','share','{{ langContent.news[newsArticle__id].title }}-');"
+									data-share-url="https://pinterest.com/pin/create/button/?url=&amp;media={{ langContent.news[newsArticle__id].title | urlencode }}"
+								>
+									<span class="share-icon"></span>
+								</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+
+				<aside>
+					<ul>
+						{% for i in range(newsArticle__id + 1, newsArticle__id + 4)  %}
+							{% if langContent.news[i] %}
+								<li>
+									<a
+										href="{{ langContent.news[i].url }}"
+									>
+										{{ langContent.news[i].title }}
+									</a>
+									<p class="post-date">
+										{% if langContent.language === "fr"  %}
+											{{ langContent.news[i].date.day }}
+											{{ langContent.news[i].date.month.full }}
+										{% else %}
+											{{ langContent.news[i].date.month.full }}
+											{{ langContent.news[i].date.day }},
+										{% endif %}
+										{{ langContent.news[i].date.year }}
+									</p>
+								</li>
+							{% endif %}
+						{% endfor %}
+					</ul>
+				</aside>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% extends "./master.njk" %}

@@ -1,0 +1,83 @@
+variables:
+  SITE_NAME: "Little Lords of Twilight"
+  HOST_USER: "gitlab"
+  HOST_NAME: "35.160.44.33"
+  DEV_HOST_PATH: "/var/www/html/llot-qa"
+  PROD_HOST_PATH: "/var/www/html/llot-prod"
+  
+stages:
+  - infra
+  - build
+  - deploy
+
+infra:
+  image: kroniak/ssh-client
+  stage: infra
+  tags:
+    - docker
+#  only:
+#    changes:
+#      - infra/**
+  before_script:
+    - mkdir -p -m 700 ~/.ssh
+    - echo "$SSH_PRIVATE_KEY" > ~/.ssh/privkey
+    - chmod 400 ~/.ssh/privkey
+  script:
+    - cd infra
+    - scp -i ~/.ssh/privkey -o StrictHostKeyChecking=no docker-compose.yml $HOST_USER@$HOST_NAME:~/docker-compose.yml
+    - scp -i ~/.ssh/privkey -o StrictHostKeyChecking=no nginx/nginx.conf $HOST_USER@$HOST_NAME:/var/www/nginx/nginx.conf
+    - scp -i ~/.ssh/privkey -o StrictHostKeyChecking=no nginx/.htpasswd $HOST_USER@$HOST_NAME:/var/www/nginx/.htpasswd
+    - ssh -i ~/.ssh/privkey -o StrictHostKeyChecking=no $HOST_USER@$HOST_NAME "docker-compose stop"
+    - ssh -i ~/.ssh/privkey -o StrictHostKeyChecking=no $HOST_USER@$HOST_NAME "docker-compose up -d --build"
+
+build:
+  image: node:alpine
+  stage: build
+  tags:
+    - docker
+  before_script:
+    - npm install -g gulp-cli
+  script:
+    - npm install
+    - gulp build
+  artifacts:
+    paths:
+      - build/
+    expire_in: 1 day
+
+deploy-qa:
+  image: eeacms/rsync
+  stage: deploy
+  tags:
+    - docker
+  dependencies:
+    - build
+  before_script:
+    - mkdir -p -m 700 ~/.ssh
+    - echo "$SSH_PRIVATE_KEY" > ~/.ssh/privkey
+    - chmod 400 ~/.ssh/privkey
+  script:
+    - echo "Synching to $HOST_NAME:$HOST_PATH"
+    - ssh -i ~/.ssh/privkey -o StrictHostKeyChecking=no $HOST_USER@$HOST_NAME "sudo chmod 777 $DEV_HOST_PATH"
+    - cd build
+    - rsync -rve "ssh -i  ~/.ssh/privkey -o StrictHostKeyChecking=no" -O --delete . $HOST_USER@$HOST_NAME:$DEV_HOST_PATH
+    
+deploy-prod:
+  image: eeacms/rsync
+  stage: deploy
+  tags:
+    - docker
+  dependencies:
+    - build
+  only:
+    - tags
+  before_script:
+    - mkdir -p -m 700 ~/.ssh
+    - echo "$SSH_PRIVATE_KEY" > ~/.ssh/privkey
+    - chmod 400 ~/.ssh/privkey
+  script:
+    - echo "Synching to $HOST_NAME:$HOST_PATH"
+    - ssh -i ~/.ssh/privkey -o StrictHostKeyChecking=no $HOST_USER@$HOST_NAME "sudo chmod 777 $PROD_HOST_PATH"
+    - cd build
+    - rsync -rve "ssh -i  ~/.ssh/privkey -o StrictHostKeyChecking=no" -O --delete . $HOST_USER@$HOST_NAME:$PROD_HOST_PATH
+    - ssh -i ~/.ssh/privkey -o StrictHostKeyChecking=no $HOST_USER@$HOST_NAME "cd $PROD_HOST_PATH; sudo rm -rf .git"

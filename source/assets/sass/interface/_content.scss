@@ -1,0 +1,640 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Content */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+#content {
+	margin-top: -50px;
+	position: relative;
+	z-index: 10;
+	@media ($breakpoint-tablet-portrait) {
+		margin-top: 0;
+	}
+
+	body.single & {
+		margin-top: -150px;
+	}
+
+	.wrapper-content {
+		margin: 0 -15px;
+		display: flex;
+
+		@media ($breakpoint-tablet-portrait) {
+			flex-direction: column;
+		}
+	}
+
+	.main-content {
+		width: calc(100% - 380px);
+		padding: 0 15px;
+
+		@media ($breakpoint-tablet-portrait) {
+			width: 100%;
+		}
+	}
+
+	aside {
+		width: 380px;
+		padding: 0 15px;
+
+		@media ($breakpoint-tablet-portrait) {
+			width: 100%;
+			display: flex;
+		}
+		@media ($breakpoint-mobile-portrait) {
+			flex-direction: column;
+		}
+	}
+
+	.actions {
+		margin: 0;
+		clear: both;
+	}
+}
+
+/*  Styles pour pages cahcées (Privacy Policy, Terms of Service, Fair Play) */
+body.page-template-default #content {
+	text-align: left;
+	padding-top: 120px;
+	margin-top: 0;
+	@media ($breakpoint-tablet-portrait) {
+		padding-top: 80px;
+	}
+}
+
+section {
+	max-width: 1920px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.button,
+submit-btn {
+	display: inline-block;
+	background-color: $color-page-background;
+	color: $color-primary;
+	font-family: $font-factoria;
+	font-size: 1.6rem;
+	font-weight: 700;
+	font-style: italic;
+	text-decoration: none;
+	text-transform: uppercase;
+	cursor: pointer;
+	border: 2px solid rgba(white, 0.25);
+	margin: 25px 0 0 0;
+	padding: 20px 40px 15px;
+	position: relative;
+	z-index: 1;
+	text-shadow: 0 0 0px $color-page-background;
+	transition: text-shadow 0.25s ease;
+
+	@media ($breakpoint-mobile-portrait) {
+		padding: 20px 30px 15px;
+	}
+
+	&.full {
+		width: 100%;
+	}
+
+	&.alt {
+		&:after {
+			@include icomoon($icomoon-arrow, 15px);
+			margin-left: 15px;
+			position: relative;
+		}
+	}
+
+	&:hover {
+		text-shadow: 0 0 50px $color-primary;
+	}
+}
+
+.play {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -25px 0 0 -25px;
+	width: 50px;
+	height: 50px;
+	&:after {
+		content: "";
+		@include icomoon($icomoon-play, 50px);
+		color: white;
+		text-shadow: 0 0 15px $color-page-background;
+	}
+}
+
+.video-section,
+.video {
+	.background {
+		position: absolute;
+		top: 40px;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		overflow: hidden;
+		z-index: 1;
+		img,
+		video {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			min-width: 100%;
+			min-height: 100%;
+			transform: translate(-50%, -50%);
+			z-index: -1;
+			pointer-events: none;
+		}
+		&.tall {
+			img,
+			video {
+				width: auto;
+				height: 100%;
+			}
+		}
+
+		&:not([data-image-source]) {
+			&:before {
+				display: none;
+			}
+			background-color: $color-page-background;
+		}
+	}
+}
+
+.video {
+	@media ($breakpoint-desktop) {
+		display: none;
+	}
+}
+
+.gradient-texture {
+	&:before,
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 190px;
+		z-index: 25;
+		@media ($breakpoint-tablet-portrait) {
+			display: none;
+		}
+	}
+	&:before {
+		background-image: linear-gradient(
+			to right,
+			rgba($color-page-background, 1) 0%,
+			rgba($color-page-background, 0) 100%
+		);
+		left: 0;
+	}
+	&:after {
+		background-image: linear-gradient(
+			to right,
+			rgba($color-page-background, 0) 0%,
+			rgba($color-page-background, 1) 100%
+		);
+		right: 0;
+	}
+}
+
+//*--------- Sliding Modal ------------*//
+.sliding-modal-item {
+	width: 100%;
+	height: 600px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 999;
+	transform: translate(0, -685px);
+	transition: transform 1s $transition-timing-function;
+
+	html[lang="fr-CA"] & {
+		display: none !important;
+	}
+
+	body.home.sliding-modal & {
+		transform: translate(0, 0);
+	}
+
+	//Close button
+	.close {
+		width: 119px;
+		height: 119px;
+		position: absolute;
+		border: 0;
+		cursor: pointer;
+		background: url(#{$gamigo-cdn}/img/sliding-modal/btn_close-sliding-modal.png)
+			50% 50% no-repeat;
+		right: 70px;
+		bottom: 41px;
+
+		span {
+			width: 1px;
+			height: 1px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			overflow: hidden;
+		}
+
+		@media ($breakpoint-desktop) {
+			right: 30px;
+			bottom: 35px;
+		}
+
+		@media ($breakpoint-mobile-landscape) {
+			width: 81px;
+			height: 81px;
+			background: url(#{$gamigo-cdn}/img/sliding-modal/btn_close-sliding-modal_mob.png)
+				50% 50% no-repeat;
+			right: 6px;
+			bottom: 87px;
+		}
+	}
+
+	&.herk .container {
+		width: 1221px;
+		height: 600px;
+		margin-left: -610px;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		background-image: url(#{$gamigo-cdn}/img/sliding-modal/bg_wintersale_desktop.png);
+		background-position: 50% 0%;
+		background-repeat: no-repeat;
+
+		@media ($breakpoint-desktop) {
+			width: 853px;
+			margin-left: -426px;
+			background-image: url(#{$gamigo-cdn}/img/sliding-modal/bg_wintersale_tablet.png);
+		}
+
+		@media ($breakpoint-mobile-landscape) {
+			width: 320px;
+			margin-left: -160px;
+			background-image: url(#{$gamigo-cdn}/img/sliding-modal/bg_wintersale_mobile.png);
+		}
+
+		.now-available {
+			width: 329px;
+			height: 96px;
+			margin-left: -165px;
+			background: url(#{$gamigo-cdn}/img/sliding-modal/btn_read-more_wintersale_desktop.png)
+				50% 50% no-repeat;
+			position: absolute;
+			left: 50%;
+			bottom: 58px;
+			cursor: pointer;
+
+			@media ($breakpoint-desktop) {
+				bottom: 59px;
+				margin-left: -178px;
+			}
+
+			@media ($breakpoint-mobile-landscape) {
+				width: 224px;
+				height: 59px;
+				margin-left: 0;
+				background: url(#{$gamigo-cdn}/img/sliding-modal/btn_read-more_wintersale_mobile.png)
+					50% 50% no-repeat;
+				left: 18px;
+				bottom: 100px;
+			}
+
+			a {
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		.close {
+			right: 100px;
+
+			@media ($breakpoint-desktop) {
+				right: 70px;
+			}
+
+			@media ($breakpoint-mobile-landscape) {
+				right: 6px;
+			}
+		}
+	}
+
+	&.steam .container {
+		width: 1133px;
+		height: 600px;
+		margin-left: -566px;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		background-image: url(#{$gamigo-cdn}/img/sliding-modal/bg_steam_desktop.png);
+		background-position: 50% 0%;
+		background-repeat: no-repeat;
+
+		@media ($breakpoint-desktop) {
+			width: 900px;
+			margin-left: -450px;
+			background-image: url(#{$gamigo-cdn}/img/sliding-modal/bg_steam_tablet.png);
+		}
+
+		@media ($breakpoint-mobile-landscape) {
+			width: 320px;
+			margin-left: -160px;
+			background-image: url(#{$gamigo-cdn}/img/sliding-modal/bg_steam_mobile.png);
+		}
+
+		.visit-steam {
+			width: 329px;
+			height: 96px;
+			margin-left: -204px;
+			background: url(#{$gamigo-cdn}/img/sliding-modal/btn_visit-steam.png)
+				50% 50% no-repeat;
+			position: absolute;
+			left: 50%;
+			bottom: 58px;
+			cursor: pointer;
+
+			@media ($breakpoint-desktop) {
+				bottom: 59px;
+				margin-left: -182px;
+			}
+
+			@media ($breakpoint-mobile-landscape) {
+				width: 224px;
+				height: 59px;
+				margin-left: 0;
+				background: url(#{$gamigo-cdn}/img/sliding-modal/btn_visit-steam_mobile.png)
+					50% 50% no-repeat;
+				left: 18px;
+				bottom: 100px;
+			}
+
+			a {
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		.close {
+			right: 130px;
+
+			@media ($breakpoint-desktop) {
+				right: 120px;
+			}
+
+			@media ($breakpoint-mobile-landscape) {
+				right: 6px;
+			}
+		}
+	}
+
+	&.lady-frost .container {
+		width: 1066px;
+		height: 600px;
+		margin-left: -533px;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		background-image: url(#{$gamigo-cdn}/img/sliding-modal/bg_lady-frost-available_desktop.png);
+		background-position: 50% 0%;
+		background-repeat: no-repeat;
+
+		@media ($breakpoint-desktop) {
+			width: 765px;
+			margin-left: -382px;
+			background-image: url(#{$gamigo-cdn}/img/sliding-modal/bg_lady-frost-available_tablet.png);
+		}
+
+		@media ($breakpoint-mobile-landscape) {
+			width: 320px;
+			margin-left: -160px;
+			background-image: url(#{$gamigo-cdn}/img/sliding-modal/bg_lady-frost-available_mobile.png);
+		}
+
+		.more-details {
+			width: 329px;
+			height: 96px;
+			margin-left: -164px;
+			background: url(#{$gamigo-cdn}/img/sliding-modal/btn_read-more_desktop.png)
+				50% 50% no-repeat;
+			position: absolute;
+			left: 50%;
+			bottom: 58px;
+			cursor: pointer;
+
+			@media ($breakpoint-desktop) {
+				bottom: 59px;
+			}
+
+			@media ($breakpoint-mobile-landscape) {
+				width: 204px;
+				height: 59px;
+				margin-left: 0;
+				background: url(#{$gamigo-cdn}/img/sliding-modal/btn_read-more_mobile.png)
+					50% 50% no-repeat;
+				left: 32px;
+				bottom: 100px;
+			}
+
+			a {
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	&.easter .container {
+		width: 1066px;
+		height: 600px;
+		margin-left: -533px;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		background-image: url(#{$gamigo-cdn}/img/sliding-modal/bg_easter_desktop.png);
+		background-position: 50% 0%;
+		background-repeat: no-repeat;
+
+		@media ($breakpoint-desktop) {
+			width: 765px;
+			margin-left: -382px;
+			background-image: url(#{$gamigo-cdn}/img/sliding-modal/bg_easter_tablet.png);
+		}
+
+		@media ($breakpoint-mobile-landscape) {
+			width: 320px;
+			margin-left: -160px;
+			background-image: url(#{$gamigo-cdn}/img/sliding-modal/bg_easter_mobile.png);
+		}
+
+		.more-details {
+			width: 329px;
+			height: 96px;
+			background: url(#{$gamigo-cdn}/img/sliding-modal/btn_read-more_desktop.png)
+				50% 50% no-repeat;
+			position: absolute;
+			margin-left: -164px;
+			left: 50%;
+			bottom: 58px;
+			cursor: pointer;
+
+			@media ($breakpoint-desktop) {
+				bottom: 50px;
+			}
+
+			@media ($breakpoint-mobile-landscape) {
+				width: 204px;
+				height: 59px;
+				margin-left: 0;
+				background: url(#{$gamigo-cdn}/img/sliding-modal/btn_read-more_mobile.png)
+					50% 50% no-repeat;
+				left: 32px;
+				bottom: 100px;
+			}
+
+			a {
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	&.merchandise .container {
+		width: 1173px;
+		height: 600px;
+		margin-left: -550px;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		background-image: url(#{$gamigo-cdn}/img/sliding-modal/bg_sliding-modal.png);
+		background-position: 50% 0%;
+		background-repeat: no-repeat;
+
+		@media ($breakpoint-desktop) {
+			width: 978px;
+			margin-left: -380px;
+			background-image: url(#{$gamigo-cdn}/img/sliding-modal/bg_sliding-modal_tbl.png);
+		}
+
+		@media ($breakpoint-mobile-landscape) {
+			width: 310px;
+			margin-left: -160px;
+			background-image: url(#{$gamigo-cdn}/img/sliding-modal/bg_sliding-modal_mob.png);
+		}
+
+		.more-details {
+			width: 329px;
+			height: 96px;
+			background: url(#{$gamigo-cdn}/img/sliding-modal/btn_more-details.png)
+				50% 50% no-repeat;
+			position: absolute;
+			left: 150px;
+			bottom: 58px;
+			cursor: pointer;
+
+			@media ($breakpoint-desktop) {
+				left: 82px;
+				bottom: 59px;
+			}
+
+			@media ($breakpoint-mobile-landscape) {
+				width: 201px;
+				height: 59px;
+				background: url(#{$gamigo-cdn}/img/sliding-modal/btn_more-details_mob.png)
+					50% 50% no-repeat;
+				left: 22px;
+				bottom: 100px;
+			}
+
+			a {
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		//Close button
+		.close {
+			right: 175px;
+
+			@media ($breakpoint-desktop) {
+				right: 242px;
+			}
+
+			@media ($breakpoint-mobile-landscape) {
+				right: 6px;
+			}
+		}
+	}
+
+	&.steam-greenlight .container {
+		width: 1204px;
+		height: 600px;
+		margin-left: -552px;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		background-image: url(#{$gamigo-cdn}/img/sliding-modal/bg_steam-greenlight_desktop.png);
+		background-position: 50% 0%;
+		background-repeat: no-repeat;
+
+		@media ($breakpoint-desktop) {
+			width: 1062px;
+			margin-left: -410px;
+			background-image: url(#{$gamigo-cdn}/img/sliding-modal/bg_steam-greenlight_tablet.png);
+		}
+
+		@media ($breakpoint-mobile-landscape) {
+			width: 422px;
+			margin-left: -195px;
+			background-image: url(#{$gamigo-cdn}/img/sliding-modal/bg_steam-greenlight_mobile.png);
+		}
+
+		.close {
+			right: 205px;
+			@media ($breakpoint-desktop) {
+				right: 330px;
+			}
+
+			@media ($breakpoint-mobile-landscape) {
+				right: 85px;
+			}
+		}
+	}
+}
+
+html[lang="en-US"] body.home #viewport {
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: rgba(black, 0);
+		z-index: 1;
+		transition: background-color 1s $transition-timing-function;
+	}
+}
+html[lang="en-US"] body.home.sliding-modal #viewport {
+	&:after {
+		background-color: rgba(black, 0.8);
+		z-index: 998;
+	}
+}
+
+html[lang="en-US"] body.home.sliding-modal {
+	overflow: hidden;
+}

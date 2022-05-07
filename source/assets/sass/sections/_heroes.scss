@@ -1,0 +1,1340 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Heroes */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+body.mobile #medias-placeholder video {
+	display: none;
+}
+
+body.page-template-page_heroes {
+	/* 
+    * Commented out to bring the heroes section onto the homepage and so the header does not break
+    *
+    header {
+		background-image: url(../img/headers/header_heroes.jpg);
+		
+		@media ($breakpoint-tablet-portrait) {
+			background-image: url(../img/headers/header_heroes-tablet.jpg);
+		}
+		@media ($breakpoint-mobile-landscape) {
+			background-image: url(../img/headers/header_heroes-mobile.jpg);
+		}
+		
+		.character img {
+			top: 52px;
+			right: -50px;
+			
+			@media ($breakpoint-tablet-portrait) {
+				top: 40px;
+				right: 50%;
+				margin-right: -350px;
+			}
+			@media ($breakpoint-mobile-landscape) {
+				height: 120%;
+				top: 0;
+				margin-right: -233px;
+			}
+		}
+	}
+    */
+
+	#heroes-section {
+		@extend .gradient-texture;
+		height: 950px;
+		@media ($breakpoint-mobile-portrait){
+			height: 750px;
+		}
+			.page-width{
+				z-index: 25;
+			}
+			.heroes-text {
+				padding: 0 225px;
+				margin-top: 50px;
+				font: 400 1.8rem/2.25rem $font-century-gothic;
+				
+				@media ($breakpoint-tablet-portrait) {
+					padding: 0;
+					max-width: 80%;
+					margin: 50px auto 0;
+				}
+				@media ($breakpoint-mobile-landscape) {
+				
+				}
+				@media ($breakpoint-mobile-portrait){
+					display: none;
+				}
+			}
+			.gears-right {
+				position: absolute;
+				top: 18px;
+				left: 770px;
+				z-index: 4;
+			}
+			.gears-left {
+				position: absolute;
+				top: 18px;
+				z-index: 4;
+				left: 309px;
+			}
+			.headline-heroes {
+				background: url(#{$gamigo-cdn}/img/homepage/headline-heroes.png);
+				width: 329px;
+				height: 49px;
+				text-align: center;
+				margin: 0 auto;
+				position: relative;
+				z-index: 5;
+				@media ($breakpoint-tablet-portrait) {
+					transform: scale(0.75);
+				}
+				@media ($breakpoint-mobile-landscape) {
+					transform: scale(0.5);
+				}
+				&::before {
+					content: '';
+					background: transparent url(https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/homepage/gears-left.png) no-repeat center top/cover;
+					width: 91px;
+					height: 60px;
+					position: absolute;
+					left: -105px;
+					bottom: -28px;
+				}
+				&::after {
+					content: '';
+					background: transparent url(https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/homepage/gears-right.png) no-repeat center top/cover;
+					width: 91px;
+					height: 60px;
+					position: absolute;
+					right: -110px;
+					bottom: -28px;
+				}
+			}
+			.separator-line.separator-title {
+				height: 1px;
+				
+			}
+			.separator-line:before {
+				content: "";
+				width: 950px;
+				height: 1px;
+				margin-left: -475px;
+				border-radius: 200px;
+				position: absolute;
+				top: 55px;
+				left: 50%;
+				box-shadow: 0 0 50px 30px rgba(0, 0, 0, 0.5);
+				z-index: 1;
+				background: #000;
+				overflow: hidden;
+				@media ($breakpoint-tablet-portrait) {
+					display: none;
+				}
+			}
+			.separator-line:after {
+				content: "";
+				height: 2px;
+				display: block;
+				position: absolute;
+				top: 55px;
+				left: -20%;
+				right: -20%;
+				background-image: linear-gradient(
+					to right,
+					rgba(183, 183, 183, 0) 0%,
+					#b7b7b7 50%,
+					rgba(183, 183, 183, 0) 100%
+				);
+				opacity: 1;
+				z-index: 2;
+				@media screen and (max-width:1440px){
+					left: 0;
+					right: 0;
+				}
+				@media ($breakpoint-tablet-portrait) {
+					left: -12%;
+					right: -12%;
+					height: 1px;
+					top: 48px;
+				}
+				@media ($breakpoint-mobile-landscape) {
+					left: -12%;
+					right: -12%;
+					height: 1px;
+					top: 40px;
+				}
+			}
+
+		#heroes {
+			position: relative;
+			height: 802px;
+			transition: all 0.3s;
+			margin-top: -125px;
+
+			@media ($breakpoint-tablet-portrait) {
+				height: 733px;
+			}
+			@media ($breakpoint-mobile-portrait) {
+				height: 425px;
+			}
+			
+			.separator-line:before {
+				content: "";
+				width: 950px;
+				height: 1px;
+				margin-left: -475px;
+				border-radius: 200px;
+				position: absolute;
+				top: 800px;
+				left: 50%;
+				box-shadow: 0 0 50px 30px rgba(0, 0, 0, 0.5);
+				z-index: 1;
+				background: #000;
+				overflow: hidden;
+			}
+			.separator-line:after {
+				content: "";
+				height: 2px;
+				display: block;
+				position: absolute;
+				top: 800px;
+				left: 10%;
+				right: 10%;
+				background-image: linear-gradient(
+					to right,
+					rgba(183, 183, 183, 0) 0%,
+					#b7b7b7 50%,
+					rgba(183, 183, 183, 0) 100%
+				);
+				opacity: 1;
+				z-index: 2;
+				@media ($breakpoint-tablet-portrait) {
+					top: 733px;
+				}
+				@media ($breakpoint-mobile-landscape) {
+					top: 522px;
+				}
+				@media ($breakpoint-mobile-portrait){
+					top: 426px;
+				}
+			}
+			&.day {
+				background: url(#{$gamigo-cdn}/img/homepage/background-heroes-day.jpg) no-repeat center top;
+				@media ($breakpoint-tablet-portrait) {
+				}
+				@media ($breakpoint-mobile-landscape) {
+					background: url(#{$gamigo-cdn}/img/homepage/background-heroes-day-768.jpg) no-repeat center top;
+					background-size: 768px 520px;
+				}
+				#heroes-selector {
+					width: 50%;
+					float: right;
+					padding-left: 132px;
+					@media screen and (max-width: 1440px){
+						width: 70%;
+						float: right; 
+						padding-left: 0;
+					}
+					@media ($breakpoint-mobile-landscape) {
+						position: absolute;
+    					top: 400px;
+    					width: 100%;
+					}
+					@media ($breakpoint-mobile-portrait){
+						top: 320px;
+					}
+					.character.veroline.active {
+						background-position: 0 -62px;
+					}
+					.character.veroline.inactive {
+						background-position: -65px -62px;
+					}
+					.character.makino.active {
+						background-position: 0 -124px;
+					}
+					.character.makino.inactive {
+						background-position: -65px -124px;
+					}
+					.character.pestipew.active {
+						background-position: 0 0;
+					}
+					.character.pestipew.inactive {
+						background-position: -65px 0;
+					}
+				}
+				.character-img {
+					@media screen and (min-width: 1920px){
+						z-index: 25;
+					}
+					@media ($breakpoint-tablet-portrait) {
+						transform: scale(0.8);
+					}
+					@media ($breakpoint-mobile-portrait) {
+						transform: scale(0.6);
+					}
+					&.char-veroline {
+						/*background-position: 0 0;*/
+						background: transparent url(#{$gamigo-cdn}/img/heroes/hot-hero-veroline-day.png) no-repeat center top;
+						width: 611px;
+						left: 175px;
+					}
+					@media screen and (max-width: 1440px){
+						&.char-veroline {
+							left: 0px;
+						}
+					}
+					@media ($breakpoint-tablet-portrait) {
+						&.char-veroline {
+							left: -100px;
+						}
+					}
+					@media ($breakpoint-mobile-landscape) {
+						&.char-veroline {
+							left: 70px;
+						}
+					}
+					@media ($breakpoint-mobile-portrait) {
+						&.char-veroline {
+							left: -100px;
+						}
+					}
+					&.char-makino {
+						/*background-position: 0 -1634px;*/
+						background: transparent url(#{$gamigo-cdn}/img/heroes/hot-hero-makino-day.png) no-repeat center top;
+						width: 1180px;
+						left: -330px;
+					}
+					@media screen and (max-width: 1440px){
+						&.char-makino {
+							left: -450px;
+						}
+					}
+					@media ($breakpoint-tablet-portrait) {
+						&.char-makino {
+							left: -450px;
+						}	
+					}
+					@media ($breakpoint-mobile-landscape) {
+						&.char-makino {
+							left: -390px;
+						}	
+					}
+					@media ($breakpoint-mobile-portrait) {
+						&.char-makino {
+							left: -490px;
+						}	
+					}
+					&.char-pestipew {
+						/*background-position: 0 -817px;*/
+						background: transparent url(#{$gamigo-cdn}/img/heroes/hot-hero-pestipew-day.png) no-repeat center top;
+						width: 651px;
+						left: 75px;
+
+					}
+					@media screen and (max-width: 1440px){
+						&.char-pestipew {
+							left: -50px;
+						}	
+					}
+					@media ($breakpoint-tablet-portrait) {
+						&.char-pestipew {
+							left: -150px;
+						}	
+					}
+					@media ($breakpoint-mobile-landscape) {
+						&.char-pestipew {
+							left: 30px;
+						}	
+					}
+					@media ($breakpoint-mobile-portrait) {
+						&.char-pestipew {
+							left: -160px;
+						}	
+					}
+				}
+				.description {
+					h3.day {
+						display: block;
+					}
+					h3.night {
+						display: none;
+					}
+					.text.day {
+						display: block;
+					}
+					.text.night {
+						display: none;
+					}
+				}
+			}
+			&.night {
+				background: url(#{$gamigo-cdn}/img/homepage/background-heroes-night.jpg) no-repeat center top;
+				@media ($breakpoint-tablet-portrait) {
+				}
+				@media ($breakpoint-mobile-landscape) {
+					background: url(#{$gamigo-cdn}/img/homepage/background-heroes-night-768.jpg) no-repeat center top;
+					background-size: 768px 520px;
+				}
+				#heroes-selector {
+					@media screen and (max-width: 1440px){
+						width: 70%;
+						float: right; 
+						padding-left: 0;
+					}
+					@media ($breakpoint-mobile-landscape) {
+						position: absolute;
+    					top: 400px;
+    					width: 100%;
+					}
+					@media ($breakpoint-mobile-portrait) {
+						top: 320px;
+					}
+					.character.veroline.active {
+						background-position: -130px -62px;
+					}
+					.character.veroline.inactive {
+						background-position: -195px -62px;
+					}
+					.character.makino.active {
+						background-position: -130px -124px;
+					}
+					.character.makino.inactive {
+						background-position: -195px -124px;
+					}
+					.character.pestipew.active {
+						background-position: -130px 0;
+					}
+					.character.pestipew.inactive {
+						background-position: -195px 0;
+					}
+				}
+				.character-container.start-2 {
+					.char-veroline {
+						/*background-position: -890px 0;*/
+					}
+				}
+				.character-img {
+					@media screen and (min-width: 1920px){
+						z-index: 25;
+					}
+					@media ($breakpoint-tablet-portrait) {
+						transform: scale(0.8);
+					}
+					@media ($breakpoint-mobile-portrait) {
+						transform: scale(0.6);
+					}
+					&.char-veroline {
+						/*background-position: -890px 0;*/
+						background: transparent url(#{$gamigo-cdn}/img/heroes/hot-hero-veroline-night.png) no-repeat center top;
+						width: 611px;
+						left: 135px;
+					}
+					@media screen and (max-width: 1440px){
+						&.char-veroline {
+							left: -20px;
+						}
+					}
+					@media ($breakpoint-tablet-portrait) {
+						&.char-veroline {
+							left: -120px;
+						}
+					}
+					@media ($breakpoint-mobile-landscape) {
+						&.char-veroline {
+							left: -10px;
+						}
+					}
+					@media ($breakpoint-mobile-portrait) {
+						&.char-veroline {
+							left: -150px;
+						}
+					}
+					&.char-makino {
+						/*background-position: -890px -1634px;*/
+						background: transparent url(#{$gamigo-cdn}/img/heroes/hot-hero-makino-night.png) no-repeat center top;
+						width: 1180px;
+						left: -222px;
+					}
+					@media screen and (max-width: 1440px){
+						&.char-makino {
+							left: -200px;
+						}
+					}
+					@media ($breakpoint-tablet-portrait) {
+						&.char-makino {
+							left: -300px;
+						}
+					}
+					@media ($breakpoint-mobile-landscape) {
+						&.char-makino {
+							left: -300px;
+						}
+					}
+					@media ($breakpoint-mobile-portrait) {
+						&.char-makino {
+							left: -430px;
+						}
+					}
+					&.char-pestipew {
+						/*background-position: -890px -817px;*/
+						background: transparent url(#{$gamigo-cdn}/img/heroes/hot-hero-pestipew-night.png) no-repeat center top;
+						width: 651px;
+						left: 75px;
+					}
+					@media screen and (max-width: 1440px){
+						&.char-pestipew {
+							left: -50px;
+						}
+					}
+					@media ($breakpoint-tablet-portrait) {
+						&.char-pestipew {
+							left: -130px;
+						}
+					}
+					@media ($breakpoint-mobile-landscape) {
+						&.char-pestipew {
+							left: -30px;
+						}
+					}
+					@media ($breakpoint-mobile-portrait) {
+						&.char-pestipew {
+							left: -130px;
+						}
+					}
+				}
+				.description {
+					h3.night {
+						display: block;
+					}
+					h3.day {
+						display: none;
+					}
+					.text.night {
+						display: block;
+					}
+					.text.day {
+						display: none;
+					}
+				}
+			}
+			
+			#heroes-selector {
+				width: 50%;
+				float: right;
+				padding-left: 132px;
+				margin-top: 165px;
+				margin-bottom: 67px;
+				z-index: 10;
+    			position: relative;
+				ul {
+					margin: 0 auto;
+					list-style: none;
+					text-align: center;
+    				padding-right: 361px;
+					@media screen and (max-width: 1440px){
+						padding-right: 0;
+					}
+					li {
+						display: inline-block;
+						width: 66px;
+						height: 62px;
+						&:not(:last-child) {
+							margin-right: 8px;
+						}
+						.character {
+							background-image: url(#{$gamigo-cdn}/img/homepage/hot-spritesheet.png);
+							display: inline-block;
+							width: 100%;
+							text-decoration: none;
+							height: 100%;
+						}
+					}
+				}
+			}
+			.character {
+				display: flex;
+				width: 100%;
+				height: 63%;
+				justify-content: space-evenly;
+				.character-container {
+					flex-basis: 50%;
+					min-width: 50%;
+				}
+				.character-img {
+					/*background-image: url(#{$gamigo-cdn}/img/homepage/heroes-sprite.png);*/
+					position: absolute;
+					/*width: 873px;*/
+					top: 125px;
+					height: 674px; /*814*/
+					@media ($breakpoint-mobile-landscape) {
+						top: 25px;
+						height: 550px;
+					}
+					@media ($breakpoint-mobile-portrait) {
+						top: -15px;
+						height: 550px;
+					}
+				}	
+				.description {
+					flex-basis: 50%;
+					padding-right: 312px;
+					padding-left: 80px;
+					display: flex;
+					flex-direction: column;
+					z-index: 5;
+					@media ($breakpoint-tablet-portrait) {
+						max-width: 360px;
+						padding:0;
+						margin-right: 20%;							
+					}
+					@media ($breakpoint-mobile-landscape) {
+						position: absolute;
+						top: 670px;
+						max-width: 80%;
+						margin: 0px auto;						
+					}
+					@media ($breakpoint-mobile-portrait){
+						top: 570px;
+					}
+					.name {
+						align-self: center;
+						margin-bottom: 22px;
+						&.inactive {
+							display: none;
+						}
+						&.active {
+							display: block;
+						}
+						&.veroline {
+							background-image: url(#{$gamigo-cdn}/img/homepage/headline-veroline.png);
+							width: 299px;
+							height: 51px;
+							@media ($breakpoint-mobile-portrait){
+								transform: scale(0.65);
+							}
+						}
+						&.makino {
+							background-image: url(#{$gamigo-cdn}/img/homepage/headline-makino.png);
+							width: 253px;
+							height: 51px;
+							@media ($breakpoint-mobile-portrait){
+								transform: scale(0.65);
+							}
+						}
+						&.pestipew {
+							background-image: url(#{$gamigo-cdn}/img/homepage/headline-pestipew.png);
+							width: 310px;
+							height: 51px;
+							@media ($breakpoint-mobile-portrait){
+								transform: scale(0.65);
+							}
+						}
+					}
+					h3.night, h3.day {
+						font-family: $font-factoria;
+						color: rgba(255, 255, 255, 0.3);
+						font-weight: bold;
+						font-size: 1.7rem;
+						margin-bottom: 63px;
+						@media ($breakpoint-mobile-landscape) {
+							display: none;
+						}
+					}
+					.text-container {
+						&.inactive {
+							display: none;
+						}
+						&.active {
+							display: block;
+						}
+					}
+
+					.text {
+						font-family: $font-century-gothic;
+    					min-width: 573px;
+						font-size: 1.7rem;
+						line-height: 2rem;
+						font-weight: bold;
+						@media ($breakpoint-tablet-portrait) {
+							min-width: auto;
+						}
+						@media ($breakpoint-mobile-portrait){
+							font-weight: 400;
+    						font-size: 1.5rem;
+    						line-height: 2rem;
+						}
+					}
+				}
+			}
+
+			/* Heroes NAV Tabs */
+			#heroes-nav {
+				height: 100px;
+				padding: 0;
+				position: relative;
+				overflow: hidden;
+				z-index: 1;
+				text-align: center;
+
+				* {
+					outline: none;
+				}
+
+				&:before {
+					content: "";
+					width: 950px;
+					height: 1px;
+					margin-left: -475px;
+					border-radius: 200px;
+					position: absolute;
+					bottom: 2px;
+					left: 50%;
+					box-shadow: 0 0 50px 30px rgba(0, 0, 0, 0.5);
+					z-index: 1;
+					background: #000;
+					overflow: hidden;
+				}
+				&:after {
+					content: "";
+					height: 2px;
+					display: block;
+					position: absolute;
+					bottom: 0;
+					left: 10%;
+					right: 10%;
+					background-image: linear-gradient(
+						to right,
+						rgba(183, 183, 183, 0) 0%,
+						rgba(183, 183, 183, 1) 50%,
+						rgba(183, 183, 183, 0) 100%
+					);
+					opacity: 0.25;
+					z-index: 2;
+				}
+
+				.hoverEffect {
+					svg {
+						.outline {
+							fill: yellow;
+						}
+						.dark {
+							fill: #351909;
+						}
+					}
+					&:before {
+						opacity: 1;
+					}
+				}
+
+				ul {
+					display: flex;
+					justify-content: center;
+					margin: 0 auto;
+					padding: 0;
+					list-style: none;
+					text-align: center;
+					li {
+						width: 40px;
+						height: 46px;
+						margin: 20px 12px 40px;
+						padding: 0;
+						display: inline-block;
+						a {
+							width: 40px;
+							height: 46px;
+							display: block;
+							position: relative;
+							display: flex;
+							flex-direction: column;
+							justify-content: center;
+							&:before {
+								content: "";
+								width: 4px;
+								height: 4px;
+								border-radius: 100px;
+								display: block;
+								position: absolute;
+								left: 50%;
+								top: 50%;
+								margin-top: -2px;
+								margin-left: -2px;
+								background-color: #0a4886;
+								box-shadow: 0 0 15px 20px #0a4886;
+								opacity: 0;
+								z-index: 1;
+								transition: opacity $transition-duration
+									$transition-timing-function;
+							}
+							span {
+								width: 1px;
+								height: 1px;
+								position: absolute;
+								top: 0;
+								left: 0;
+								overflow: hidden;
+							}
+							svg {
+								width: 100%;
+								height: auto;
+								display: block;
+								position: relative;
+								z-index: 2;
+								.outline,
+								.dark {
+									transition: fill $transition-duration
+										$transition-timing-function;
+								}
+							}
+
+							&.active {
+								@extend .hoverEffect;
+							}
+
+							@include hover() {
+								@extend .hoverEffect;
+							}
+						}
+					}
+				}
+			}
+
+			/* Heroes Day & Night Indicator */
+			#day-night-trigger {
+				width: 103px;
+				height: 109px;
+				position: absolute;
+				top: 726px;
+				left: 50%;
+				margin-left: -58px;
+				z-index: 30;
+
+				@media ($breakpoint-tablet-portrait) {
+					top: 659px;
+				}
+				@media ($breakpoint-mobile-landscape) {
+					top: 446px;
+				}
+				@media ($breakpoint-mobile-portrait) {
+					top: 352px;
+				}
+				.wrap-trigger {
+					width: 114px;
+					height: 114px;
+					display: block;
+					position: absolute;
+					top: 0;
+					left: 50%;
+					margin-left: -57px;
+					z-index: 5;
+
+					/* Rim */
+					.indicator-rim {
+						width: 114px;
+						height: 114px;
+						display: block;
+						position: absolute;
+						top: 0;
+						left: 50%;
+						margin-left: -57px;
+						z-index: 2;
+						background: url(#{$gamigo-cdn}/img/heroes/dn-rim.png) 0
+							0 no-repeat;
+
+						img {
+							transform: rotate(-50deg);
+							transition: transform 0.5s
+								$transition-timing-function 0.2s;
+							transform-origin: 50% 50%;
+						}
+					}
+
+					/* Day & Icons */
+					.icon {
+						margin-left: -57px;
+						position: absolute;
+						left: 50%;
+						top: 0;
+						transition: opacity 0.5s $transition-timing-function
+							0.2s;
+						&.day {
+							z-index: 1;
+						}
+						&.night {
+							z-index: 1;
+							opacity: 0;
+						}
+					}
+
+					/* Trigger buttons */
+					.buttons {
+						width: 103px;
+						height: 109px;
+						position: absolute;
+						top: 0;
+						left: 50%;
+						margin-left: -52px;
+						z-index: 5;
+						a {
+							width: 50%;
+							height: 100%;
+							display: block;
+							position: absolute;
+							top: -34px;
+							bottom: 0;
+							transform: rotate(180deg);
+							&.day {
+								left: 0;
+							}
+							&.night {
+								right: 0;
+							}
+						}
+					}
+				}
+
+				/* When night is active */
+				&.night {
+					.indicator-rim {
+						img {
+							transform: rotate(50deg);
+						}
+					}
+					.icon.night {
+						opacity: 1;
+					}
+				}
+
+				/* Spinning Gears */
+				.gears {
+					width: 221px;
+					height: 117px;
+					margin-left: -110px;
+					position: absolute;
+					left: 50%;
+					top: -43px;
+					z-index: 1;
+					overflow: hidden;
+					transform: rotate(180deg);
+
+					.holders {
+						width: 221px;
+						height: 117px;
+						position: absolute;
+						top: -40px;
+						left: 5px;
+						background: url(#{$gamigo-cdn}/img/heroes/gears-holder.png)
+							0 0 no-repeat;
+						z-index: 2;
+					}
+					.gear {
+						position: absolute;
+						z-index: 2;
+						&.top-right {
+							right: 2px;
+							top: -37px;
+						}
+						&.top-left {
+							left: 8px;
+							top: -26px;
+							z-index: 2;
+						}
+						&.bottom-left {
+							left: 28px;
+							top: 16px;
+							z-index: -3;
+						}
+						&.bottom-right {
+							right: 44px;
+							top: 32px;
+						}
+					}
+				}
+			}
+
+			.heroes-carousel-wrapper {
+				min-height: 640px;
+				position: relative;
+				margin-bottom: 75px;
+				opacity: 0;
+				@media ($breakpoint-mobile-landscape) {
+					min-height: 900px;
+				}
+
+				@media ($breakpoint-mobile-portrait) {
+					border: 1px solid blue;
+					min-height: 814px;
+				}
+
+				&:before {
+					content: "";
+					position: absolute;
+					left: 0;
+					top: -2px;
+					right: 0;
+					bottom: -140px;
+					background-color: rgba(#0d1722, 0.9);
+					background-image: url(#{$gamigo-cdn}/img/heroes/loading.gif);
+					background-repeat: no-repeat;
+					background-position: 50% 15%;
+					background-size: 150px 150px;
+					opacity: 0;
+					transition: opacity $transition-duration
+						$transition-timing-function;
+					z-index: 9;
+					pointer-events: none;
+				}
+
+				&:after {
+					content: "";
+					width: 101px;
+					height: 23px;
+					margin-left: -55px;
+				}
+
+				span.loadingMask {
+					width: 101px;
+					height: 24px;
+					margin-left: -55px;
+					position: absolute;
+					top: -26px;
+					left: 50%;
+					opacity: 0;
+					transition: opacity $transition-duration
+						$transition-timing-function;
+					z-index: 9;
+					overflow: hidden;
+					&:before {
+						content: "";
+						width: 101px;
+						height: 101px;
+						display: block;
+						border-radius: 101px;
+						display: block;
+						background-color: rgba(#0d1722, 0.9);
+					}
+				}
+
+				&.loading {
+					&:before,
+					span.loadingMask {
+						opacity: 1;
+					}
+				}
+
+				#medias-placeholder {
+					position: relative;
+					display: block;
+					height: 600px;
+					overflow: hidden;
+					z-index: 1;
+
+					video {
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						min-width: 100%;
+						max-width: 1920px;
+						min-height: 100%;
+						max-height: 600px;
+						z-index: 2;
+						pointer-events: none;
+						transform: translate(-50%, -50%);
+						transition: opacity 0.5s $transition-timing-function;
+
+						@media ($breakpoint-tablet-portrait) {
+							display: none;
+						}
+					}
+					img {
+						width: 1024px;
+						height: 600px;
+						opacity: 0;
+						position: absolute;
+						top: 0;
+						left: 50%;
+						transform: translate(-50%, 0);
+						transition: opacity 0.5s $transition-timing-function;
+						z-index: 1;
+						@media ($breakpoint-desktop) {
+							&.mobile {
+								display: none;
+								opacity: 0;
+							}
+							&.desktop {
+								display: block;
+								opacity: 1;
+							}
+						}
+						@media ($breakpoint-mobile-landscape) {
+							width: 768px;
+							&.desktop {
+								display: none;
+								opacity: 0;
+							}
+							&.mobile {
+								display: block;
+								opacity: 1;
+							}
+						}
+					}
+				}
+
+				#heroes-carousel {
+					width: 100%;
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					z-index: 3;
+
+					@media ($breakpoint-mobile-portrait) {
+						height: 740px;
+					}
+
+					* {
+						outline: none;
+					}
+
+					.slide {
+						width: 100%;
+
+						@media ($breakpoint-mobile-landscape) {
+							padding: 400px 0 0;
+						}
+
+						.infos {
+							width: 380px;
+							height: 600px;
+							margin-left: calc(50% + 110px);
+							display: flex;
+							flex-direction: column;
+							justify-content: center;
+
+							@media ($breakpoint-tablet-portrait) {
+								width: 300px;
+								margin-left: calc(50% + 60px);
+							}
+
+							@media ($breakpoint-mobile-landscape) {
+								width: 100%;
+								height: auto;
+								margin: 0;
+								padding: 50px 20px;
+								background: url(#{$gamigo-cdn}/img/heroes/bg-mobile-infos.png)
+									50% 50% no-repeat;
+								background-size: cover;
+							}
+
+							h3 {
+								margin: 0 0 15px;
+								padding: 0;
+								font-family: $font-factoria;
+								font-size: 3rem;
+								font-weight: bold;
+								font-style: italic;
+								text-transform: uppercase;
+								color: $color-primary;
+								text-shadow: 0 0 10px #0a4886, 0 0 10px #0a4886;
+								span {
+									color: #fff;
+									display: block;
+									font-size: 1.6rem;
+									text-transform: capitalize;
+								}
+							}
+
+							p {
+								font-size: 1.6rem;
+								padding: 0 10px;
+							}
+						}
+
+						.skins {
+							width: 307px;
+							height: 100px;
+							margin-left: -430px;
+							padding: 30px 0 0;
+							position: absolute;
+							top: 450px;
+							left: 50%;
+							background: url(#{$gamigo-cdn}/img/heroes/skin-selector-bg.png)
+								50% 0 no-repeat;
+
+							@media ($breakpoint-desktop) {
+								margin-left: -348px;
+							}
+
+							@media ($breakpoint-tablet-portrait) {
+								margin-left: -348px;
+							}
+
+							@media ($breakpoint-mobile-landscape) {
+								position: relative;
+								margin: 0 auto;
+								left: inherit;
+								top: inherit;
+							}
+
+							a {
+								width: 59px;
+								height: 59px;
+								margin: 0 2px;
+								display: inline-block;
+								cursor: pointer;
+								border-radius: 8px;
+								border: 3px solid #acafb2;
+								box-shadow: none;
+								background-position: 50% 50%;
+								transition: box-shadow $transition-duration
+										$transition-timing-function,
+									border $transition-duration
+										$transition-timing-function;
+								&.active {
+									border: 3px solid #fff;
+									box-shadow: 0 0 5px 0
+										rgba(255, 255, 255, 0.85);
+								}
+
+								@include hover() {
+									box-shadow: 0 0 5px 0
+										rgba(255, 255, 255, 0.85);
+									border: 3px solid #fff;
+								}
+							}
+						}
+
+						.minions {
+							min-height: 160px;
+							position: relative;
+							background: url(#{$gamigo-cdn}/img/heroes/bg-minions.png)
+								50% 0 no-repeat;
+
+							.wrap {
+								max-width: 1280px;
+								margin: 0 auto;
+								display: flex;
+								flex-wrap: wrap;
+								justify-content: center;
+							}
+
+							&:before {
+								content: "";
+								height: 2px;
+								display: block;
+								position: absolute;
+								top: 0;
+								left: 10%;
+								right: 10%;
+								background-image: linear-gradient(
+									to right,
+									rgba(183, 183, 183, 0) 0%,
+									rgba(183, 183, 183, 1) 50%,
+									rgba(183, 183, 183, 0) 100%
+								);
+								opacity: 0.25;
+								z-index: 1;
+								@media ($breakpoint-tablet-portrait) {
+									background-color: rgba(
+										183,
+										183,
+										183,
+										0.5
+									) !important;
+									left: 0;
+									right: 0;
+								}
+							}
+
+							h4 {
+								width: 200px;
+								margin: 30px 0 0 0;
+								padding: 0;
+								font-family: $font-factoria;
+								font-size: 2.4rem;
+								font-style: italic;
+								font-weight: bold;
+								text-transform: uppercase;
+								color: #fff;
+								text-shadow: 0 0 10px #0a4886, 0 0 10px #0a4886;
+
+								span {
+									display: block;
+									text-align: center;
+								}
+
+								@media ($breakpoint-tablet-portrait) {
+									margin: 20px 0 10px !important;
+									display: block;
+									width: 600px;
+
+									span {
+										display: inline-block;
+									}
+								}
+							}
+							.minion {
+								margin: 0;
+								padding: 20px 0 0;
+								position: relative;
+								z-index: 2;
+								display: flex;
+
+								.visual {
+									margin-top: -35px;
+								}
+								.minion-infos {
+									max-width: 250px;
+									text-align: left;
+									margin-left: 10px;
+									h5 {
+										font-family: $font-factoria;
+										font-size: 1.6rem;
+										font-style: italic;
+										font-weight: bold;
+										text-transform: uppercase;
+										color: $color-primary;
+										text-shadow: 0 0 10px #0a4886,
+											0 0 10px #0a4886;
+									}
+									p {
+										font-size: 1.4rem;
+										font-style: italic;
+									}
+								}
+
+								@media ($breakpoint-tablet-portrait) {
+									.visual {
+										width: 100px;
+										margin-top: -10px;
+										margin-left: 15px;
+										img {
+											width: 100%;
+											height: auto;
+										}
+									}
+									.minion-infos {
+										max-width: 245px;
+										margin: 0 0 0 10px;
+									}
+								}
+							}
+
+							@media ($breakpoint-tablet-portrait) {
+								height: auto;
+								margin-bottom: 100px;
+							}
+						}
+					}
+
+					&.day .day,
+					&.night .night {
+						display: block;
+					}
+					&.day .night,
+					&.night .day {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

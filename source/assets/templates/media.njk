@@ -1,0 +1,362 @@
+{% import "./macros.njk" as macros %}
+
+
+{% set bodyClass = "page-template page-template-page_media page-template-page_media-php page page-id-17 media page-media" %}
+{% set activeMenu = "menu-item-media" %}
+{% set gamigo_cdn = "https://webcdn.triongames.com/landingpages/heroesoftwilight" %}
+
+{% set media__kitURL = "{{ gamigo_cdn }}/assets/download/LLoT2_MediaKit.zip" %}
+
+
+{% block master__content %}
+	{% set media__pageHeader_characters = [
+		"{{ gamigo_cdn }}/assets/img/headers/charac_media.png"
+	] %}
+	{{ macros.outputPageHeader(media__pageHeader_title, media__pageHeader_html, media__pageHeader_characters, langContent) }}
+
+
+	<div id="content">
+		<section id="features">
+			<div class="page-width">
+				<p class="actions">
+					<a
+						class="button"
+						href="{{ media__kitURL }}"
+						onclick="ark.track('media','download','media-kit-');">
+							{{ media__download }}
+						</a>
+				</p>
+
+				<h2>
+					{{ media__features_title }}
+				</h2>
+				<img src="{{ gamigo_cdn }}/assets/img/media/pestipew_lady-frost.png" alt="" />
+				<ul class="key-features">
+					{{ media__features_text }}
+				</ul>
+			</div>
+			<div class="factsheet">
+				<div class="page-width">
+					<h3>&#8211; {{ media__factsheet_title }} &#8211;</h3>
+					<ul>
+						{{ media__factsheet_text }}
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section id="story">
+			<div class="page-width">
+				<h2>
+					{{ media__story_title }}
+				</h2>
+				{{ media__story_text }}
+			</div>
+		</section>
+
+		<section id="origins">
+			<h2>
+				{{ media__origins_title }}
+			</h2>
+			<div class="page-width">
+				<div class="wrapper-content">
+					<div class="wrapper-text">
+						{{ media__origins_text }}
+					</div>
+					<div class="wrapper-video">
+						<span class="video">
+							<img src="{{ gamigo_cdn }}/assets/img/media/FredM-et-Rosalie.jpg" alt="" />
+						</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="videos">
+			<h2>
+				{{ media__videos_title }}
+			</h2>
+			<div class="page-width">
+				<div class="wrapper-video">
+					{%
+						set media__videos_data = [
+							{
+								"image" : "{{ gamigo_cdn }}/assets/img/content/bg_video_cinema-trailer.jpg"
+							},
+							{
+								"image" : "{{ gamigo_cdn }}/assets/img/content/bg_video_gameplay-trailer.jpg"
+							}
+						]
+					%}
+					{% for video in media__videos_data %}
+					<div class="video">
+						<a
+							href="#"
+							data-prevent-smooth-scroll="true"
+							class="play-btn"
+							onclick="ark.track('media','play','{{ media__videos_videos[loop.index0].title }}-');"
+							data-videoid="{{ media__videos_videos[loop.index0].id }}"
+						>
+							<span class="play"></span>
+							<img src="{{ video.image }}" alt="" />
+						</a>
+						<p>
+							{{ media__videos_videos[loop.index0].title }}
+						</p>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</section>
+
+		<section id="gallery">
+			<h2>
+				{{ media__gallery_title }}
+			</h2>
+			<div class="page-width">
+				<div class="ark-tabs">
+					<div class="heading-tab">
+						<div class="filter ark-tabs-nav">
+							<p class="tab" data-filter="screenshots">
+								<a href="#screenshot" data-prevent-smooth-scroll="">
+									<span>
+										{{ media__gallery_screenshots }}
+									</span>
+								</a>
+							</p>
+							<p class="tab" data-filter="concept-arts">
+								<a href="#concept-arts" data-prevent-smooth-scroll="">
+									<span>
+										{{ media__gallery_art }}
+									</span>
+								</a>
+							</p>
+						</div>
+						<p class="download">
+							<a href="{{ gamigo_cdn }}/assets/download/LLoT_Gallery_Media_Package.zip" onclick="ark.track('media','download','gallery-');">
+								{{ media__gallery_download }} &gt;
+							</a>
+						</p>
+					</div>
+
+					<div class="ark-tabs-panels">
+						{%
+							set media__gallery = {
+								"screenshots" : [
+									{
+										"image" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Presskit_ScreenShots_2019_01.jpg",
+										"thumbnail" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Presskit_ScreenShots_2019_01-850x478.jpg"
+									},
+									{
+										"image" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Presskit_ScreenShots_2019_13.jpg",
+										"thumbnail" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Presskit_ScreenShots_2019_13-850x478.jpg"
+									},
+									{
+										"image" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Presskit_ScreenShots_2019_11.jpg",
+										"thumbnail" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Presskit_ScreenShots_2019_11-850x478.jpg"
+									},
+									{
+										"image" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Presskit_ScreenShots_2019_12.jpg",
+										"thumbnail" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Presskit_ScreenShots_2019_12-850x478.jpg"
+									},
+									{
+										"image" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Presskit_ScreenShots_2019_10.jpg",
+										"thumbnail" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Presskit_ScreenShots_2019_10-850x478.jpg"
+									},
+									{
+										"image" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Presskit_ScreenShots_2019_08.jpg",
+										"thumbnail" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Presskit_ScreenShots_2019_08-850x478.jpg"
+									},
+									{
+										"image" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Presskit_ScreenShots_2019_09.jpg",
+										"thumbnail" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Presskit_ScreenShots_2019_09-850x478.jpg"
+									},
+									{
+										"image" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Presskit_ScreenShots_2019_07.jpg",
+										"thumbnail" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Presskit_ScreenShots_2019_07-850x478.jpg"
+									},
+									{
+										"image" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Presskit_ScreenShots_2019_05.jpg",
+										"thumbnail" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Presskit_ScreenShots_2019_05-850x478.jpg"
+									},
+									{
+										"image" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Presskit_ScreenShots_2019_06.jpg",
+										"thumbnail" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Presskit_ScreenShots_2019_06-850x478.jpg"
+									},
+									{
+										"image" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Presskit_ScreenShots_2019_04.jpg",
+										"thumbnail" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Presskit_ScreenShots_2019_04-850x478.jpg"
+									},
+									{
+										"image" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Presskit_ScreenShots_2019_02.jpg",
+										"thumbnail" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Presskit_ScreenShots_2019_02-850x478.jpg"
+									},
+									{
+										"image" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Presskit_ScreenShots_2019_03.jpg",
+										"thumbnail" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Presskit_ScreenShots_2019_03-850x478.jpg"
+									}
+								],
+								"art" : [
+									{
+										"image" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Website_Media_ConceptArt_02.jpg",
+										"thumbnail" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Website_Media_ConceptArt_02-850x478.jpg"
+									},
+									{
+										"image" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Website_Media_ConceptArt_03.jpg",
+										"thumbnail" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Website_Media_ConceptArt_03-850x478.jpg"
+									},
+									{
+										"image" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Website_Media_ConceptArt_04.jpg",
+										"thumbnail" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Website_Media_ConceptArt_04-850x478.jpg"
+									},
+									{
+										"image" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Website_Media_ConceptArt_06.jpg",
+										"thumbnail" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Website_Media_ConceptArt_06-850x478.jpg"
+									},
+									{
+										"image" : "/{{ gamigo_cdn }}assets/img/content/LLoT_Website_Media_ConceptArt_07.jpg",
+										"thumbnail" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Website_Media_ConceptArt_07-850x478.jpg"
+									},
+									{
+										"image" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Website_Media_ConceptArt_08.jpg",
+										"thumbnail" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Website_Media_ConceptArt_08-850x478.jpg"
+									},
+									{
+										"image" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Website_Media_ConceptArt_09.jpg",
+										"thumbnail" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Website_Media_ConceptArt_09-850x478.jpg"
+									},
+									{
+										"image" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Website_Media_ConceptArt_10.jpg",
+										"thumbnail" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Website_Media_ConceptArt_10-850x478.jpg"
+									},
+									{
+										"image" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Website_Media_ConceptArt_11.jpg",
+										"thumbnail" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Website_Media_ConceptArt_11-850x478.jpg"
+									},
+									{
+										"image" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Website_Media_ConceptArt_12.jpg",
+										"thumbnail" : "{{ gamigo_cdn }}/assets/img/content/LLoT_Website_Media_ConceptArt_12-850x478.jpg"
+									},
+									{
+										"image" : "{{ gamigo_cdn }}/assets/img/content/presskit_LLoT_Take3-screen22.jpg",
+										"thumbnail" : "{{ gamigo_cdn }}/assets/img/content/presskit_LLoT_Take3-screen22-850x478.jpg"
+									},
+									{
+										"image" : "{{ gamigo_cdn }}/assets/img/content/presskit_LLoT_Take3-screen24.jpg",
+										"thumbnail" : "{{ gamigo_cdn }}/assets/img/content/presskit_LLoT_Take3-screen24-850x478.jpg"
+									},
+									{
+										"image" : "{{ gamigo_cdn }}/assets/img/content/presskit_LLoT_Take3-screen26.jpg",
+										"thumbnail" : "{{ gamigo_cdn }}/assets/img/content/presskit_LLoT_Take3-screen26-850x478.jpg"
+									},
+									{
+										"image" : "{{ gamigo_cdn }}/assets/img/content/presskit_LLoT_Take3-screen27.jpg",
+										"thumbnail" : "{{ gamigo_cdn }}/assets/img/content/presskit_LLoT_Take3-screen27-850x478.jpg"
+									}
+								]
+							}
+						%}
+						<div id="screenshot" class="ark-tabs-panel">
+							<ul class="wrapper-images">
+								{% for item in media__gallery.screenshots %}
+									<li>
+										<a
+											href="{{ item.image }}"
+										>
+											<img
+												data-src="{{ item.thumbnail }}"
+												alt=""
+											>
+										</a>
+									</li>
+								{% endfor %}
+							</ul>
+							<p class="actions">
+								<button class="button all" href="#">
+									{{ media__gallery_showAll }}
+									(<span></span>)
+								</button>
+							</p>
+						</div>
+
+						<div id="concept-arts" class="ark-tabs-panel">
+							<ul class="wrapper-images">
+								{% for item in media__gallery.art %}
+									<li>
+										<a
+											href="{{ item.image }}"
+										>
+											<img
+												data-src="{{ item.thumbnail }}"
+												alt=""
+											>
+										</a>
+									</li>
+								{% endfor %}
+							</ul>
+							<p class="actions">
+								<button class="button all" href="#">
+									{{ media__gallery_showAll }}
+									(<span></span>)
+								</button>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section id="logos">
+			<h2>
+				{{ media__logos_title }}
+			</h2>
+			<div class="page-width">
+				<p class="download">
+					<a href="{{ gamigo_cdn }}/assets/download/LLoT_Logo_Media_Package.zip" data-prevent-smooth-scroll="true" onclick="ark.track('media','download','logos-');">
+						{{ media__logos_download }} &gt;
+					</a>
+				</p>
+				<div class="wrapper-images">
+					<img src="{{ gamigo_cdn }}/assets/img/media/logos/logo_LLOT2_full-color.png" alt="Little Lords of Twilight 2" />
+				</div>
+			</div>
+		</section>
+
+
+		<section id="about-contact">
+			<div class="page-width">
+				<div>
+					<h2>
+						{{ media__about_title }}
+					</h2>
+					{{ media__about_text }}
+					<span class="separator"></span>
+				</div>
+				<div>
+					<h2>
+						{{ media__contact_title }}
+					</h2>
+					{{ media__contact_text }}
+				</div>
+			</div>
+		</section>
+
+
+		<!--<section id="download-kit">
+			<div class="page-width">
+				<img class="veroline" src="{{ gamigo_cdn }}/assets/img/media/media_veroline.png" alt="Veroline" />
+				<p class="actions">
+					<a
+						class="button"
+						href="{{ media__kitURL }}"
+					>
+						{{ media__download }}
+					</a>
+				</p>
+			</div>
+		</section>-->
+	</div>
+{% endblock %}
+
+{% extends "./master.njk" %}

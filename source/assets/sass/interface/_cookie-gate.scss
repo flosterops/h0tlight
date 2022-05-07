@@ -1,0 +1,56 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Cookie Gate */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+#cookie-gate { position: fixed; left: 0; right: 0; bottom: 0; z-index: 9999; border-top: 1px solid #333; background: #0e1721; opacity: 1; transform: translateY(100%);
+
+	transition-property: transform, opacity; transition-duration: $transition-duration; transition-timing-function: $transition-timing-function;
+
+
+	&.show { opacity: 1; transform: translateY(0); }
+
+	.wrapper { max-width: $page-width; margin: 0 auto; min-height: 60px; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; flex-direction: row;
+
+		@media ( $breakpoint-mobile-landscape ) {
+			flex-direction: column; justify-content: center;
+		}
+
+		.legal-text { width: 100%; color: white;
+
+			p { margin: 5px 0; padding: 0; text-align: left; font-size: 1.4rem;
+
+				a { color: grey; }
+
+			}
+
+		}
+
+
+		.actions { width: 100%; margin: 10px 0 0; text-align: right; 
+
+			a, button { width: auto; min-height: 37px; margin: 0; padding-top: 8px; padding-bottom: 8px; font-size: 1.4rem; line-height: 1.1; padding-left: 25px; padding-right: 25px; border-width: 2px; border-style: solid; border-color: gray; background: transparent; color: #fbd443; text-decoration: none; position: relative; cursor: pointer; text-align: center; vertical-align: middle;
+				
+				display: inline-block;
+				
+				transition-property: opacity, background-color, color;
+				transition-timing-function: $transition-timing-function;
+				transition-duration: $transition-duration;
+				
+				@include hover() {
+					background-color: gray; color: white;
+				}
+				
+			}
+
+			@media ( $breakpoint-mobile-landscape ) {
+
+				& { width: 100%; }
+
+				a, button { width: 100%; }
+				a { margin-left: 0; }
+			}
+
+		}
+
+	}
+	
+}

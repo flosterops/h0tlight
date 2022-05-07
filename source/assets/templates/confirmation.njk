@@ -1,0 +1,20 @@
+{% import "./macros.njk" as macros %}
+
+{% set bodyClass = "home page-template page-template-page_home page-template-page_home-php page page-id-5 page-home" %}
+
+{% block master__content %}
+    {% set gamigo_cdn = "https://webcdn.triongames.com/landingpages/heroesoftwilight" %}
+
+<section id="confirmation">
+	<div class="container">
+		<div class="robot"></div>
+		<div class="message">
+			<h2>Thank you!</h2>
+			<p>Your E-Mail address has been verified. Stay tuned for exciting news about Heroes of Twilight!</p>
+		</div>
+	</div>
+</section>
+
+{% endblock %}
+
+{% extends "./master.njk" %}

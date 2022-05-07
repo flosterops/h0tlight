@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+	<head>
+		<title>{{ pageTitle }} | Magic Battle Arena</title>
+
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="description" content="{{langContent.metaDescription}}">
+
+
+		<link rel="shortcut icon" href="{{ gamigo_cdn }}/assets/icons/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="{{ gamigo_cdn }}/assets/icons/touch-icon.png" />
+		<link rel="apple-touch-icon" sizes="57x57" href="{{ gamigo_cdn }}/assets/icons/touch-icon-57x57.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="{{ gamigo_cdn }}/assets/icons/touch-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="{{ gamigo_cdn }}/assets/icons/touch-icon-76x76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="{{ gamigo_cdn }}/assets/icons/touch-icon-114x114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="{{ gamigo_cdn }}/assets/icons/touch-icon-120x120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="{{ gamigo_cdn }}/assets/icons/touch-icon-144x144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="{{ gamigo_cdn }}/assets/icons/touch-icon-152x152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="{{ gamigo_cdn }}/assets/icons/touch-icon-180x180.png" />
+		<link rel="mask-icon" href="{{ gamigo_cdn }}/assets/icons/favicon.svg" color="#95d600" />
+
+		<link rel="stylesheet" href="https://use.typekit.net/gfu5bnc.css">
+		<link rel="stylesheet" href="https://use.typekit.net/tih3chk.css" />
+		<link rel="stylesheet" type="text/css" href="{{ gamigo_cdn }}/assets/css/styles.min.css" />
+
+		<!-- OneTrust Cookies Consent Notice start for heroesoftwilight.com -->
+		<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="9f7abe9a-af3d-45e3-a3cc-da75cbe1cec6" ></script>
+		<script type="text/javascript">
+		function OptanonWrapper() { }
+		</script>
+		<!-- OneTrust Cookies Consent Notice end for heroesoftwilight.com -->
+		<script src="{{ gamigo_cdn }}/assets/js/scripts.min.js"></script>
+		<script type="application/javascript">
+			!function(t,a,e,r,s,l,d,n,o){t.Adjust=t.Adjust||{},t.Adjust_q=t.Adjust_q||[];for(var c=0;c<l.length;c++)d(t.Adjust,t.Adjust_q,l[c]);n=a.createElement("script"),o=a.getElementsByTagName("script")[0],n.async=!0,n.src="https://cdn.adjust.com/adjust-latest.min.js",n.onload=function(){for(var a=0;a<t.Adjust_q.length;a++)t.Adjust[t.Adjust_q[a][0]].apply(t.Adjust,t.Adjust_q[a][1]);t.Adjust_q=[]},o.parentNode.insertBefore(n,o)}(window,document,0,0,0,["initSdk","trackEvent","addGlobalCallbackParameters","addGlobalPartnerParameters","removeGlobalCallbackParameter","removeGlobalPartnerParameter","clearGlobalCallbackParameters","clearGlobalPartnerParameters","switchToOfflineMode","switchBackToOnlineMode","stop","restart","gdprForgetMe","disableThirdPartySharing"],function(t,a,e){t[e]=function(){a.push([e,arguments])}});
+		</script>
+		<script>
+			Adjust.initSdk({
+				appToken: 't6mfgwn3fr40',
+				environment: 'production'
+			});
+		</script>
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TLJC7HC');</script>
+		<!-- End Google Tag Manager -->
+	</head>
+	
+	<body class="{{ bodyClass }}">
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLJC7HC"height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+	{% set gamigo_cdn = "https://webcdn.triongames.com/landingpages/heroesoftwilight" %}
+
+		<div id="viewport">
+
+			<div class="wrapper-sliding-modal">
+				<div class="sliding-modal-item herk">
+					<div class="container">
+						<div class="now-available">
+							<a
+								href="{{ langContent.header.modal.url }}"
+								title="{{ langContent.header.modal.label }}"
+							></a>
+						</div>
+						<button type="button" class="close">
+							<span>
+								{{ langContent.close }}
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div id="menu">
+				<div class="wrapper">
+
+					<div class="header-logo">
+						<a
+							href="{{ langContent.header.nav.homepage.url }}"
+							title="Heroes Of Twilight"
+						>
+							<img src="{{ gamigo_cdn }}/assets/img/homepage/heroes-of-twilight-slim-logo.png" alt="Heroes Of Twilight" />
+							<!--<span data-svg-url="{{ gamigo_cdn }}/assets/img/interface/llot-nav-logo.svg"></span>-->
+						</a>
+					</div>
+
+					<div class="mobile-wrapper">
+						<nav>
+							<div class="menu-menu-container">
+								<ul id="menu-menu" class="main-nav">
+									{# <li id="menu-item-media"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44 {{ 'current-menu-item' if activeMenu == 'menu-item-media' }}"
+									>
+										<a
+											href="{{ langContent.header.nav.media.url }}"
+										>
+											{{ langContent.header.nav.media.label }}
+										</a>
+									</li> #}
+								</ul>
+							</div>
+						</nav>
+
+						<div class="utils">
+							<div id="lang-selection"><p>BLA</p>
+								<ul class="lang-container">
+									<li>
+										<a href="/{{ currPath }}" class="lang_sel_other">
+											<span class="wpml-ls-native icl_lang_sel_native">{{ langContent.header.nav.languages.en.label }}</span>
+										</a>
+									</li>
+									<li>
+										<a href="{{ langContent.header.nav.languages.de.url }}/{{ currPath }}" class="lang_sel_other">
+											<span class="wpml-ls-native icl_lang_sel_native">{{ langContent.header.nav.languages.de.label }}</span>
+										</a>
+									</li>
+									<li>
+										<a href="{{ langContent.header.nav.languages.fr.url }}/{{ currPath }}" class="lang_sel_other">
+											<span class="wpml-ls-native icl_lang_sel_native">{{ langContent.header.nav.languages.fr.label }}</span>
+										</a>
+									</li>
+									<li>
+										<a href="{{ langContent.header.nav.languages.es.url }}/{{ currPath }}" class="lang_sel_other">
+											<span class="wpml-ls-native icl_lang_sel_native">{{ langContent.header.nav.languages.es.label }}</span>
+										</a>
+									</li>
+								</ul>	
+							</div>
+							<ul>
+								<li class="social-facebook"><a href="https://www.facebook.com/HeroesOfTwilight/" target="_blank">Facebook</a></li>
+								<li class="social-twitter"><a href="https://twitter.com/HoTHeroes" target="_blank">Twitter</a></li>
+								<li class="social-instagram"><a href="https://www.instagram.com/heroesoftwilight/" target="_blank">Instagram</a></li>
+								<li class="social-youtube"><a href="https://www.youtube.com/channel/UCNYfGRghc0dR4vEY8xWHAMg" target="_blank">Youtube</a></li>
+								<!--<li class="social-soundcloud"><a href="https://soundcloud.com/heroesoftwilight" target="_blank">Soundcloud</a></li>
+								<li class="social-telegram"><a href="https://t.me/HeroesOfTwilight" target="_blank">Telegram</a></li>-->
+								<!--<li class=""><a href="" target="_blank"></a></li>-->
+							</ul>
+						</div>
+						<script>
+							$(document).on('click', '.social-facebook', function() {
+								Adjust.trackEvent({
+									eventToken: '7oa4f8'
+								});
+							});
+							$(document).on('click', '.social-twitter', function() {
+								Adjust.trackEvent({
+									eventToken: 'jxygko'
+								});
+							});
+							$(document).on('click', '.social-instagram', function() {
+								Adjust.trackEvent({
+									eventToken: 'q1pimv'
+								});
+							});
+							$(document).on('click', '.social-youtube', function() {
+								Adjust.trackEvent({
+									eventToken: 'lxmfk6'
+								});
+							});
+						</script>
+						<button class="menu-close trigger">
+							<span>
+								{{ langContent.close }}
+							</span>
+						</button>
+					</div>
+					<button class="menu-trigger trigger">
+						<span class="label">
+							{{ langContent.header.menu }}
+						</span>
+						<span class="bar"></span>
+					</button>
+				</div>
+				
+			</div>

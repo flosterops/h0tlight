@@ -1,0 +1,57 @@
+.share {
+	width: 290px; height: 60px; margin: 10px auto 30px; position: relative;
+	transform: translateZ(0);
+	
+	
+	.share-button,
+	.share-toggle-button {
+		color: #878b90; font-size: 0; text-align: center; width: 60px; height: 60px; margin-top: -30px; margin-left: -30px; border: 2px solid #434a52; border-radius: 50%; outline: none; background: $color-page-background; display: inline-block; position: absolute; top: 50%; left: 50%; cursor: pointer;
+		transition: color $transition-duration $transition-timing-function;
+		
+		&:after {
+			content: ""; border-radius: 50%; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; opacity: 0;
+			background-image: radial-gradient(rgba($color-shadow, .5), rgba($color-shadow, 0) 75%);
+			transform: scale(.5,.5);
+			transition: all $transition-duration $transition-timing-function;
+			transition-property: opacity, transform;
+		}
+		
+		.share-icon:before {
+			@include icomoon("", 22px); position: absolute; top: 50%; left: 0; right: 0;
+			transform: translate3d(0, -50%, 0);
+		}
+		
+		@include hover() {
+			color: $color-primary;
+			
+			&:after {
+				opacity: 1;
+				transform: none;
+			}
+		}
+	}
+	
+	.share-toggle-button {
+		z-index: 9;
+		.share-icon:before { content: $icomoon-share; }
+	}
+	
+	.share-button {
+		text-decoration: none;
+		transform: scale(0.95, 0.95);
+	}
+	
+	.share-items {
+		margin: 0; padding: 0; list-style-type: none;
+		
+		.share-item {
+			display: inline-block;
+			
+			&.facebook .share-icon:before { content: $icomoon-facebook; }
+			&.twitter .share-icon:before { content: $icomoon-twitter; }
+			&.google-plus .share-icon:before { content: $icomoon-google; }
+			&.pinterest .share-icon:before { content: $icomoon-pinterest; }
+		}
+	}
+	
+}

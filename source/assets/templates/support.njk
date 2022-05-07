@@ -1,0 +1,54 @@
+{% import "./macros.njk" as macros %}
+{% set gamigo_cdn = "https://webcdn.triongames.com/landingpages/heroesoftwilight" %}
+
+{% set bodyClass = "page-template page-template-page_support page-template-page_support-php page page-id-15 support page-support" %}
+{% set activeMenu = "menu-item-support" %}
+
+
+{% block master__content %}
+	{% set support__pageHeader_characters = [
+		"{{ gamigo_cdn }}/assets/img/headers/charac_support.png"
+	] %}
+	{{ macros.outputPageHeader(support__pageHeader_title, support__pageHeader_html, support__pageHeader_characters, langContent) }}
+
+
+	<div id="content">
+		<div class="page-width">
+			<div class="wrapper-content">
+				<div class="main-content">
+					{{ support__faq }}
+				</div>
+
+
+				<aside>
+					<div class="latest-update">
+						<h3>
+							{{ support__readUpdate }}
+						</h3>
+						<p class="actions">
+							<a
+								class="button full"
+								href="{{ langContent.news[0].url }}"
+							>
+								{{ support__gotoUpdate }}
+							</a>
+						</p>
+					</div>
+					
+					<div class="contact-us">
+						<h3>
+							{{ support__contactTitle }}
+						</h3>
+						<p class="actions">
+							<a class="button form full" href="mailto:support@littlelordsoftwilight.com" onclick="ark.track('support','click','contact-us-');" data-prevent-smooth-scroll="">
+								{{ support__contactButton }}
+							</a>
+						</p>
+					</div>
+				</aside>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% extends "./master.njk" %}

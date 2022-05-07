@@ -1,0 +1,187 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Page Careers */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+body.page-template-page_careers {
+
+	header {
+		background-image: url(#{$gamigo-cdn}/img/headers/header_careers.jpg);
+		@media ($breakpoint-tablet-portrait) {
+			background-image: url(#{$gamigo-cdn}/img/headers/header_careers-tablet.jpg);
+		}
+		@media ($breakpoint-mobile-landscape) {
+			background-image: url(#{$gamigo-cdn}/img/headers/header_careers-mobile.jpg);
+		}
+
+		.character img {
+			top: 65px;
+			right: -150px;
+			
+			@media ($breakpoint-tablet-portrait) {
+				top: 10px;
+				right: 50%;
+				margin-right: -385px;
+			}
+			@media ($breakpoint-mobile-landscape) {
+				top: 0;
+				height: 120%;
+				margin-right: -238px;
+			}
+		}
+	}
+
+	#content {
+		margin-bottom: -250px;
+		@media ($breakpoint-tablet-portrait) {
+			margin-bottom: 570px;
+		}
+		@media ($breakpoint-mobile-landscape) {
+			margin-bottom: 1000px;
+		}
+
+		.page-width {
+			background: url(#{$gamigo-cdn}/img/careers/bg_studio-1.png) no-repeat left top;
+			@media ($breakpoint-tablet-portrait) {
+				background-position: right top;
+			}
+			@media ($breakpoint-mobile-landscape) {
+				background-position: center top;
+				top: 180px;
+				padding-bottom: 150px;
+			}
+
+			.logo-bkom {
+				position: relative;
+				@media ($breakpoint-mobile-landscape) {
+					text-align: center;
+					top: -210px;
+				}
+				img {
+					height: 168px;
+					display: block;
+					position: relative;
+					top: 100px;
+					left: -25px;
+					@media ($breakpoint-tablet-portrait) {
+						left: 60px;
+					}
+					@media ($breakpoint-mobile-landscape) {
+						left: auto;
+						display: inline-block;
+					}
+				}
+			}
+
+			.character {
+				background: url(#{$gamigo-cdn}/img/careers/bg_studio-3.png) no-repeat right top;
+				text-align: right;
+				position: relative;
+				@media ($breakpoint-tablet-portrait) {
+					top: 400px;
+					right: -80px;
+				}
+				@media ($breakpoint-mobile-landscape) {
+					top: 690px;
+					right: -20px;
+					background-position: left top;
+				}
+
+				img {
+					display: inline-block;
+					position: relative;
+					top: 107px;
+					right: 110px;
+					z-index: 15;
+					@media ($breakpoint-tablet-portrait) {
+						height: 460px;
+						top: 190px;
+						right: 150px;
+					}
+					@media ($breakpoint-mobile-landscape) {
+						height: 360px;
+						top: 270px;
+						right: 80px;
+					}
+					@media ($breakpoint-mobile-portrait) {
+						right: 60px;
+					}
+				}
+			}
+
+			.cta {
+				background: url(#{$gamigo-cdn}/img/careers/bg_studio-2.png) no-repeat left top;
+				width: 475px;
+				height: 365px;
+				position: relative;
+				top: -400px;
+				left: -60px;
+				display: flex;
+				align-items: flex-end;
+				justify-content :flex-end;
+					
+				html[lang="fr-CA"] & { width: 525px; }
+
+				@media ($breakpoint-tablet-portrait) {
+					width: 425px;
+					position: absolute;
+					top: 500px;
+					left: 0;
+				}
+				@media ($breakpoint-mobile-landscape) {
+					width: 100% !important;
+					html[lang="fr-CA"] & { width: 100%; height: 395px; }
+				}
+
+				.button {
+					font-size: 2.4rem;
+					color: $color-bkom;
+					text-align: left;
+					padding: 25px;
+					width: 350px;
+					border: 2px solid rgba($color-text, 0.25);
+					box-shadow: 0 0 40px 6px rgba($color-shadow, 0.3);
+					transition: box-shadow 0.25s ease;
+
+					html[lang="fr-CA"] & { width: 480px; }
+					
+					@media ($breakpoint-mobile-landscape) {
+						margin: 0 auto;
+					}
+
+					@media ($breakpoint-mobile-portrait) {
+						padding: 25px 25px 25px 10px;
+						width: 100% !important;
+						max-width: 350px;
+					}
+
+					&:after {
+						@include icomoon($icomoon-arrow, 40px);
+						position: absolute;
+						right: 10px;
+						top: 50%;
+						margin-top: -20px;
+						@media ($breakpoint-mobile-landscape) {
+							font-size: 26px;
+							margin-top: -13px;
+						}
+					}
+
+					&:hover {
+						text-shadow: none;
+						box-shadow: 0 0 40px 6px rgba($color-shadow, 0.8);
+					}
+
+					span {
+						font-size: 2rem;
+						color: white;
+						display: block;
+						line-height: 1.2em;
+					}
+				}
+			}
+		}
+
+
+	}
+}

@@ -1,0 +1,41 @@
+{% import "./macros.njk" as macros %}
+
+
+{% set bodyClass = "page-template page-template-page_careers page-template-page_careers-php page page-id-19 careers page-careers" %}
+
+
+{% block master__content %}
+	{% set gamigo_cdn = "https://webcdn.triongames.com/landingpages/heroesoftwilight" %}
+	{% set careers__pageHeader_characters = [
+		"https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/headers/charac_golem.png"
+	] %}
+	{{ macros.outputPageHeader(careers__pageHeader_title, careers__pageHeader_html, careers__pageHeader_characters, langContent) }}
+
+
+	<div id="content">
+		<div class="page-width">
+			<div class="logo-bkom">
+				<img src="{{ gamigo_cdn }}/assets/img/interface/logo_bkom.svg" alt="BKOM Studios" />
+			</div>
+			<div class="character">
+				<img src="{{ gamigo_cdn }}/assets/img/careers/charac_veroline.png" alt="Veroline" />
+			</div>
+
+			<div class="cta">
+				<a
+					class="button big"
+					onclick="ark.track('careers','click','open-positions-');"
+					target="_blank"
+					href="{{ careers__joinURL }}"
+				>
+					<span>
+						{{ careers__joinLine1 }}
+					</span>
+					{{ careers__joinLine2 }}
+				</a>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% extends "./master.njk" %}

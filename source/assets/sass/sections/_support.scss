@@ -1,0 +1,468 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Page support */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+body.page-template-page_support {
+
+	header {
+		height: 700px;
+		background-image: url(#{$gamigo-cdn}/img/headers/header_support.jpg);
+		background-position: 50% 0%;
+		@media ($breakpoint-tablet-portrait) {
+			background-image: url(#{$gamigo-cdn}/img/headers/header_support-tablet.jpg);
+		}
+		@media ($breakpoint-mobile-landscape) {
+			background-image: url(#{$gamigo-cdn}/img/headers/header_support-mobile.jpg);
+		}
+
+		.character img {
+			top: 65px;
+			right: 0;
+			
+			@media ($breakpoint-tablet-portrait) {
+				top: 50px;
+				right: 50%;
+				margin-right: -225px;
+			}
+			@media ($breakpoint-mobile-landscape) {
+				top: 0;
+				margin-right: -175px;
+			}
+		}
+
+	}
+
+	#content .wrapper-content {
+
+		section { 
+			text-align: left;
+			margin-bottom: 65px;
+
+			h2 {
+				color: $color-title; 
+				font: bold italic 3rem $font-factoria; 
+				text-transform: uppercase; 
+				text-shadow: 0 0 50px $color-shadow, 0 0 50px $color-shadow; 
+				text-align: left;
+				margin-bottom: 20px;
+				padding: 0;
+				display: block;
+
+				&:before, &:after {
+					display: none;
+				}
+			}
+
+			.faq-section {
+
+				.wrapper-item {
+					position: relative;
+
+					&:nth-child(odd) {
+						background: url(#{$gamigo-cdn}/img/support/Pattern_Support.png) repeat left top;
+						background-size: 100% auto;
+
+						&:before, &:after {
+							content:""; 
+							position:absolute; 
+							display:block;
+							height: 2px;
+							left: 0; right: 0;
+							z-index: 2;
+						}
+						&:before {
+							background: url(#{$gamigo-cdn}/img/support/separator_faq_top.jpg) repeat-x left center;
+							top: 0;
+
+						}
+						&:after {
+							background: url(#{$gamigo-cdn}/img/support/separator_faq_bottom.jpg) repeat-x left center;
+							bottom: 0;
+						}
+					}
+
+					&:last-child:after {
+						content:""; 
+						position:absolute; 
+						display:block;
+						background: url(#{$gamigo-cdn}/img/support/separator_faq_bottom.jpg) repeat-x left center;
+						height: 2px;
+						left: 0; right: 0; bottom: 0;
+						z-index: 2;
+					}
+
+					.question { 
+						color: $color-primary; 
+						font-size: 1.8rem; 
+						font-weight: normal; 
+						font-style: italic; 
+						align-items: center;
+						padding: 25px 70px 25px 15px;
+						margin: 0; 
+						display: flex;
+						position: relative;
+						overflow: visible;
+						z-index: 1;
+						cursor: pointer;
+
+						.switch {
+							position: absolute;
+							width: 24px; 
+							height: 24px;
+							right: 20px;
+							top: 50%;
+							margin-top: -12px;
+
+							@media ($breakpoint-mobile-landscape) {
+								width: 16px;
+								margin-top: -8px;
+								right: 10px;
+							}
+
+							&:before, &:after { 
+								content:""; 
+								position:absolute; 
+								display:block;
+								background-color: white;
+								width: 24px; 
+								height: 6px;
+								top: 9px;
+								transition: transform .25s ease-in-out;
+								transform-origin: 50% 50%;
+								backface-visibility: hidden;
+
+								@media ($breakpoint-mobile-landscape) {
+									width: 16px;
+									height: 4px;
+								}
+							}
+							&:before {
+								box-shadow: 0 0 40px 6px $color-shadow;
+							}
+							&:after {
+								transform: rotate(90deg);
+							}
+						}
+					}
+
+					.wrapper-answer { 
+						max-height: 0;
+						overflow: hidden; 
+						font-size: 1.8rem; 
+						color: $color-secondary-text; 
+						position: relative;
+						transition: max-height 0.5s ease;
+
+						.answer {
+							padding: 0 70px 35px 15px;
+							@media ($breakpoint-mobile-landscape) {
+								padding: 0 20px 25px 15px;
+							}
+						}
+
+						li { margin-bottom: .5em; }
+					}
+
+					&.opened { 
+						.question .switch { 
+							&:after {
+								transform: rotate(0deg);
+							}
+						}
+						.wrapper-answer {
+							max-height: 800px;
+							height: 100%;
+							@media ($breakpoint-mobile-landscape) {
+								max-height: 1000px;
+							}
+						}
+					}
+
+				}
+			}
+
+		}
+
+		aside {
+
+			.button {
+				padding: 14px 20px 12px;
+				margin: 0;
+				text-align: center;
+				@media ($breakpoint-tablet-portrait) {
+					margin-top: 0;
+				}
+			}
+
+
+			h3 {
+				color: $color-text; 
+				font: bold italic 3rem $font-factoria; 
+				text-transform: uppercase; 
+				text-align: left;
+				line-height: 1em;
+				margin: 0 30% 0 0;
+				text-shadow: 0 0 10px $color-shadow, 0 0 10px $color-shadow;
+				@media ($breakpoint-tablet-portrait) {
+					font-size: 2rem;
+					margin: 0 25% 0 0;
+				}
+				@media ($breakpoint-mobile-landscape) {
+					margin: 0;
+				}
+				@media ($breakpoint-mobile-portrait) {
+					margin: 0 25% 0 0;
+					margin-bottom: 15px !important;
+				}
+
+				span {
+					font-size: 1.8rem;
+					display: block;
+					line-height: 1.1em;
+					@media ($breakpoint-tablet-portrait) {
+						font-size: 2rem;
+					}
+				}
+			}
+
+			.latest-update {
+				background: url(#{$gamigo-cdn}/img/support/bg_latest-update.jpg) no-repeat center center;
+				background-size: cover;
+				width: 100%;
+				height: 180px;
+				padding: 20px 15px;
+				margin: 60px 0 45px;
+				position: relative;
+				display: block;
+				text-decoration: none;
+				box-shadow: inset 0 0 0 1px rgba(white, 0.1);
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+
+				@media ($breakpoint-tablet-portrait) {
+					height: 160px;
+					padding-top: 30px;
+					padding-bottom: 10px;
+					margin: 70px 15px 30px 0;
+				}
+				@media ($breakpoint-mobile-landscape) {
+					margin-right: 10px;
+					margin-top: 0;
+				}
+				@media ($breakpoint-mobile-portrait) {
+					height: auto;
+					padding: 25px 10px 10px 10px;
+					margin-right: 0;
+				}
+
+				&:after {
+					content: "";
+					background: url(#{$gamigo-cdn}/img/support/img_latest-update.png) no-repeat center top;
+					position: absolute;
+					display: block;
+					width: 190px;
+					height: 142px;
+					bottom: 65px;
+					left: 50%;
+
+					@media ($breakpoint-tablet-portrait) {
+						height: 172px;
+						bottom: 10px;
+						left: auto;
+						right: -30px;
+					}
+					@media ($breakpoint-mobile-landscape) {
+						display: none;
+					}
+					@media ($breakpoint-mobile-portrait) {
+						display: block;
+						height: 112px;
+						width: 122px;
+						right: -10px;
+						top: -12px;
+						bottom: auto;
+						background-size: inherit;
+					}
+				}
+				
+				h3 {
+					html[lang="fr-CA"] & { 
+						margin: 0; width: 50%; 
+						@media ($breakpoint-tablet-portrait) {
+							margin: 0 25% 0 0; width: auto;
+						}
+					}
+				}
+
+				p {
+					color: $color-primary;
+					font-style: italic;
+					font-size: 1.6rem;
+					text-align: left;
+					margin-bottom: 0;
+				}
+
+			}
+
+			.contact-us {
+				background: url(#{$gamigo-cdn}/img/support/bg_aside_contact-us.jpg) no-repeat center top;
+				background-size: cover;
+				width: 100%;
+				height: 416px;
+				padding: 20px;
+				position: relative;
+				box-shadow: inset 0 0 0 1px rgba(white, 0.1);
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+
+				@media ($breakpoint-tablet-portrait) {
+					height: 160px;
+					padding: 30px 20px 10px 20px;
+					margin: 70px 0 30px 15px;
+					justify-content: space-between;
+				}
+				@media ($breakpoint-mobile-landscape) {
+					padding: 30px 15px 10px 15px;
+					margin-left: 10px;
+					margin-top: 0;
+				}
+				@media ($breakpoint-mobile-portrait) {
+					height: auto;
+					padding: 15px 10px 10px 10px;
+					margin-left: 0;
+				}
+
+				&:after {
+					content: "";
+					background: url(#{$gamigo-cdn}/img/support/img_aside_contact-us.png) no-repeat center center;
+					position: absolute;
+					display: block;
+					width: 407px;
+					height: 455px;
+					bottom: 0;
+					left: -4px;
+
+					@media ($breakpoint-tablet-portrait) {
+						background: url(#{$gamigo-cdn}/img/support/img_aside_contact-us_tablet.png) no-repeat center bottom;
+						width: 228px;
+						height: 235px;
+						left: auto;
+						right: -3px;
+						bottom: 0;
+					}
+					@media ($breakpoint-mobile-landscape) {
+						display: none;
+					}
+					@media ($breakpoint-mobile-portrait) {
+						display: block;
+						width: 170px;
+						height: 175px;
+						background-size: inherit;
+					}
+				}
+
+				h3 {
+					margin-bottom: 50px;
+					html[lang="fr-CA"] & { margin-bottom: 30px; }
+					
+					@media ($breakpoint-tablet-portrait) {
+						margin-bottom: 0;
+						html[lang="fr-CA"] & { margin-bottom: 0; }
+					}
+				}
+
+			}
+
+		}
+	}
+	
+	#contact-form { position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: 99999; background-color: rgba(#0e1721, .9); display: none; align-items: center; justify-content: center;
+		
+		&.open { display: flex; overflow-x: hidden; overflow-y: scroll;
+			@media($breakpoint-mobile-landscape) {
+				display: block; padding: 120px 0 0;
+			}
+		}
+		
+		.wrapper { width: 98%; max-width: 730px; margin: 0; padding: 110px 90px 30px; text-align: left; position: relative; border: 1px solid #272f38; background: #0e1721 url(#{$gamigo-cdn}/img/support/bg-contact-form.jpg) 50% 0 no-repeat !important;
+		
+			@media($breakpoint-mobile-landscape) {
+				margin: 0 auto; padding: 110px 25px 30px; 
+			}	
+					
+			&:before { content: ""; width: 407px; height: 503px; display: block; background: url(#{$gamigo-cdn}/img/support/veroline-contact-form.png) no-repeat center top; position: absolute; top: -120px; right: -20px; z-index: 1000; 
+				@media($breakpoint-tablet-portrait) {
+					top: -160px; right: -50px; transform: scale(.8);
+				}
+			}
+			
+			form { position: relative; z-index: 1001; }
+			
+			h4 { margin: 0 0 20px; padding: 0; font-family: $font-factoria; color: $color-primary; text-transform: capitalize; font-style: italic; font-weight: bold; font-size: 4rem; }
+			
+			.close { width: 65px; height: 65px; display: block; position: absolute; right: -80px; top: -5px; background: url(#{$gamigo-cdn}/img/interface/btn-close.png) 50% 0 no-repeat !important;  
+				
+				@media($breakpoint-tablet-portrait) {
+					right: -10px; top: -60px; z-index: 99999; transform: scale(.5);
+				}
+				
+				span { content: ""; height: 0; display: block; overflow: hidden; visibility: hidden; clear: both; }
+			}
+			
+			label { color: #fff; font-size: 1.8rem; margin-bottom: 45px; z-index: 1001; }
+			input, textarea { padding-right: 5px; padding-left: 5px; margin-top: 5px; background-color: rgba(255,255,255,.1); border: 0; color: #fff; font-size: 1.8rem; border-radius: 0; }
+			textarea { height: 150px; }
+			input[type="text"], input[type="email"] { width: 100%; height: 50px; }
+			input[type="submit"] { width: 220px; margin: 0 auto; background-color: $color-page-background; border: 2px solid rgba(white, 0.25); }
+			small { margin-top: 5px; font-size: 1.1rem; }
+			
+			textarea { width: 100%;
+				@media($breakpoint-mobile-landscape) {
+					height: 100px;
+				}
+			}
+			
+			.wrap-fields {
+				
+				display: flex;
+				justify-content: space-between;
+				
+				p { width: calc(50% - 5px); }
+				
+				@media($breakpoint-mobile-landscape) {
+					display: block;
+					p { width: 100%; }
+					
+				}
+				
+			}
+			
+			.legal { margin-bottom: 10px;
+				
+				p, span { font-size: 1.4rem; text-align: left; }
+				
+				.wpcf7-list-item { margin: 0; 
+				
+					label { margin: 0; display: flex; justify-content: space-between; align-items: flex-start;
+						input[type=checkbox] { margin: 0 10px 10px 0; align-self: flex-start; }
+					}
+					
+				}
+				
+			}
+			
+			#recaptcha { margin: 20px 0; text-align: center; 
+				
+				> div:first-child { width: 300px !important; margin: 0 auto; }
+
+			}
+					
+			.submit-wrapper { text-align: center; }
+		
+		}			
+		
+	}
+
+}

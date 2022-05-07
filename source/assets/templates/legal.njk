@@ -1,0 +1,18 @@
+{% import "./macros.njk" as macros %}
+
+
+{% set bodyClass = "page-template-default page page-id-89 page-child parent-pageid-87 terms-of-service page-app page-terms-of-service " + legal__bodyClass %}
+
+
+{% block master__content %}
+	<div id="content">
+		<div class="page-width">
+			<h1>{{ legal__title }}</h1> 
+			<div class="post_content">
+				{{ legal__text }}
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% extends "./master.njk" %}

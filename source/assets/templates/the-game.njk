@@ -1,0 +1,90 @@
+{% import "./macros.njk" as macros %}
+
+
+{% set bodyClass = "page-template page-template-page_the-game page-template-page_the-game-php page page-id-7 the-game page-the-game" %}
+{% set activeMenu = "menu-item-game" %}
+{% set gamigo_cdn = "https://webcdn.triongames.com/landingpages/heroesoftwilight" %}
+
+{% block master__content %}
+	{% set theGame__pageHeader_html %}
+		{{ theGame__pageHeader_html }}
+		<p class="stores">
+			<a
+				href="{{ app.languages[lang].stores.apple.url }}"
+				target="_blank"
+			>
+				<span
+					data-svg-url="{{ app.languages[lang].stores.apple.image }}"
+					title="{{ app.languages[lang].stores.apple.label }}">
+				</span>
+			</a>
+			<a
+				href="{{ app.languages[lang].stores.google.url }}"
+				target="_blank"
+			>
+				<span
+					data-svg-url="{{ app.languages[lang].stores.google.image }}"
+					title="{{ app.languages[lang].stores.google.label }}">
+				</span>
+			</a>
+		</p>
+	{% endset %}
+	{% set theGame__pageHeader_characters = [
+		"{{ gamigo_cdn }}/assets/img/headers/charac_the-game-1.png",
+		"{{ gamigo_cdn }}/assets/img/headers/charac_the-game-2.png"
+	] %}
+	{{ macros.outputPageHeader(theGame__pageHeader_title, theGame__pageHeader_html, theGame__pageHeader_characters, langContent) }}
+
+
+	<div id="content">
+		<div class="page-width">
+			<h2>{{ theGame__title }}</h2>
+			
+			{%
+				set theGame__features_assets = [
+					{
+						"class" : "realm-zikverland",
+						"image" : "{{ gamigo_cdn }}/assets/img/the-game/realm-of-ziverland.png"
+					},
+					{
+						"class" : "rule-night-day",
+						"image" : "{{ gamigo_cdn }}/assets/img/the-game/rule-night-day.png"
+					},
+					{
+						"class" : "legendary-heroes",
+						"image" : "{{ gamigo_cdn }}/assets/img/the-game/heroes-of-zikverland.png"
+					},
+					{
+						"class" : "madzik-cards",
+						"image" : "{{ gamigo_cdn }}/assets/img/the-game/madzik-cards.png"
+					},
+					{
+						"class" : "heroes-legend",
+						"image" : "{{ gamigo_cdn }}/assets/img/the-game/heroes-to-legend.png"
+					},
+					{
+						"class" : "epic-pvp-battles",
+						"image" : "{{ gamigo_cdn }}/assets/img/the-game/epic-pvp-battles.png"
+					}
+				]
+			%}
+			{% for feature in theGame__features %}
+				<section class="{{ theGame__features_assets[loop.index0].class }}">
+					<div class="visual">
+						<img
+							src="{{ theGame__features_assets[loop.index0].image }}"
+							alt="{{ feature.title }}"
+							title="{{ feature.title }}"
+						/>
+					</div>
+					<div class="content">
+						<h3>{{ feature.title }}</h3>
+						{{ feature.text }}
+					</div>
+				</section>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}
+
+{% extends "./master.njk" %}

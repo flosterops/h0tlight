@@ -1,0 +1,158 @@
+{% set lang = "en-US" %}
+
+
+{% set pageTitle = "Heroes Of Twilight" %}
+
+
+{% set homepage__headerEnter = "Coming Soon!" %}
+
+
+{%
+	set homepage__testimonials = [
+		{
+			"quote"   : "Bkom Studios has struck out into the world with this interesting gem. It’s a very experimental game in many ways. Turn based strategy games with special hero character units are as replete as real time strategy equivalents, but I’ve never seen such a hero focus.",
+			"author"  : "Andrew Koziara",
+			"company" : "TouchArcade"
+		},
+		{
+			"quote"   : "This colourful PvP scrapper offers compellingly competitive real time strategy match-ups, but weaves in elements of the MOBA and card battling genres to make it feel more current and intuitive.",
+			"author"  : "Jon Mundy",
+			"company" : "PocketGamer"
+		},
+		{
+			"quote"   : "It’s bright, it’s clever, and with card-collecting mechanics thrown in as well, there’s an awful lot here to sink your teeth into.",
+			"author"  : "Harry Slater",
+			"company" : "PocketGamer"
+		},
+		{
+			"quote"   : "A big strategy game in a small package.",
+			"author"  : "Harry Slater",
+			"company" : "PocketGamer"
+		},
+		{
+			"quote"   : "A stand-out Apple-compatible game spotted by Apple Insider at this year's Electronics Entertainment Expo!",
+			"author"  : "Appleinsider",
+			"company" : ""
+		},
+		{
+			"quote"   : "This game not only has great gameplay and mechanics (a bit of RPG, a bit strategy and a bit card collecting), tons of weapons/spells and great heroes, but it also looks amazing, so I am sure it will be a massive hit. Keep an eye out for this one!",
+			"author"  : "Luciano",
+			"company" : "Touch, Tap, Play"
+		},
+		{
+			"quote"   : "BKOM Studio's tactical RPG, Little Lords of Twilight, uses unique day/night phases!",
+			"author"  : "Emily Sowden",
+			"company" : "PocketGamer"
+		}
+	]
+%}
+
+
+{% set homepage__synopsis_title = "SunPops and NightFalls, ever waging war for your soul. Resist or embrace their power." %}
+{% set homepage__synopsis_text %}
+	<p>Based on a universe that its creator has been crafting over the course of the last decade, Little Lords of Twilight is a new breed of tactical strategy game that exploits distinct and refreshing mechanics. In this very unique take on the tactical RPG genre, set against a dark and mythical landscape (the realm of Zikverländ), two players face off in epic battles ruled by the power of night and day.</p>
+	<p>Each time the Sun hides behind one of the moons of Zikverländ and when it emerges to shine anew, you will be transformed and lent formidable powers. But listen well Little Lord: although you must bow to the rule of NightFalls and SunPops, your soul yearns to be free. Secretly devote your abilities to serve Light or Darkness, but choose wisely, the next LightShift is on its way&#8230;</p>
+{% endset %}
+
+
+{% set homepage__watchTrailer = "Watch Cinematic Trailer" %}
+
+{% set homepage__community_title = "Community" %}
+{% set homepage__community_text %}
+	<p>Play and Share your passion about Little Lords of Twilight</p>
+{% endset %}
+{% set homepage__community_viewAll = "View All Community posts" %}
+
+
+{% set homepage__news_title = "Latest News" %}
+{% set homepage__news_viewAll = "View All News" %}
+
+{# HEROES START #}
+{% set heroes__pageHeader_title = "Meet the heroes of Zikverländ" %}
+{% set heroes__pageHeader_html %}
+	<p>Now that the NightFalls are upon us, that these times of darkness and tyrannical rules prevail, which of these heroes will reverse the tide? Who will you rise to the challenge?</p>
+{% endset %}
+
+
+{% set heroes__title = "The Heroes" %}
+{% set heroes__text %}
+	<p>Zikverländ, where day and night are synonymous with good and evil, is slowly surrendering to the darkness and is in desperate need of heroes again.</p>
+{% endset %}
+
+
+{%
+	set heroes__states = {
+		"day" : "Day",
+		"night" : "Night"
+	}
+%}
+{%
+	set heroes__heroes = {
+		"veroline" : {
+			"states" : {
+				"day" : {
+					"description" : "While everyone seems to know a little MadZik around these parts, Veroline is probably one of the most powerful wielders in the land. Possibly due to some side effects of the mighty Spell that was used against her all those years ago…"
+				},
+				"night" : {
+					"description" : "Although NightFalls transforms Veroline into a darker self, warlike and a little more prone to bad temper, her underlying intentions seem to remain good and noble… for now."
+				}
+			},
+			"minionsTitle" : "Veroline’s <span>minions</span>",
+			"minions" : [
+				{
+					"name"        : "Garden Gnome",
+					"description" : "Garden Gnome's minds are weak and their wits easily controllable by anyone who masters the rudiment of MadZik. For those who harness their powerful will to cause harm, the Mad Gnomes can become a formidable line of defense against enemy threats."
+				},
+				{
+					"name"        : "Plush Doll",
+					"description" : "The Plush Dolls are quick and nimble. They wield a powerful shield when exposed to SunPops."
+				}
+			]
+		},
+		"makino" : {
+			"states" : {
+				"day" : {
+					"description" : "Exiled by his tribe for having decided to befriend a non-WindBër (a very reclusive race of gigantic bearlike creatures living in the Western Peaks), Makino has become Veroline’s sworn protector. If by SunPops the giant beast is at best grumpy and ill tempered, he still passes for an angel when compared with his NightFalls self."
+				},
+				"night" : {
+					"description" : "At NightFall, Makino is a were-bear with fearsome talons and razor sharp fangs, huge wings that remind those of a bat and a raging and uncontrollable hunger for battle. During NightFalls, Makino can fly at will."
+				}
+			},
+			"minionsTitle" : "Makino’s <span>minions</span>",
+			"minions" : [
+				{
+					"name"        : "Sherpa Beez",
+					"description" : "For centuries, those men-bees have honoured a strategic alliance with the WindBërs (a reclusive gigantic bearlike tribe living on the slopes of the Western Peaks whom Makino was a part of before being outcast). Often at the peril of their own lives, Sherpa Beez brave storms and Nightfalls to provide the WindBërs with supplies of Highland Honey, a rare elixir with supernatural properties, in exchange for their protection of the White Hives."
+				},
+				{
+					"name"        : "Rük Golem",
+					"description" : "The Rük Golems are deadly beasts at NightFalls and fast during SunPops. They live in the mountains of Makino's home country."
+				}
+			]
+		},
+		"pestipew" : {
+			"states" : {
+				"day" : {
+					"description" : "The brave PestiPew works in secret on a special armored garb: Gas-pistols connected to the back of his pressurized suit by flexible tubes allow him to channel and multiply his natural defenses. As what remains of his people, they are enslaved by SoHöt to mine ever deeper and retrieve precious metals. Equipped with this toxic weapon, Pestipew confronts SoHöt and vanquishes the Dragon who flees, swearing to return and exert a terrible revenge. The citizens of Gazus still sing ballads about their hero’s epic victory and it is said that the Dragon still carries with him a persistent and unbearable smell that drives him mad."
+				},
+				"night" : {
+					"description" : "Master of his natural defenses by SunPop, Pestipew surrenders to the rule of his own lethal gas at NightFall. As if perverted, the fume seems to have MadZikally developed a nefarious intelligence and a will to wreck havoc throughout the land, using the Dragon’s Bane as its pawn. “Don’t let it get to your head” goes the saying… That’s the first place the living gas rushes for each time the Sun hides. You can see trouble is on the way when Pestipew’s helmet fills with the green substance… A good time to start running."
+				}
+			},
+			"minionsTitle" : "Pestipew’s <span>minions</span>",
+			"minions" : [
+				{
+					"name"        : "Sniper Skunk",
+					"description" : "The Sniper Skunks use their fume crossbow darts to attack from a safe distance. Their attack range will increase with a steady aim."
+				},
+				{
+					"name"        : "Sprayer Skunk",
+					"description" : "The Sprayer Skunks are melee sprayers. They can attack a wider area during NightFalls thanks to their poisonous fume sprayers."
+				}
+			]
+		}
+	}
+%}
+{# HEROES END #}
+
+{% include "./assets/templates/homepage.njk" %}

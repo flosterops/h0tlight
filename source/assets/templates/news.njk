@@ -1,0 +1,30 @@
+{% import "./macros.njk" as macros %}
+
+
+{% set bodyClass = "blog" %}
+{% set activeMenu = "menu-item-news" %}
+{% set gamigo_cdn = "https://webcdn.triongames.com/landingpages/heroesoftwilight" %}
+
+{% block master__content %}
+	{% set news__pageHeader_characters = [
+		"{{ gamigo_cdn }}/assets/img/headers/charac_news.png"
+	] %}
+	{{ macros.outputPageHeader(news__pageHeader_title, news__pageHeader_html, news__pageHeader_characters, langContent) }}
+
+
+	<div id="content">
+		<div class="page-width">
+			<section id="news" class="news">
+				{% for article in langContent.news %}
+					{{ macros.outputNewsItem(article, langContent) }}
+
+					{% if loop.index === 4 %}
+						{{ macros.outputPromoCard("article", "", langContent) }}
+					{% endif %}
+				{% endfor %}
+			</section>
+		</div>
+	</div>
+{% endblock %}
+
+{% extends "./master.njk" %}

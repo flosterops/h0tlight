@@ -1,0 +1,365 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Community */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+body.page-template-page_community {
+
+	header {
+		height: 640px;
+		background-image: url(#{$gamigo-cdn}/img/headers/header_community.jpg);
+
+		@media ($breakpoint-tablet-portrait) {
+			background-image: url(#{$gamigo-cdn}/img/headers/header_community-tablet.jpg);
+		}
+		@media ($breakpoint-mobile-landscape) {
+			background-image: url(#{$gamigo-cdn}/img/headers/header_community-mobile.jpg);
+		}
+
+		.character img {
+			top: 32px;
+			right: -80px;
+
+			@media ($breakpoint-tablet-portrait) {
+				top: 30px;
+				right: 50%;
+				margin-right: -333px;
+			}
+			@media ($breakpoint-mobile-landscape) {
+				height: 120%;
+				top: 0;
+				margin-right: -246px;
+			}
+		}
+	}
+
+
+	#community-posts {
+		.masonry-grid {
+			.wrapper-posts {
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				margin: 0 -15px;
+				position: relative;
+				list-style: none;
+	
+				@media ($breakpoint-tablet-portrait) {
+					margin: 0 -25px;
+				}
+	
+				@media ($breakpoint-mobile-landscape) {
+					margin: 0;
+				}
+	
+				li { 
+					margin: 15px;
+					position: relative; 
+					background-position: center center; 
+					background-repeat: no-repeat;
+					background-size: cover;
+					box-shadow: 0 0 22px black; 
+					width: calc(33% - 30px); 
+					transition: transform 0.25s ease-in-out;
+	
+					@media ($breakpoint-tablet-portrait) {
+						width: calc(50% - 30px);
+					}
+	
+					@media ($breakpoint-mobile-landscape) {
+						width: 100%;
+						margin: 10px 0;	
+					}
+	
+					&:before { content: ""; display: block; position: absolute; left: 0; right: 0; bottom: 0; top: 50%; z-index: 1; background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.08) 12%,rgba(0,0,0,0.2) 24%,rgba(0,0,0,0.61) 57%,rgba(0,0,0,0.83) 78%,rgba(0,0,0,0.98) 94%,rgba(0,0,0,1) 100%); }
+	
+					&:after { content: ""; border: 1px solid rgba(white, .1); position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 2; }
+	
+					&.youtube { height: 200px;
+						&:before {
+							background-image: linear-gradient(to bottom, rgba($color-youtube,0) 0%, rgba($color-youtube,0.5) 50%, rgba($color-youtube,1) 100%);
+						}
+	
+						.channel {
+							background: url(#{$gamigo-cdn}/img/socials/corner_youtube.png) no-repeat top right;
+						}
+					}
+	
+					&.twitch { height: 200px;
+						&:before {
+							background-image: linear-gradient(to bottom, rgba($color-twitch,0) 0%, rgba($color-twitch,0.5) 50%, rgba($color-twitch,1) 100%);
+						}
+						.channel {
+							background: url(#{$gamigo-cdn}/img/socials/corner_twitch.png) no-repeat top right;
+						}
+					}
+	
+					&.instagram { height: 300px;
+						&:before {
+							background-image: linear-gradient(to bottom, rgba($color-instagram,0) 0%, rgba($color-instagram,0.5) 50%, rgba($color-instagram,1) 100%);
+						}
+						.channel {
+							background: url(#{$gamigo-cdn}/img/socials/corner_instagram.png) no-repeat top right;
+						}
+						.text {
+							p { font-size: 1.4rem; font-style: italic; text-align: left; margin: 0; }
+						}
+					}
+	
+					&.facebook, &.twitter { height: auto;
+						&:before { display: none; }
+						.channel { top: 10px; right: 50%; margin-right: -35px;
+							&:before {
+								color: white; position: absolute; top: 50%; left: 50%;
+							}
+						}
+						.text { padding-top: 90px;
+							.date, .author { font-size: 1.4rem; font-style: italic; }
+							.author { text-align: left; margin-top: 30px; display: flex; align-items: center;
+								p { margin-bottom: 0; }
+							}
+							.avatar { width: 50px; height: 50px; border-radius: 50%; margin-right: 10px; background-position: center center; background-size: cover; }
+						}
+					}
+	
+					&.facebook { background-color: $color-facebook;
+						.channel { 
+							&:before {
+								@include icomoon($icomoon-facebook, 30px); margin: -15px 0 0 -7px;
+							}
+						}
+					}
+	
+					&.twitter { background-color: $color-twitter;
+						.channel { 
+							&:before {
+								@include icomoon($icomoon-twitter, 30px); margin: -15px 0 0 -21px;
+							}
+						}
+					}
+	
+					&.promo { height: 410px; background-position: -124px 50% !important;
+	
+						@media ($breakpoint-mobile-landscape) {
+							background-position: 0 50% !important;
+						}
+	
+						@media ($breakpoint-mobile-portrait) {
+							background-position: -150px 50% !important;
+						}
+	
+						&:after { content: ""; width: 168px; height: 133px; display: block; position: absolute; top: -12px; left: 185px; background: url(#{$gamigo-cdn}/img/news/bloc-promo-outside-visual.png);  z-index: 3; border: 0; 
+							@media ($breakpoint-mobile-landscape) {
+								left: 309px;
+							}
+	
+							@media ($breakpoint-mobile-portrait) {
+								display: none;
+							}
+						}
+	
+						.app-icon { position: absolute; right: 0; bottom: 130px; overflow: hidden; 
+	
+							@media ($breakpoint-mobile-landscape) {
+								right: 80px; 
+							}
+	
+							@media ($breakpoint-mobile-portrait) { 
+	
+								bottom: 125px; right: -25px; 
+	
+							}
+	
+						}
+	
+						h3 { padding: 0; font-family: $font-factoria; font-style: italic; font-weight: 700; text-transform: uppercase; text-align: center; color: #fff; position: absolute; bottom: 65px; right: 20px; z-index: 4; text-shadow: 0px 0px 12px #0A4886, 0px 0px 12px #0A4886, 0px 0px 12px #0A4886;
+							span { display: block; }
+							span:nth-child(1) { font-size: 1.8rem; }
+							span:nth-child(2) { font-size: 2.4rem; }
+							span:nth-child(3) { font-size: 2.4rem; }
+							span:nth-child(4) { font-size: 4.6rem; }
+	
+							@media ($breakpoint-mobile-landscape) {
+								bottom: 75px;
+								span:nth-child(2), span:nth-child(3) { display: inline-block; }
+							}
+	
+							@media ($breakpoint-mobile-portrait) { right: 10px; text-align: center;
+								span { display: block !important; }
+								span:nth-child(1) { font-size: 1.5rem; }
+								span:nth-child(2), span:nth-child(3) { font-size: 2rem; }
+								span:nth-child(4) { font-size: 3.8rem; }
+							}
+	
+						}
+	
+						p { width: 100%; display: block; position: absolute; bottom: 15px; z-index: 99;
+							a { width: 135px; height: 40px; margin: 0 5px; display: inline-block; position: relative; text-align: center; box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); 
+								svg { padding: 0; margin: 0; display: block; }
+	
+								@media ($breakpoint-mobile-portrait) {
+									margin: 0;
+								}
+	
+							}
+	
+							@media ($breakpoint-mobile-landscape) {
+								padding-right: 45px; text-align: right;
+							}
+	
+							@media ($breakpoint-mobile-portrait) {
+								padding-right: 0; text-align: center;
+							}
+						}
+	
+					}
+	
+	
+					/* Hover on article bloc */
+					@include hover() {
+						transform: translateY(-10px);
+					}
+	
+					a { position: relative; text-decoration: none; cursor: pointer !important; height: 100%; z-index: 99;
+						display: flex;
+						flex-direction: column;
+						justify-content: flex-end;
+					}
+	
+	
+					.text { padding: 10px; 
+	
+						h3 { color: #fff; font-size: 1.4rem; text-transform: uppercase; margin-bottom: 0; text-align: left; z-index: 2; }
+					}
+					
+					.post { word-break: break-word; hyphens: auto; }
+	
+					.channel {
+						display: block;
+						position: absolute;
+						width: 70px;
+						height: 70px;
+						top: 0; right: 0;
+					}
+	
+				}
+	
+			}
+			
+			
+			.btn-load-more {
+				outline: none; cursor: pointer;
+				transition: opacity $transition-duration $transition-timing-function;
+				.label-loading { display: none; }
+			}
+			
+			&.masonry-grid-loading {
+				.btn-load-more {
+					opacity: .3; cursor: default; pointer-events: none;
+					.label-load-more { display: none; }
+					.label-loading { display: inline-block; }
+				}
+			}
+		}
+
+	}
+
+	#socials {
+		padding: 50px 0;
+		background: url(#{$gamigo-cdn}/img/community/bg_socials.png) no-repeat center center;
+
+		h2 {
+			&:before, &:after {
+				display: none;
+			}
+		}
+
+		h3 {
+			color: $color-title; 
+			font: bold italic 2.4rem $font-factoria; 
+			text-shadow: 0 0 50px $color-shadow, 0 0 50px $color-shadow; 
+		}
+
+		ul { position: relative; margin: 0 0 20px 0; text-align: center;
+
+			li { height: 80px; width: 80px; border-radius: 50%; margin: 0 25px 25px 25px; display: inline-block; position: relative;
+
+				@media ($breakpoint-tablet-portrait) {
+					margin: 0 20px 20px 20px;
+				}
+
+				&.social-facebook { background-color: $color-facebook;
+					a:before { @include icomoon($icomoon-facebook, 42px); line-height: 80px }
+				}
+				&.social-google { background-color: $color-google;
+					a:before { @include icomoon($icomoon-google, 28px); line-height: 80px }
+				}
+				&.social-twitch { background-color: $color-twitch;
+					a:before { @include icomoon($icomoon-twitch, 36px); line-height: 80px }
+				}
+				&.social-twitter { background-color: $color-twitter;
+					a:before { @include icomoon($icomoon-twitter, 34px); line-height: 80px }
+				}
+				&.social-youtube { background-color: $color-youtube;
+					a:before { @include icomoon($icomoon-youtube, 28px); line-height: 80px }
+				}
+
+				a { width: 100%; height: 80px; display: block; text-decoration: none; text-indent: -9999px; overflow: hidden;
+
+					&:before { color: white; display: block; position: absolute; left: 0; right: 0; text-decoration: none; text-indent: 0;
+
+						transition: color $transition-duration $transition-timing-function;
+
+					}
+
+					&:hover:before { 
+						color: $color-page-background;
+					}
+				}
+
+			}
+		}
+		
+		/* Form newsletter */
+		.wrap-newsletter { max-width: 727px; margin: 0 auto; position: relative;
+			
+			@media($breakpoint-mobile-portrait) {
+				margin-bottom: 50px;
+			}
+			
+			&:before, &:after { content: ""; height: 7px; position: absolute; 
+				@media($breakpoint-mobile-portrait) {
+					background-size: 100% auto;
+				}
+			}
+			&:before { top: -7px; left: 0; right: 0; background: url(#{$gamigo-cdn}/img/interface/shadow-newsletter-box.png) 50% 0 no-repeat; }
+			&:after { bottom: -7px; left: 0; right: 0; background: url(#{$gamigo-cdn}/img/interface/shadow-newsletter-box.png) 50% 0 no-repeat; transform: rotate(180deg); }
+			
+			#mc_embed_signup { max-width: 730px; height: 44px; margin: 0 auto; display: inline-block; display: flex; justify-content: center; background-image: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 35%,rgba(0,0,0,1) 65%,rgba(0,0,0,0) 100%); position: relative;
+				
+				&:before { content: ""; height: 1px; position: absolute; top: 0; left: 0; right: 0; background-image: linear-gradient(to right, rgba(39,46,54,0) 0%,rgba(39,46,54,1) 35%,rgba(39,46,54,1) 65%,rgba(39,46,54,0) 100%); z-index: 1; }
+				&:after { content: ""; height: 1px; position: absolute; bottom: 0; left: 0; right: 0; background-image: linear-gradient(to right, rgba(39,46,54,0) 0%,rgba(39,46,54,1) 35%,rgba(39,46,54,1) 65%,rgba(39,46,54,0) 100%); z-index: 1; }
+				
+				form { margin: 0; padding: 0; }
+				#mc_embed_signup_scroll { height: 44px; display: flex; justify-content: center; align-items: center; }
+				.mc-field-group { display: inline-block; }
+				.button { margin: 0 5px; padding: 5px 10px; font-size: 1.4rem; color: #fff; 
+					@media($breakpoint-mobile-portrait) {
+						width: 230px; height: 40px; margin-left: -115px; position: absolute; bottom: -60px; left: 50%;
+					}
+				}
+				input[type="email"] { width: 275px; height: 30px; padding: 0 5px; border: 0; background: none; display: inline-block; font-size: 1.8rem; color: #a4a5a5; }
+				div.mce_inline_error { background: none; position: absolute; bottom: -48px; left: 0; right: 0; color: red; font-size: 1.6rem; 
+					
+					@media($breakpoint-mobile-portrait) {
+						bottom: -110px;
+						html[lang|="fr"] & { bottom: -130px; }
+					}
+					
+				}
+				#mce-responses { position: absolute; bottom: -48px; left: 0; right: 0; font-size: 1.6rem; }
+			}
+		}
+		
+	}
+
+}

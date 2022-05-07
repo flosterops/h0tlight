@@ -1,0 +1,309 @@
+{% import "./macros.njk" as macros %}
+
+
+{% set bodyClass = "page-template page-template-page_heroes page-template-page_heroes-php page page-id-9 heroes page-heroes" %}
+{% set activeMenu = "menu-item-heroes" %}
+{% set gamigo_cdn = "https://webcdn.triongames.com/landingpages/heroesoftwilight" %}
+
+
+{% block master__content %}
+	{% set heroes__pageHeader_characters = [
+		"https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/headers/charac_heroes.png"
+	] %}
+	{{ macros.outputPageHeader(heroes__pageHeader_title, heroes__pageHeader_html, heroes__pageHeader_characters, langContent) }}
+
+
+	<div id="content">
+		<div class="page-width">
+			<h2>{{ heroes__title }}</h2>
+			{{ heroes__text }}
+		</div>
+
+
+		{%
+			set heroes__heroes_data = [
+				{
+					"id"      : "veroline",
+					"name"    : "Veroline",
+					"icon"    : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/heroes/veroline-icon.svg",
+					"states"  : [
+						{
+							"id": "day",
+							"pinterest" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/videos/characters/veroline_skin_day-1.jpg",
+							"skins" : [
+								{
+									"icon" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/heroes/skins/veroline_skin_day-1.png"
+								},
+								{
+									"icon" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/heroes/skins/veroline_skin_day-2.png"
+								}
+							]
+						},
+						{
+							"id": "night",
+							"pinterest" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/videos/characters/veroline_skin_night-1.jpg",
+							"skins" : [
+								{
+									"icon" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/heroes/skins/veroline_skin_night-1.png"
+								},
+								{
+									"icon" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/heroes/skins/veroline_skin_night-2.png"
+								},
+								{
+									"icon" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/heroes/skins/veroline_skin_night-3.png"
+								}
+							]
+						}
+					],
+					"minions" : [
+						{
+							"image" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/heroes/_minions/garden_gnome.png"
+						},
+						{
+							"image" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/heroes/_minions/plush_doll.png"
+						}
+					]
+				},
+				{
+					"id"      : "makino",
+					"name"    : "Makino",
+					"icon"    : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/heroes/makino-icon.svg",
+					"states"  : [
+						{
+							"id": "day",
+							"pinterest" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/videos/characters/makino_skin_day-1.jpg",
+							"skins" : [
+								{
+									"icon" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/heroes/skins/makino_skin_day-1.png"
+								},
+								{
+									"icon" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/heroes/skins/makino_skin_day-2.png"
+								},
+								{
+									"icon" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/heroes/skins/makino_skin_day-3.png"
+								},
+								{
+									"icon" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/heroes/skins/makino_skin_day-4.png"
+								}
+							]
+						},
+						{
+							"id": "night",
+							"pinterest" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/videos/characters/makino_skin_night-1.jpg",
+							"skins" : [
+								{
+									"icon" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/heroes/skins/makino_skin_night-1.png"
+								},
+								{
+									"icon" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/heroes/skins/makino_skin_night-2.png"
+								}
+							]
+						}
+					],
+					"minions" : [
+						{
+							"image" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/heroes/_minions/sherpa_beez.png"
+						},
+						{
+							"image" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/heroes/_minions/ruk_golem.png"
+						}
+					]
+				},
+				{
+					"id"      : "pestipew",
+					"name"    : "Pestipew",
+					"icon"    : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/heroes/pestipew-icon.svg",
+					"states"  : [
+						{
+							"id": "day",
+							"pinterest" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/videos/characters/pestipew_skin_day-1.jpg",
+							"skins" : [
+								{
+									"icon" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/heroes/skins/pestipew_skin_day-1.png"
+								},
+								{
+									"icon" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/heroes/skins/pestipew_skin_day-2.png"
+								}
+							]
+						},
+						{
+							"id": "night",
+							"pinterest" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/videos/characters/pestipew_skin_night-1.jpg",
+							"skins" : [
+								{
+									"icon" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/heroes/skins/pestipew_skin_night-1.png"
+								},
+								{
+									"icon" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/heroes/skins/pestipew_skin_night-2.png"
+								}
+							]
+						}
+					],
+					"minions" : [
+						{
+							"image" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/heroes/_minions/sniper_skunk.png"
+						},
+						{
+							"image" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/heroes/_minions/sprayer_skunk.png"
+						}
+					]
+				}
+			]
+		%}
+		<div id="heroes">
+			<nav id="heroes-nav">
+				<ul>
+					{% for hero in heroes__heroes_data %}
+						<li>
+							<a
+								href="#"
+								data-prevent-smooth-scroll=""
+								data-character="{{ hero.id }}"
+							>
+								<span
+									data-svg-url="{{ hero.icon }}"
+									title=""
+								></span>
+								<span>
+									{{ hero.name }}
+								</span>
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</nav>
+
+
+
+
+			<div id="day-night-trigger" class="day">
+				<div class="gears">
+					<div class="holders"></div>
+					<img src="{{ gamigo_cdn }}/assets/img/heroes/top-left-gear.png" alt="" class="gear top-left spinnable-gear" data-rotation-orientation="counterclockwise">
+					<img src="{{ gamigo_cdn }}/assets/img/heroes/bottom-left-gear.png" alt="" class="gear bottom-left spinnable-gear">
+					<img src="{{ gamigo_cdn }}/assets/img/heroes/bottom-right-gear.png" alt="" class="gear bottom-right spinnable-gear" data-rotation-orientation="counterclockwise">
+					<img src="{{ gamigo_cdn }}/assets/img/heroes/top-right-gear.png" alt="" class="gear top-right spinnable-gear">
+				</div>
+				<div class="wrap-trigger">
+					<div id="dn-buttons" data-character="veroline" class="buttons">
+						<a href="#" data-prevent-smooth-scroll="" class="day"></a>
+						<a href="#" data-prevent-smooth-scroll="" class="night"></a>
+					</div>
+					<div class="indicator-rim">
+						<img src="{{ gamigo_cdn }}/assets/img/heroes/dn-rim-arrow.png" alt="dn-rim-arrow" width="114" height="114">
+					</div>
+					<img src="{{ gamigo_cdn }}/assets/img/heroes/day-indicator-icon.png" class="icon day" alt="" />
+					<img src="{{ gamigo_cdn }}/assets/img/heroes/night-indicator-icon.png" class="icon night" alt="" />
+				</div>
+			</div>
+
+		
+		
+			<div class="heroes-carousel-wrapper">
+				<span id="data-controler"></span>
+				<span class="loadingMask"></span>
+				<div id="medias-placeholder">
+					<video autoplay="autoplay" loop="" muted="muted" preload="auto">
+						<source type="video/mp4">
+					</video>
+					<img class="desktop" />
+					<img class="mobile" />
+				</div>
+				<div id="heroes-carousel" class="day">
+					{% for hero in heroes__heroes_data %}
+						<div id="{{hero.id}}" class="slide">
+							<div class="day"></div>
+							<div class="night"></div>
+							
+							{% for state in hero.states %}
+								<div
+									class="{{state.id}}"
+								>
+									<div class="skins">
+										{% for skin in state.skins %}
+											<a
+												href="#"
+												data-prevent-smooth-scroll=""
+												style="background-image: url({{ skin.icon }});"
+											></a>
+										{% endfor %}
+									</div>
+									<div class="infos">
+										<h3>{{ hero.name }} <span>({{ heroes__states[state.id] }})</span></h3>
+										<p>{{ heroes__heroes[hero.id].states[state.id].description }}</p>
+
+										<div class="share">
+											<button class="share-toggle-button share">
+												<span class="share-icon"></span>
+											</button>
+											<ul class="share-items">
+												<li class="share-item facebook">
+													<span
+														class="share-button"
+														data-share-character="{{hero.id}}"
+														data-share-url="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flittlelordsoftwilight.com%2Fheroes.html%23{{ hero.id }}_{{ state.id }}"
+													>
+														<span class="share-icon"></span>
+													</span>
+												</li>
+												<li class="share-item twitter">
+													<span
+														class="share-button"
+														data-share-character="{{hero.id}}"
+														data-share-url="https://twitter.com/home?status=https%3A%2F%2Flittlelordsoftwilight.com%2Fheroes.html%23{{ hero.id }}_{{ state.id }}"
+													>
+														<span class="share-icon"></span>
+													</span>
+												</li>
+												<li class="share-item google-plus">
+													<span
+														class="share-button"
+														data-share-character="{{hero.id}}"
+														data-share-url="https://plus.google.com/share?url=https%3A%2F%2Flittlelordsoftwilight.com%2Fheroes.html%23{{ hero.id }}_{{ state.id }}"
+													>
+														<span class="share-icon"></span>
+													</span>
+												</li>
+												<li class="share-item pinterest">
+													<span
+														class="share-button"
+														data-share-character="{{hero.id}}"
+														data-share-url="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Flittlelordsoftwilight.com{{ state.pinterest | urlencode }}&amp;media={{ hero.name | urlencode }}%20%28{{ heroes__states[state.id] | urlencode }}%29"
+													>
+														<span class="share-icon"></span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							{% endfor %}
+
+							<div class="minions">
+								<div class="wrap">
+									<h4>{{ heroes__heroes[hero.id].minionsTitle }}</h4>
+									{% for minion in hero.minions %}
+										<div class="minion">
+											<div class="visual">
+												<img
+													src="{{ minion.image }}"
+													alt="{{ heroes__heroes[hero.id].minions[loop.index0].name }}"
+												/>
+											</div>
+											<div class="minion-infos">
+												<h5>{{ heroes__heroes[hero.id].minions[loop.index0].name }}</h5>
+												<p>{{ heroes__heroes[hero.id].minions[loop.index0].description }}</p>
+											</div>
+										</div>
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% extends "./master.njk" %}

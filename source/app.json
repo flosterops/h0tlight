@@ -1,0 +1,656 @@
+{
+	"app": {
+		"languages": {
+			"en-US": {
+				"language" : "en",
+				"metaDescription" : "Coming soon on mobile: Heroes of Twilight! Dominate this magical turn-based PvP arena. Prepare yourself for the battle to rule night and day!",
+				"close" : "Close",
+				"authorBy" : "By",
+				"seeAllNews" : "See All News",
+				"goHome" : "Go back to the Home Page",
+				"stores" : {
+					"apple" : {
+						"image" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/store-badges/app-store/Download_on_the_App_Store_Badge_US-UK_135x40.svg",
+						"label" : "Download on the App Store",
+						"url"   : "https://itunes.apple.com/app/little-lords-of-twilight/id1442286947"
+					},
+					"google" : {
+						"image" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/store-badges/google-play/en_badge_web_generic.svg",
+						"label" : "Get it on Google Play",
+						"url"   : "https://play.google.com/store/apps/details?id=com.gamigo.hot"
+					}
+				},
+				"header" : {
+					"modal" : {
+						"url"   : "",
+						"label" : "Read More"
+					},
+					"menu" : "Menu",
+					"nav" : {
+						"homepage" : {
+							"label" : "",
+							"url"   : "/"
+						},
+						"game" : {
+							"label" : "The Game",
+							"url"   : "/the-game.html"
+						},
+						"heroes" : {
+							"label" : "Heroes",
+							"url"   : "/heroes.html"
+						},
+						"community" : {
+							"label" : "Community",
+							"url"   : "/community.html"
+						},
+						"news" : {
+							"label" : "What’s new",
+							"url"   : "/whats-new/"
+						},
+						"support" : {
+							"label" : "Support",
+							"url"   : "/support.html"
+						},
+						"media" : {
+							"label" : "Media",
+							"url"   : "/media.html"
+						},
+						"language" : {
+							"label" : "Spanish",
+							"url"   : "/es/"
+						},
+						"languages" : {
+							"en" : {
+							"label" : "EN",
+							"url" : "/"
+							},
+							"de" : {
+							"label" : "DE",
+							"url" : "/de"
+							},
+							"fr" : {
+							"label" : "FR",
+							"url" : "/fr"
+							},
+							"es" : {
+							"label" : "ES",
+							"url" : "/es"
+							}
+						}
+					}
+				},
+				"footer" : {
+					"nav" : {
+						"terms"    : {
+							"label" : "Terms of Use",
+							"url"   : "/legal/terms-of-use.html"
+						},
+						"privacy"  : {
+							"label" : "Privacy Policy",
+							"url"   : "/legal/privacy-policy.html"
+						},
+						"imprint" : {
+							"label" : "Imprint",
+							"url"   : "/legal/imprint.html"
+						}
+					},
+					"logos" : {
+						"bkom" : {
+							"url" : "https://www.bkomstudios.com/"
+						},
+						"cmf" : {
+							"url" : "https://www.cmf-fmc.ca/en-ca"
+						}
+					},
+					"copyright" : "Heroes of Twilight © 2020-2021 gamigo Publishing GmbH, a member of gamigo group. Heroes of Twilight has been licensed from BKOM Studios. gamigo is a registered trademark of gamigo AG in Germany and in the European Union. All other trademarks are properties of their respective owners. All rights reserved.",
+					"cookies" : {
+						"text": "<p>We use cookies on this site to enhance your experience.</p><p>By clicking \"Yes, I agree\" you are giving your consent for us to set cookies.</p>",
+						"buttons" : {
+							"ok"     : "Yes, I agree",
+							"cancel" : "No, I want to find out more"
+						}
+					}
+				},
+				"kickstarterPromo" : {
+					"title"    : "<span class=\"level-1\">Support us on</span> <span class=\"level-2\">Kickstarter</span>",
+					"subtitle" : "Help us bring<br />LLoT 2 to life",
+					"url"      : "https://www.kickstarter.com/projects/bkomstudios/little-lords-of-twilight-2"
+				},
+				"promoCard" : {
+					"lines" : [
+						"Download",
+						"Little Lords",
+						"of Twilight",
+						"Now!"
+					]
+				},
+				"news" : [
+					{
+						"title" : "LLOT VERSION 2.3.20 RELEASE NOTES",
+						"image" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/content/LLoT_IMG_News_Release_Note-1150x419.jpg",
+						"url"   : "/whats-new/llot-version-2-3-20-release-notes.html",
+						"date"  : {
+							"month" : {
+								"short" : "Mar",
+								"full"  : "March"
+							},
+							"day" : "26",
+							"year" : "2019"
+						}
+					},
+					{
+						"title" : "LLOT VERSION 2.3.17 RELEASE NOTES",
+						"image" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/content/LLoT_IMG_News_Release_Note-1150x419.jpg",
+						"url"   : "/whats-new/llot-version-2-3-17-release-notes.html",
+						"date"  : {
+							"month" : {
+								"short" : "Feb",
+								"full"  : "February"
+							},
+							"day" : "28",
+							"year" : "2019"
+						}
+					},
+					{
+						"title" : "LLOT VERSION 2.3.16 RELEASE&nbsp;NOTES",
+						"image" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/content/LLoT_IMG_News_Release_Note-1150x419.jpg",
+						"url"   : "/whats-new/llot-version-2-3-16-release-notes.html",
+						"date"  : {
+							"month" : {
+								"short" : "Feb",
+								"full"  : "February"
+							},
+							"day" : "25",
+							"year" : "2019"
+						}
+					},
+					{
+						"title" : "LLOT VERSION 2.3.15 RELEASE&nbsp;NOTES",
+						"image" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/content/LLoT_IMG_News_Release_Note-1150x419.jpg",
+						"url"   : "/whats-new/llot-version-2-3-15-release-notes.html",
+						"date"  : {
+							"month" : {
+								"short" : "Feb",
+								"full"  : "February"
+							},
+							"day" : "12",
+							"year" : "2019"
+						}
+					},
+					{
+						"title" : "PvP Season of the Chilling Moon has begun!",
+						"image" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/content/LLoT_Ads_1920x1080_Season7-1150x647.jpg",
+						"url"   : "/whats-new/pvp-season-chilling-moon-begun.html",
+						"date"  : {
+							"month" : {
+								"short" : "Dec",
+								"full"  : "December"
+							},
+							"day" : "08",
+							"year" : "2018"
+						}
+					},
+					{
+						"title" : "The Anthousai Nymphs",
+						"image" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/content/LLoT_IMG_News_Herk_Minions_01.jpg",
+						"url"   : "/whats-new/the-anthousai-nymphs.html",
+						"date"  : {
+							"month" : {
+								"short" : "Jun",
+								"full"  : "June"
+							},
+							"day" : "06",
+							"year" : "2018"
+						}
+					},
+					{
+						"title" : "The Argonauts, brought from the afterworld",
+						"image" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/content/LLoT_IMG_News_Herk_Minions_02.jpg",
+						"url"   : "/whats-new/argonauts-brought-afterworld.html",
+						"date"  : {
+							"month" : {
+								"short" : "Jun",
+								"full"  : "June"
+							},
+							"day" : "05",
+							"year" : "2018"
+						}
+					},
+					{
+						"title" : "The Steam Lunar New Year Sale has begun!",
+						"image" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/content/LLoT_IMG_News_LunarSale-1150x419.jpg",
+						"url"   : "/whats-new/steam-lunar-new-year-sale-begun.html",
+						"date"  : {
+							"month" : {
+								"short" : "Feb",
+								"full"  : "February"
+							},
+							"day" : "15",
+							"year" : "2018"
+						}
+					},
+					{
+						"title" : "67% OFF on all Hero Starter Packs!",
+						"image" : "https://webcdn.triongames.com/landingpages/heroesoftwilight/assets/img/content/LLoT_IMG_News_Game_Update-1150x419.jpg",
+						"url"   : "/whats-new/67-off-hero-starter-packs.html",
+						"date"  : {
+							"month" : {
+								"short" : "Jan",
+								"full"  : "January"
+							},
+							"day" : "25",
+							"year" : "2018"
+						}
+					}
+				],
+				"watchTrailer": "Watch Cinematic Trailer",
+				"prereg": {
+					"preRegister": "Pre-Register",
+					"enterEmail": "Enter your email address here",
+					"titleReg": "Pre-Register now",
+					"textLine1": "Prepare to experience MadZik soon at your fingertips.",
+					"textLine2": "Sign up for our newsletter and",
+					"textLine3": "secure your pre-registration reward",
+					"agreeLine1": "Personal information collection",
+					"agreeLine2": " and processing agreement (required)",
+					"regDirect": "Or pre-register on",
+					"legalText": {
+						"firstLine": "I would like to receive the gamigo group newsletter",
+						"secondLine": "THIS IS THE NEWSLETTER OF THE GAMIGO GROUP (ALL COMPANIES INVOLVED CAN BE VIEWED",
+						"thirdLine": "HERE",
+						"forthLine": "). I AGREE THAT EVERY COMPANY OF THE GAMIGO GROUP MAY INFORM ME ABOUT ALL OFFERS, SERVICES, AND OTHER ACTIVITIES, INCLUDING THOSE OF OTHER COMPANIES IN THE GROUP. FURTHER INFORMATION IS AVAILABLE IN THE PRIVACY POLICY. THIS AGREEMENT CAN BE WITHDRAWN AT ANY TIME AND WITHOUT STATING REASONS VIA THE UNSUBSCRIBE BUTTON.",
+						"gamigoGroup": "gamigo group: Aeria Games GmbH (address: Schlesische Str. 27c, 10997 Berlin, Germany) gamigo US Inc. (address: 9430 Research Blvd, Austin, TX 78759, United States of America) gamigo AG (address: Behringstr. 16b, 22765 Hamburg, Germany) gamigo Inc. (address: 800 Bellevue Way NE, Suite 500, Bellevue, WA 98004, United States of America) gamigo Publishing GmbH (address: Behringstr. 16b, 22765 Hamburg, Germany) gamigo Portals GmbH (address: Behringstr. 16b, 22765 Hamburg, Germany)",
+						"agree": "Agree"
+					},
+					"rewardTitle": "The more, the merrier",
+					"rewardDesc1": "Gold, Gold, and more Gold! Invite friends to pre-register",
+					"rewardDesc2": "and increase your rewards!",
+					"iosMessage1": "The game will be available later this year on iOS in your country.",
+					"iosMessage2": "Sign-up to our newsletter to be the first to know about the exact release date.",
+					"popupTitle1": "Thank you for ",
+					"popupTitle2": "pre-registration",
+					"popupText": "We just sent you a confirmation email."
+				},
+				"charDesc": {
+					"day": "day",
+					"night": "night",
+					"verolineDay": "Sure, everyone knows a little MadZik, but Veroline may very well be the most powerful in all of Zikverländ. Maybe it has something to do with the mighty Spell used against her many years ago…",
+					"verolineNight": "Although NightFalls transform Veroline into a darker self, warlike and prone to a bad temper, her underlying intentions seem to remain good and noble... for now.",
+					"makinoDay": "Exiled by his tribe for befriending a non-WindBër (a very reclusive race of gigantic bearlike creatures living in the Western Peaks), Makino has become Veroline’s sworn protector. Grumpy and ill tempered while basking in the light of SunPops, the giant beast still passes for an angel when compared with his NightFalls self.",
+					"makinoNight": "At NightFall, Makino is a were-bear with fearsome talons and razor sharp fangs, huge wings that remind those of a bat and a raging and uncontrollable hunger for battle. During NightFalls, Makino can fly at will.",
+					"pestipewDay": "The brave PestiPew works in secret on a special armored garb: Gas-pistols connected to the back of his pressurized suit allow him to channel and multiply his natural defenses. His people may still be enslaved by SoHöt, but freedom is not far off…",
+					"pestipewNight": "PestiPew surrenders to the rule of his own lethal gas at NightFall. You can see trouble is on the way when PestiPew’s helmet fills with the green substance… A good time to start running before he wreaks havoc on the land!"
+				},
+				"carousel": {
+					"line1": "A GENRE MIX FOR A FRESH EXPERIENCE",
+					"line2": "Familiar gameplay promises a quick start, turn-based strategy mechanics, collectible cards and tactics are given a dose of MadZik for a unique twist to the 1v1 PvP arena experience.",
+					"line3": "Gameplay cycles add a unique twist to each battle. Each time the sun hides or emerges to shine anew, your Hero will transform and be granted different abilities. Sharpen your tactics as you upgrade their skills to become the toughest opponent in Zikverländ.",
+					"line4": "OUTSMART YOUR OPPONENT IN PVP ARENAS",
+					"line5": "Each Hero has two personalities, meaning twice as many ways to strengthen your strategy in turn-based battle. At war in real-time, knowing when to attack and when to evade is of the essence.",
+					"line6": "COLLECT CARDS AND CAST NEW SPELLS",
+					"line7": "Summon the MadZik of Zikverländ by building your ultimate battle deck of spells. A catalog of over 80 spells is at your disposal, ready to give your Hero an advantage in the arena.",
+					"line8": "WORK TOGETHER TO CLIMB THE RANKS AND EARN REWARDS",
+					"line9": "Join an interactive clan and participate in weekly objectives to earn access to the clan chest and the rewards inside. Each clan member’s points count towards the clan ranking, with the top three high-scoring members featured on the podium.",
+					"line10": "BECOME THE GREATEST IN ALL OF ZIKVERLÄND – AND THE WORLD!",
+					"line11": "Familiar gameplay promises a quick start, turn-based strategy mechanics, collectible cards and tactics are given a dose of MadZik for a unique twist to the 1v1 PvP arena experience.",
+					"line12": "A GENRE MIX FOR A FRESH EXPERIENCE",
+					"line13": "Familiar gameplay promises a quick start, turn-based strategy mechanics, collectible cards and tactics are given a dose of MadZik for a unique twist to the 1v1 PvP arena experience.",
+					"line14": "DAY AND NIGHT ARE AT WAR FOR YOUR SOUL",
+					"line15": "Gameplay cycles add a unique twist to each battle. Each time the sun hides or emerges to shine anew, your Hero will transform and be granted different abilities. Sharpen your tactics as you upgrade their skills to become the toughest opponent in Zikverländ.",
+					"line16": "Victory comes with bragging rights for those who win the war. A global competitive leader board lists the strongest Heroes and most formidable foes ever to have entered the arena."
+				},
+				"veroline": {
+					"dayTitle": "SunPops and NightFalls are at war over your soul",
+					"dayText": "Set in Zikverländ, a dark and mythical universe filled with MadZik, Heroes of Twilight is a new breed of tactical strategy game with distinct and refreshing mechanics. In this unique take on the turn-based strategy genre, two players face off in epic battles ruled by the power of night and day.",
+					"nightTitle": "Resist or embrace their power",
+					"nightText": "Each time the sun hides behind one of Zikverländ’s two moons or emerges to shine anew, you will be transformed and lent formidable powers. But listen well Hero: although you must bow to the rule of NightFalls and SunPops, your soul yearns to be free. Secretly devote your abilities to serve Light or Darkness, but choose wisely: the next LightShift is on its way…"
+				}
+			},
+			"fr-FR" : {
+				"language" : "fr",
+				"metaDescription" : "Gratuit, joueur contre joueur, jeu mobile de stratégie tour par tour disponible maintenant sur iOS et Android.",
+				"close" : "Fermer",
+				"authorBy" : "Par",
+				"seeAllNews" : "Voir toutes les nouvelles",
+				"goHome" : "Retour à l’accueil",
+				"header" : {
+					"modal" : {
+						"url"   : "",
+						"label" : "En savoir plus"
+					},
+					"menu" : "Menu",
+					"nav" : {
+						"homepage" : {
+							"label" : "",
+							"url"   : "/fr/"
+						},
+						"language" : {
+							"label" : "English",
+							"url"   : "/"
+						},
+						"languages" : {
+							"en" : {
+							"label" : "EN",
+							"url" : "/"
+							},
+							"de" : {
+							"label" : "DE",
+							"url" : "/de"
+							},
+							"fr" : {
+							"label" : "FR",
+							"url" : "/fr"
+							},
+							"es" : {
+							"label" : "ES",
+							"url" : "/es"
+							}
+						}
+					}
+				},
+				"footer" : {
+					"nav" : {
+						"terms"    : {
+							"label" : "Conditions d'utilisation",
+							"url"   : "/fr/legal/terms-of-use.html"
+						},
+						"privacy"  : {
+							"label" : "Politique de confidentialité",
+							"url"   : "/fr/legal/privacy-policy.html"
+						},
+						"imprint" : {
+							"label" : "Marque",
+							"url"   : "/fr/legal/imprint.html"
+						}
+					}
+				},
+				"watchTrailer": "Regarder la bande-annonce",
+				"prereg": {
+					"preRegister": "Inscrivez-vous",
+					"enterEmail": "Entrez votre adresse e-mail ici",
+					"titleReg": "Inscrivez-vous dès maintenant",
+					"textLine1": "Préparez-vous à découvrir MadZik bientôt au bout de vos doigts.",
+					"textLine2": "Inscrivez-vous à notre newsletter et obtenez",
+					"textLine3": "votre récompense de pré-enregistrement !",
+					"agreeLine1": "Collecte d'informations personnelles",
+					"agreeLine2": " et de traitement des données (obligatoire)",
+					"regDirect": "Ou pré-enregistrez-vous sur",
+					"legalText": {
+						"firstLine": "J'aimerais recevoir la newsletter du gamigo group",
+						"secondLine": "Voici la newsletter du gamigo group (vous pouvez visionner ",
+						"thirdLine": "ICI",
+						"forthLine": "la liste des entreprises qui en font partie). Je donne mon autorisation à ce que les entreprises qui constituent le gamigo group m'envoient des informations au sujet d'offres, services et autres activités, y compris ceux appartenant à d'autres entreprises au sein du groupe. Pour plus d'informations, veuillez consulter notre politique de confidentialité. Ce consentement peut être rétracté à tout moment sans devoir fournir de raisons en utilisant le bouton se désabonner.",
+						"gamigoGroup": "gamigo group: Aeria Games GmbH (Adresse: Schlesische Str. 27c, 10997 Berlin, Germany) gamigo US Inc. (Adresse: 9430 Research Blvd, Austin, TX 78759, United States of America) gamigo AG (Adresse: Behringstr. 16b, 22765 Hamburg, Germany) gamigo Inc. (Adresse: 800 Bellevue Way NE, Suite 500, Bellevue, WA 98004, United States of America) gamigo Publishing GmbH (Adresse: Behringstr. 16b, 22765 Hamburg, Germany) gamigo Portals GmbH (Adresse: Behringstr. 16b, 22765 Hamburg, Germany)",
+						"agree": "Accepter"
+					},
+					"rewardTitle": "Plus on est de fous, plus on rit",
+					"rewardDesc1": "De l'or, de l'or et encore de l'or ! Invitez vos amis",
+					"rewardDesc2": "et améliorer les récompenses !",
+					"iosMessage1": "Le jeu sera disponible plus tard cette année sur iOS dans votre pays.",
+					"iosMessage2": "Inscrivez-vous à notre newsletter pour connaître la date de sortie exacte.",
+					"popupTitle1": "Merci de vous ",
+					"popupTitle2": "pré-enregistrer",
+					"popupText": "Nous venons de vous envoyer un e-mail de confirmation."
+				},
+				"charDesc": {
+					"day": "jour",
+					"night": "nuit",
+					"verolineDay": "Bien entendu, tout le monde s'y connaît un peu en MadZik mais Veroline pourraît bien être la plus puissante de tout Zikverländ. Peut-être cela a-t-il quelque chose à voir avec le puissant sort qui a été lancé sur elle il y a des années de cela...",
+					"verolineNight": "Même si NightFalls fait ressortir son côté sombre, agressif et colérique, ses intentions semblent toutefois demeurer nobles et bonnes.",
+					"makinoDay": "Exilé de sa tribu pour être devenu ami avec un être n'appartenant pas à WindBër (une espèce très recluse de créatures gigantesque ressemblent à des ours qui vivent dans les Pics de l'Ouest), Makino est devenu le gardien protecteur juré de Veroline. Grognon et de mauvaise humeur lorsqu'il est exposé à la lumière de SunPops, cette bête paraît tout de même angélique comparée à son tempérament lorsque NightFalls tombe.",
+					"makinoNight": "Durant NightFalls, Makino est un ours-garou aux griffes et crocs terriblement acérés, dont les ailes rappellent celles des chauve-souris, et possède une soif de combat qui le rend absolument inarrêtable. Lors de NightFalls, Makino peut voler à volonté.",
+					"pestipewDay": "Le brave PestiPew travaille en secret sur une tenue blindée spéciale. Des pistolets à gaz connectés à une combinaison pressurisée lui permettent de canaliser et de multiplier ses défenses naturelles. Son peuple a certes été réduit en esclavage par SoHöt, mais le jour de la libération approche...",
+					"pestipewNight": "PestiPew se laisse dominer par son propre gaz mortel lorsque NightFalls tombe. Lorsque son casque se remplit de substance verte, cela n'est pas bon signe... Mieux vaudrait prendre vos jambes à votre cou avant qu'il ne cause des dégâts massifs à tout ce qui se trouve autour de lui."
+				},
+				"carousel": {
+					"line1": "UN MÉLANGE DE STYLES POUR UNE EXPÉRIENCE ÉTONNANTE",
+					"line2": "Le gameplay éprouvé et connu de tous garantit un début rapide, et les mécaniques de stratégie en tour par tour combinées aux cartes à collectionner et diverses tactiques sont saupoudrées d'un peu de MadZik pour offrir une expérience unique de JcJ en 1c1.",
+					"line3": "Les cycles de jeu offrent un aspect unique à chaque affrontement. À chaque fois que le soleil se cache ou réapparaît, votre héros se transformera et verra ses capacités changer. Aiguisez vos tactiques en améliorant leur compétences pour devenir le meilleur joueur de Zikverländ.",
+					"line4": "DÉJOUEZ LES STRATÉGIES DE VOTRE ADVERSAIRE DANS LES ARÈNES JCJ",
+					"line5": "Chaque héros possède deux personnalités, ce qui signifie deux fois plus de façons de forger des stratégies pour les affrontements en tour par tour. Lors de la lutte en temps réel, savoir quand attaquer et quand esquiver est essentiel.",
+					"line6": "COLLECTIONNEZ DES CARTES ET LANCEZ DES NOUVEAUX SORTS",
+					"line7": "Invoquez la MadZik de Zikverländ en construisant le paquet ultime de cartes de sorts. Un catalogue de plus de 80 sorts à votre disposition pour donner à votre héros un avantage dans l'arène.",
+					"line8": "TRAVAILLEZ ENSEMBLE POUR GRIMPER DANS LE CLASSEMENT ET GAGNER DES RÉCOMPENSES",
+					"line9": "Rejoignez un clan et participez à des objectives hebdomadaires pour gagner accès à des coffres de clan et ainsi aux récompenses à l'intérieur. Le décompte de points de chaque membre du clan compte pour le classement général du clan, et un podium sera affiché pour les trois meilleurs membres du clan.",
+					"line10": "DEVENEZ LE MEILLEUR DE TOUT ZIKVERLÄND, ET DU MONDE !",
+					"line11": "Le gameplay éprouvé et connu de tous garantit un début rapide, et les mécaniques de stratégie en tour par tour combinées aux cartes à collectionner et diverses tactiques sont saupoudrées d'un peu de MadZik pour offrir une expérience unique de JcJ en 1c1.",
+					"line12": "UN MÉLANGE DE STYLES POUR UNE EXPÉRIENCE ÉTONNANTE",
+					"line13": "Le gameplay éprouvé et connu de tous garantit un début rapide, et les mécaniques de stratégie en tour par tour combinées aux cartes à collectionner et diverses tactiques sont saupoudrées d'un peu de MadZik pour offrir une expérience unique de JcJ en 1c1.",
+					"line14": "LE JOUR ET LA NUIT SE BATTENT POUR S'EMPARER DE VOTRE ÂME",
+					"line15": "Les cycles de jeu offrent un aspect unique à chaque affrontement. À chaque fois que le soleil se cache ou réapparaît, votre héros se transformera et verra ses capacités changer. Aiguisez vos tactiques en améliorant leur compétences pour devenir le meilleur joueur de Zikverländ.",
+					"line16": " La victoire s'accompagne du droit de se vanter pour ceux qui gagnent la guerre. Un tableau de classement mondial répertorie les héros les plus forts et les ennemis les plus redoutables qui sont entrés dans l'arène."
+				},
+				"veroline": {
+					"dayTitle": "SunPops et NightFalls se battent pour s'emparer de votre âme",
+					"dayText": "Heroes of Twilight est un jeu qui prend place dans Zikverländ, un univers sombre et mythique rempli de MadZik, et offre un nouveau système de jeu de stratégie avec des mécaniques complètement inédites. Dans cette version unique du jeu de stratégie en tour par tour, deux joueurs s'affrontent dans des batailles épiques qui changent drastiquement en fonction du cycle du jour et de la nuit.",
+					"nightTitle": "Résistez ou ne faites qu'un avec la puissance",
+					"nightText": "À chaque fois que le soleil se cache ou réapparaît de derrière l'une des deux lune de Zikverländ, votre héros se transformera et verra ses capacités changer. Mais attention, héros : bien que vous deviez vous plier au règne de NightFalls et de SunPops, votre âme ne désire que la liberté. Choisissez de vouer vos talents à la Lumière ou aux Ténèbres mais choisissez judicieusement car le prochain LightShift sera bientôt là..."
+				}
+			},
+			"es-ES" : {
+				"language" : "es",
+				"header" : {
+					"menu" : "Menu",
+					"nav" : {
+						"homepage" : {
+							"label" : "",
+							"url"   : "/es/"
+						},
+						"language" : {
+							"label" : "English",
+							"url"   : "/"
+						},
+						"languages" : {
+							"en" : {
+							"label" : "EN",
+							"url" : "/"
+							},
+							"de" : {
+							"label" : "DE",
+							"url" : "/de"
+							},
+							"fr" : {
+							"label" : "FR",
+							"url" : "/fr"
+							},
+							"es" : {
+							"label" : "ES",
+							"url" : "/es"
+							}
+						}
+					}
+				},
+				"footer" : {
+					"nav" : {
+						"terms"    : {
+							"label" : "Términos y Condiciones",
+							"url"   : "/es/legal/terms-of-use.html"
+						},
+						"privacy"  : {
+							"label" : "Política de Privacidad",
+							"url"   : "/es/legal/privacy-policy.html"
+						},
+						"imprint" : {
+							"label" : "Aviso legal",
+							"url"   : "/es/legal/imprint.html"
+						}
+					}
+				},
+				"watchTrailer": "Ver Tráiler",
+				"prereg": {
+					"preRegister": "Pre-regístrate",
+					"enterEmail": "Introduce tu dirección de correo electrónico aquí",
+					"titleReg": "Pre-regístrate ahora",
+					"textLine1": "Prepárate para experimentar MadZik, pronto al alcance de tu mano.",
+					"textLine2": "¡Apúntate a nuestra newsletter y",
+					"textLine3": "asegura tu recompensa por el pre-registro!",
+					"agreeLine1": "Acuerdo de recolección",
+					"agreeLine2": " y procesamiento de información personal (requerido)",
+					"regDirect": "O pre-regístrate en",
+					"legalText": {
+						"firstLine": "ME GUSTARÍA RECIBIR EL BOLETÍN INFORMATIVO DEL GRUPO GAMIGO",
+						"secondLine": "(PUEDES VER LAS EMPRESAS QUE LO COMPONEN",
+						"thirdLine": "AQUÍ",
+						"forthLine": "). DOY MI CONSENTIMIENTO PARA QUE TODAS LAS EMPRESAS DEL GRUPO GAMIGO ME INFORMEN SOBRE SUS OFERTAS, SERVICIOS Y OTRAS ACTIVIDADES, ASÍ COMO DE LOS DE OTRAS EMPRESAS DEL GRUPO. PARA MÁS INFORMACIÓN, CONSULTA LA POLÍTICA DE PRIVACIDAD. ESTE CONSENTIMIENTO PUEDE RETIRARSE EN CUALQUIER MOMENTO Y SIN INDICAR EL MOTIVO HACIENDO CLIC EN CANCELAR SUSCRIPCIÓN.",
+						"gamigoGroup": "gamigo group: Aeria Games GmbH (Dirección: Schlesische Str. 27c, 10997 Berlin, Germany) gamigo US Inc. (Dirección: 9430 Research Blvd, Austin, TX 78759, United States of America) gamigo AG (Dirección: Behringstr. 16b, 22765 Hamburg, Germany) gamigo Inc. (Dirección: 800 Bellevue Way NE, Suite 500, Bellevue, WA 98004, United States of America) gamigo Publishing GmbH (Dirección: Behringstr. 16b, 22765 Hamburg, Germany) gamigo Portals GmbH (Dirección: Behringstr. 16b, 22765 Hamburg, Germany)",
+						"agree": "Aceptar"
+					},
+					"rewardTitle": "Cuantos más, mejor",
+					"rewardDesc1": "¡Oro, oro y más oro! ¡Invita a tus amigos a pre-registrarse y",
+					"rewardDesc2": "aumenta tus recompensas!",
+					"iosMessage1": "El juego estará disponible a finales de este año en iOS en tu país.",
+					"iosMessage2": "Suscríbete a nuestro boletín para ser el primero en conocer la fecha exacta de lanzamiento.",
+					"popupTitle1": "¡Gracias por tu ",
+					"popupTitle2": "pre-registro!",
+					"popupText": "Te acabamos de enviar un email de confirmación"
+				},
+				"charDesc": {
+					"day": "día",
+					"night": "noche",
+					"verolineDay": "Todo el mundo sabe un poco de MadZik, pero Veroline es, probablemente, la más poderosa de Zikverländ. Puede que el poderoso hechizo que le lanzaron hace años tenga algo que ver...",
+					"verolineNight": "Aunque NightFalls transforma a Veroline en una figura más tenebrosa, belicosa y de mayor tendencia al mal genio, sus ocultas intenciones parecen seguir siendo buenas y nobles... por ahora.",
+					"makinoDay": "Exiliado por su tribu por haber entablado amistad con alguien que no era WindBër (una raza de criaturas gigantes y solitarias que parecen osos y que habitan los Picos Occidentales), Makino ha jurado proteger a Veroline. La personalidad gruñona y cascarrabias que tiene a la luz de SunPops es un angelito en comparación con la bestia en la que se transforma durante NightFalls.",
+					"makinoNight": "En las NightFalls, Makino es un hombre oso con garras y colmillos como cuchillos y con unas alas de murciélago que dan escalofríos. Le invade una ira incontrolable que lo obliga a luchar sin descanso. Makino puede volar en la oscuridad de las NightFalls.",
+					"pestipewDay": "El valeroso PestiPew está trabajando a escondidas desarrollando un traje especial blindado: pistolas de gas, conectadas a la parte trasera de su traje presurizado, que le permiten canalizar y multiplicar sus defensas naturales. Su pueblo sigue esclavizado bajo el yugo de SoHöt, pero pronto serán liberados...",
+					"pestipewNight": "PestiPew se rinde a la voluntad de su gas letal durante NightFall. Sabes que algo va mal cuando el casco de PestiPew empieza a llenarse de un gas verde... ¡Echa a correr antes de que empiece a sembrar el pánico!"
+				},
+				"carousel": {
+					"line1": "LA MEZCLA DE GÉNEROS TE HARÁ DISFRUTAR DE UNA EXPERIENCIA NUNCA VISTA",
+					"line2": "El modo de juego te puede parecer familiar, pero la dosis de MadZik, junto a las mecánicas de estrategia por turnos, cartas coleccionables y diferentes posibilidades tácticas, le dan un giro único a la experiencia en la arena 1V1 PvP.",
+					"line3": "Los ciclos de jugabilidad hacen de cada batalla una experiencia única. Cada vez que el sol salga o se ponga, tu héroe se transformará y tendrá habilidades diferentes. ¡Mejora tus tácticas con nuevos hechizos y conviértete en un rival duro de batir!",
+					"line4": "SUPERA EL INGENIO DE TU OPONENTE EN LAS ARENAS PVP",
+					"line5": "Cada héroe tiene dos identidades, lo que significa el doble de posibilidades de mejorar tu estrategia en las batallas por turnos. Lucha en tiempo real; ataca y defiéndete en el momento justo.",
+					"line6": "COLECCIONA CARTAS Y USA HECHIZOS NUEVOS",
+					"line7": "Invoca la MadZik de Zikverländ para crear el mazo de hechizos definitivo. Tienes a tu disposición un catálogo de más de 80 hechizos para darle ventaja a tu héroe en la arena.",
+					"line8": "LLEGA A LO MÁS ALTO DE LA CLASIFICACIÓN PARA CONSEGUIR RECOMPENSAS",
+					"line9": "Únete a uno de los clanes interactivos para lograr los objetivos semanales y tener acceso al cofre del clan y los premios que contiene. Los puntos de cada miembro del clan se suman en la clasificación. Los tres miembros con mayor puntuación coronarán el podio.",
+					"line10": "¡CONVIÉRTETE EN EL MÁS PODEROSO DE ZIKVERLÄND Y DEL MUNDO!",
+					"line11": "El modo de juego te puede parecer familiar, pero la dosis de MadZik, junto a las mecánicas de estrategia por turnos, cartas coleccionables y diferentes posibilidades tácticas, le dan un giro único a la experiencia en la arena 1V1 PvP.",
+					"line12": "LA MEZCLA DE GÉNEROS TE HARÁ DISFRUTAR DE UNA EXPERIENCIA NUNCA VISTA",
+					"line13": "El modo de juego te puede parecer familiar, pero la dosis de MadZik, junto a las mecánicas de estrategia por turnos, cartas coleccionables y diferentes posibilidades tácticas, le dan un giro único a la experiencia en la arena 1V1 PvP.",
+					"line14": "EL DÍA Y LA NOCHE ESTÁN EN GUERRA POR TU ALMA",
+					"line15": "Los ciclos de jugabilidad hacen de cada batalla una experiencia única. Cada vez que el sol salga o se ponga, tu héroe se transformará y tendrá habilidades diferentes. ¡Mejora tus tácticas con nuevos hechizos y conviértete en un rival duro de batir!",
+					"line16": "Con la victoria llega el derecho a presumir para los que ganan la guerra. Una tabla de clasificación competitiva global muestra a los Héroes más fuertes y a los enemigos más formidables que jamás hayan entrado en la arena."
+				},
+				"veroline": {
+					"dayTitle": "SunPops y NightFalls están en guerra por tu alma",
+					"dayText": "Heroes of Twilight se desarrolla en el oscuro universo de Zikverländ, plagado de MadZik. Este juego de estrategia presenta nuevas mecánicas nunca vistas. En este juego de estrategia por turnos, dos jugadores se enfrentarán a batallas legendarias gobernadas por el poder del día y de la noche.",
+					"nightTitle": "Resiste a su poder o sucumbe a él.",
+					"nightText": "Cada vez que el sol se esconda o aparezca tras una de las lunas de Zikverländ, te transformarás y obtendrás increíbles poderes nuevos. Que el poder ejercido por NightFalls y SunPops no te confunda, héroe, tu alma tiene ansias de libertad. Utiliza tus habilidades para servir a la luz o la oscuridad, pero escoge con prudencia; el próximo LightShift se acerca..."
+				}
+			},
+			"de-DE" : {
+				"language" : "de",
+				"header" : {
+					"menu" : "Menu",
+					"nav" : {
+						"homepage" : {
+							"label" : "",
+							"url"   : "/de/"
+						},
+						"language" : {
+							"label" : "EN",
+							"url"   : "/"
+						},
+						"languages" : {
+							"en" : {
+							"label" : "EN",
+							"url" : "/"
+							},
+							"de" : {
+							"label" : "DE",
+							"url" : "/de"
+							},
+							"fr" : {
+							"label" : "FR",
+							"url" : "/fr"
+							},
+							"es" : {
+							"label" : "ES",
+							"url" : "/es"
+							}
+						}
+					}
+				},
+				"footer" : {
+					"nav" : {
+						"terms"    : {
+							"label" : "AGB",
+							"url"   : "/de/legal/terms-of-use.html"
+						},
+						"privacy"  : {
+							"label" : "Datenschutz",
+							"url"   : "/de/legal/privacy-policy.html"
+						},
+						"imprint" : {
+							"label" : "Imprint",
+							"url"   : "/de/legal/imprint.html"
+						}
+					}
+				},
+				"watchTrailer": "Schau dir den Cinematic Trailer an",
+				"prereg": {
+					"preRegister": "Vorregistrieren",
+					"enterEmail": "Gib hier deine E-Mail-Adresse ein",
+					"titleReg": "Jetzt vorregistrieren",
+					"textLine1": "Bereite dich darauf vor, MadZik bald selbst zu erleben.",
+					"textLine2": "Melde dich für unseren Newsletter an und",
+					"textLine3": "sichere dir eine Vorregistrierung-Prämie.",
+					"agreeLine1": "Einverständnis zur Erfassung persönlicher Daten",
+					"agreeLine2": " und Einwilligung zur Verarbeitung (erforderlich)",
+					"regDirect": "Oder registriere dich auf",
+					"legalText": {
+						"firstLine": "Ich möchte den newsletter der gamigo group erhalten.",
+						"secondLine": "Dies ist der newsletter der gamigo gruppe (alle beteiligten unternehmen können",
+						"thirdLine": "hier",
+						"forthLine": "eingesehen werden). Ich stimme zu, dass jedes unternehmen der gamigo group mich über alle angebote, dienstleistungen und andere aktivitäten informieren kann, auch von anderen unternehmen der gruppe. Weitere informationen findest du in der datenschutzrichtlinie. Diese vereinbarung kann jederzeit und ohne angabe von gründen über den abmelden-button zurückgenommen werden.",
+						"gamigoGroup":  "gamigo group: Aeria Games GmbH (Adresse: Schlesische Str. 27c, 10997 Berlin, Germany) gamigo US Inc. (Adresse: 9430 Research Blvd, Austin, TX 78759, United States of America) gamigo AG (Adresse: Behringstr. 16b, 22765 Hamburg, Germany) gamigo Inc. (Adresse: 800 Bellevue Way NE, Suite 500, Bellevue, WA 98004, United States of America) gamigo Publishing GmbH (Adresse: Behringstr. 16b, 22765 Hamburg, Germany) gamigo Portals GmbH (Adresse: Behringstr. 16b, 22765 Hamburg, Germany)",
+						"agree": "Zustimmen"
+					},
+					"rewardTitle": "Je mehr, desto besser",
+					"rewardDesc1": "Gold, Gold und noch mehr Gold! Lade deine Freunde zur Vorregistrierung ein",
+					"rewardDesc2": "und erhöhe deine Belohnungen!",
+					"iosMessage1": "Das Spiel wird später in diesem Jahr auf iOS in Ihrem Land verfügbar sein.",
+					"iosMessage2": "Melden Sie sich für unseren Newsletter an, um als Erster über das genaue Veröffentlichungsdatum informiert zu werden.",
+					"popupTitle1": "Vielen Dank für die ",
+					"popupTitle2": "Vorregistrierung",
+					"popupText": "Wir haben dir eine Bestätigungs-E-Mail geschickt."
+				},
+				"charDesc": {
+					"day": "tag",
+					"night": "nacht",
+					"verolineDay": "Jeder verfügt über ein bisschen MadZik, aber Veroline ist wahrscheinlich die Stärkste in ganz Zikverländ. Vielleicht hängt das mit dem mächtigen Zauber zusammen, der vor Jahren über sie gesprochen wurde ...",
+					"verolineNight": "Die NightFalls bringen Verolines Schattenseite hervor. Obwohl sie dann kriegerisch und leicht zu reizen ist, scheinen ihre Absichten dennoch gut ... zumindest bisher.",
+					"makinoDay": "Nachdem er vom Stamm der WindBëren - einer zurückgezogenen Rasse riesiger bärenartiger Wesen - verstoßen wurde, wurde Makino zu Verolines Beschützer. Während den SunPops ist er stets schlecht gelaunt und aggressiv, doch immer noch ein Engel verglichen mit seiner NightFalls-Version.",
+					"makinoNight": "Denn in der Nacht wird Makino zu einem Werbären mit riesigen Klauen, messerscharfen Zähnen und gigantischen Flügeln, dessen Kampfeslust unstillbar ist. Makino kann in diesem Zustand fliegen.",
+					"pestipewDay": "Der tapfere PestiPew arbeitet im Geheimen an einem gepanzerten Anzug: Gaspistolen, die mit der Rückseite seines Druckanzugs verbunden sind, verbessern seine natürlichen Verteidigungskapazitäten enorm. Sein Volk wird von den SoHöt versklavt, doch die Freiheit liegt in greifbarer Nähe ...",
+					"pestipewNight": "In der Nacht unterliegt PestiPew seinem eigenen giftigen Gas. Wenn sein Helm beginnt, sich mit der grünen Substanz zu füllen, ist es an der Zeit, das Weite zu suchen, bevor PestiPew das gesamte Land verwüstet."
+				},
+				"carousel": {
+					"line1": "EIN GENRE-MIX FÜR EINE NEUARTIGE ERFAHRUNGs",
+					"line2": "Vertraute Gameplay-Elemente sorgen für einen schnellen Einstieg, während rundenbasierte Strategie und Sammelkarten für eine gute Portion Taktik und einen Twist in den 1v1 PVP Arena-Kämpfen sorgen.",
+					"line3": "Die unterschiedlichen Phasen im Gameplay machen jede Schlacht einzigartig. Immer wenn die Sonne verschwindet oder wieder hervorkommt, verwandelt sich dein Held und erhält andere Fähigkeiten. Verbessere ihre Skills, um deine Taktik zu verfeinern und der zäheste Gegner in ganz Zikverländ zu werden.",
+					"line4": "ÜBERLISTE DEINE GEGNER IN PVP-ARENEN",
+					"line5": "Jeder Held hat zwei Persönlichkeiten - das ergibt doppelt so viele Möglichkeiten für strategische Züge in den rundenbasierten Kämpfen. Lerne, wann du angreifen kannst und wann du ausweichen solltest.",
+					"line6": "SAMMLE KARTEN UND LERNE NEUE ZAUBER",
+					"line7": "Baue dein ultimatives Kartendeck und beschwöre die MadZik von Zikverländ. Du kannst aus über 80 verschiedenen Zaubern wählen, um deinem Helden einen Vorteil in der Arena zu verschaffen.",
+					"line8": "ARBEITET ZUSAMMEN, UM DIE RANGLISTE ZU EROBERN UND BELOHNUNGEN ZU ERHALTEN",
+					"line9": "Tritt einem Clan bei, um wöchentliche Challenges zu absolvieren und Zugang zur Clan-Truhe zu haben, die große Belohnungen enthält. Die Punkte jedes Clan-Mitglieds fließen ins Clan-Ranking ein, und die besten drei Mitglieder kommen aufs Siegertreppchen.",
+					"line10": "WERDE DER BESTE IN GANZ ZIKVERLÄND - UND DER WELT!",
+					"line11": "Vertraute Gameplay-Elemente sorgen für einen schnellen Einstieg, während rundenbasierte Strategie und Sammelkarten für eine gute Portion Taktik und einen Twist in den 1v1 PVP Arena-Kämpfen sorgen.",
+					"line12": "EIN GENRE-MIX FÜR EINE NEUARTIGE ERFAHRUNG",
+					"line13": "Vertraute Gameplay-Elemente sorgen für einen schnellen Einstieg, während rundenbasierte Strategie und Sammelkarten für eine gute Portion Taktik und einen Twist in den 1v1 PVP Arena-Kämpfen sorgen.",
+					"line14": "DER TAG UND DIE NACHT KÄMPFEN UM DEINE SEELE",
+					"line15": "Die unterschiedlichen Phasen im Gameplay machen jede Schlacht einzigartig. Immer wenn die Sonne verschwindet oder wieder hervorkommt, verwandelt sich dein Held und erhält andere Fähigkeiten. Verbessere ihre Skills, um deine Taktik zu verfeinern und der zäheste Gegner in ganz Zikverländ zu werden.",
+					"line16": "Wer den Krieg gewinnt, hat das Recht zu prahlen. Eine globale Rangliste zeigt die stärksten Helden und furchterregendsten Feinde auf, die jemals die Arena betreten haben."
+				},
+				"veroline": {
+					"dayTitle": "SunPops und NightFalls kämpfen um deine Seele",
+					"dayText": "Heroes of Twilight spielt in Zikverländ, einer rätselhaften Welt voller MadZik, und bietet eine neue Art von taktischem Strategiespiel mit ganz eigenen Gameplay-Mechaniken. In diesem einzigartigen rundenbasierten Strategiespiel stehen sich zwei Spieler in Kämpfen gegenüber, die durch den Wechsel zwischen Tag und Nacht gelenkt werden.",
+					"nightTitle": "Ergib dich der Macht oder widerstehe",
+					"nightText": "Immer wenn die Sonne hinter einem der beiden Monde von Zikverländ verschwindet oder wieder hervorkommt, verwandelst du dich und erhältst neue Kräfte. Doch pass gut auf, Held! Auch wenn du der Macht der SunPops und NightFalls unterworfen bist, sehnt sich deine Seele nach Freiheit. Widme deine Skills dem Licht oder der Dunkelheit, doch wähle weise - der nächste LightShift kommt bald ..."
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,90 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Footer */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+footer {
+	font-size: 1.2rem; padding: 15px 0; position: relative; z-index: 2;
+	
+	@media ($breakpoint-mobile-landscape) {
+		padding: 30px 0 15px;
+	}
+	
+	
+	&,
+	a {
+		color: #878b90;
+	}
+	
+	nav {
+		font-size: 1.6rem; text-transform: uppercase;
+		ul {
+			margin: 0; padding: 0; list-style: none;
+			display: flex;
+			align-items: stretch;
+			justify-content: center;
+		}
+		
+		li {
+			padding: 0 18px; margin: 5px 0; border-left: 1px solid #878b90;
+			
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			
+			&:first-child { border: 0; }
+		}
+		
+		a {
+			text-decoration: none; display: inline-block;
+			@include hover() {
+				color: $color-primary;
+			}
+		}
+		
+		@media ($breakpoint-mobile-landscape) {
+			ul { flex-direction: column; }
+			li { border: 0; }
+		}
+	}
+	
+	.logos {
+		margin: 20px 0;
+		display: inline-flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		
+		p {
+			margin: 0; padding: 0 15px; max-width: 100%;
+			a { 
+				max-width: 100%; vertical-align: middle; display: inline-block;
+			    padding: 0px 10px;
+			    margin: 0px 5px;
+				img,
+				svg {
+					width: 100%; height: auto; display: block;
+				}
+				&:nth-child(1) { width: 160px; }
+				&:nth-child(2) { width: 160px; }
+				&:nth-child(3) { width: 120px; }
+			}
+		}
+		
+		.gamigo-group{
+			background-image: url(#{$gamigo-cdn}/img/homepage/hot-spritesheet.png);
+			background-position: -250px -880px;
+			width: 160px;
+			height: 60px;
+			transform: scale(0.9);
+		}
+		
+		@media ($breakpoint-mobile-landscape) {
+			width: 100%;
+			
+			p {
+				width: 100%; flex-grow: 1; margin: 15px 0;
+				&:nth-child(n+2) {  }
+			}
+		}
+	}
+}

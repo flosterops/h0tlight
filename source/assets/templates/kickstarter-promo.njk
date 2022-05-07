@@ -1,0 +1,54 @@
+<div class="kickstarter-promo">
+	{% set gamigo_cdn = "https://webcdn.triongames.com/landingpages/heroesoftwilight" %}
+	<div class="page-width">
+		<h2>
+			{{ langContent.kickstarterPromo.title }}
+		</h2>
+		<div class="app-icon">
+			<img src="{{ gamigo_cdn }}/assets/img/footer-promo/little-lords-of-twilight-app-icon.png" alt="Little Lords of Twilight App Icon" width="400" height="400" />
+		</div>
+		<div class="app-info">
+			{# <div class="stores">
+				<a href="{{ langContent.stores.apple.url }}" onclick="ark.track('general','download','ios-');" target="_blank">
+					<span
+						data-svg-url="{{ langContent.stores.apple.image }}"
+						title="{{ langContent.stores.apple.label }}">
+					</span>
+				</a>
+				<a href="{{ langContent.stores.google.url }}" onclick="ark.track('general','download','android-');" target="_blank">
+					<span
+						data-svg-url="{{ langContent.stores.google.image }}"
+						title="{{ langContent.stores.google.label }}">
+					</span>
+				</a>
+			</div> #}
+			{# <div class="credits">
+				<p>{{ langContent.footer.promo.credits.text }}</p>
+				<p>
+					<a
+						href="{{ langContent.footer.promo.credits.url }}"
+						onclick="ark.track('general','external-links','bkomstudios-');" target="_blank"
+					>
+						www.kickstarter.com
+					</a>
+				</p>
+			</div> #}
+			<div class="kickstarter-promo__support">
+				<a
+					class="button"
+					href="{{ langContent.kickstarterPromo.url }}"
+					target="_blank"
+				>
+					{{ langContent.kickstarterPromo.subtitle }}
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="background-container">
+		<div class="background"
+			data-video-poster="{{ gamigo_cdn }}/assets/videos/footer-promo/poster.jpg"
+			data-video-intro="{{ gamigo_cdn }}/assets/videos/footer-promo/intro.mp4"
+			data-video-loop="{{ gamigo_cdn }}/assets/videos/footer-promo/loop.mp4"
+		></div>
+	</div>
+</div>

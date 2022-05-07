@@ -1,0 +1,84 @@
+{% macro outputNewsItem(data, langContent) %}
+	<article
+		class="posts"
+		style="background-image: url({{ data.image }});"
+	>
+		<a
+			href="{{ data.url }}"
+			onclick="ark.track('homepage','click','{{ data.title }}-');"
+		>
+			<p class="date">
+				{% if langContent.language === "fr" %}
+					<span class="day">{{ data.date.day }}</span>
+					<span class="month">{{ data.date.month.short }}</span>
+				{% else %}
+					<span class="month">{{ data.date.month.short }}</span>
+					<span class="day">{{ data.date.day }}</span>
+				{% endif %}
+			</p>
+			<h3>{{ data.title }}</h3>
+		</a>
+	</article>
+{% endmacro %}
+
+
+
+
+{% macro outputPageHeader(title, html, characters, langContent) %}
+	{% set gamigo_cdn = "https://webcdn.triongames.com/landingpages/heroesoftwilight" %}
+	<header>
+		<div class="page-width">
+			<div class="title">
+				<h1>{{ title }}</h1>
+				{{ html }}
+			</div>
+		</div>
+		<div class="character">
+			{% for character in characters %}
+				<img class="image-{{loop.index}}" src="{{ character }}" alt="" />
+			{% endfor %}
+		</div>
+	</header>
+{% endmacro %}
+
+
+
+
+{% macro outputPromoCard(tag, cssClass, langContent) %}
+	{% set gamigo_cdn = "https://webcdn.triongames.com/landingpages/heroesoftwilight" %}
+	<{{ tag }}
+		style="background-image: url({{ gamigo_cdn }}/assets/img/news/bg-article-promo.jpg);"
+		class="promo {{ cssClass }}"
+	>
+		<h3>
+			{% for line in langContent.promoCard.lines %}
+				<span>
+					{{ line }}
+				</span>
+			{% endfor %}
+		</h3>
+		<div class="app-icon">
+			<img src="{{ gamigo_cdn }}/assets/img/news/app_icon.png" alt="">
+		</div>
+		<p>
+			<a
+				href="{{ langContent.stores.apple.url }}"
+				target="_blank"
+			>
+				<span
+					data-svg-url="{{ langContent.stores.apple.image }}"
+					title="{{ langContent.stores.apple.label }}"
+				></span>
+			</a>
+			<a
+				href="{{ langContent.stores.google.url }}"
+				target="_blank"
+			>
+				<span
+					data-svg-url="{{ langContent.stores.google.image }}"
+					title="{{ langContent.stores.google.label }}"
+				></span>
+			</a>
+		</p>
+	</{{ tag }}>
+{% endmacro %}
